@@ -1,0 +1,1259 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-14T18:10:27+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>GitHub User</name></author><entry><title type="html">Example content</title><link href="http://localhost:4000/2017/11/22/example-content.html" rel="alternate" type="text/html" title="Example content" /><published>2017-11-22T00:00:00+08:00</published><updated>2017-11-22T00:00:00+08:00</updated><id>http://localhost:4000/2017/11/22/example-content</id><content type="html" xml:base="http://localhost:4000/2017/11/22/example-content.html"><![CDATA[<p>Text can be <strong>bold</strong>, <em>italic</em>, or <del>strikethrough</del>.</p>
+
+<p><a href="another-page">Link to another page</a>.</p>
+
+<p>There should be whitespace between paragraphs.</p>
+
+<p>There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.</p>
+
+<h1 id="header-1">Header 1</h1>
+
+<p>This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.</p>
+
+<h2 id="header-2">Header 2</h2>
+
+<blockquote>
+  <p>This is a blockquote following a header.</p>
+
+  <p>When something is important enough, you do it even if the odds are not in your favor.</p>
+</blockquote>
+
+<h3 id="header-3">Header 3</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Javascript code with syntax highlighting.</span>
+<span class="kd">var</span> <span class="nx">fun</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">lang</span><span class="p">(</span><span class="nx">l</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">dateformat</span><span class="p">.</span><span class="nx">i18n</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./lang/</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">l</span><span class="p">)</span>
+  <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Ruby code with syntax highlighting</span>
+<span class="no">GitHubPages</span><span class="o">::</span><span class="no">Dependencies</span><span class="p">.</span><span class="nf">gems</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">gem</span><span class="p">,</span> <span class="n">version</span><span class="o">|</span>
+  <span class="n">s</span><span class="p">.</span><span class="nf">add_dependency</span><span class="p">(</span><span class="n">gem</span><span class="p">,</span> <span class="s2">"= </span><span class="si">#{</span><span class="n">version</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<h4 id="header-4">Header 4</h4>
+
+<ul>
+  <li>This is an unordered list following a header.</li>
+  <li>This is an unordered list following a header.</li>
+  <li>This is an unordered list following a header.</li>
+</ul>
+
+<h5 id="header-5">Header 5</h5>
+
+<ol>
+  <li>This is an ordered list following a header.</li>
+  <li>This is an ordered list following a header.</li>
+  <li>This is an ordered list following a header.</li>
+</ol>
+
+<h6 id="header-6">Header 6</h6>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">head1</th>
+      <th style="text-align: left">head two</th>
+      <th style="text-align: left">three</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">ok</td>
+      <td style="text-align: left">good swedish fish</td>
+      <td style="text-align: left">nice</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">out of stock</td>
+      <td style="text-align: left">good and plenty</td>
+      <td style="text-align: left">nice</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ok</td>
+      <td style="text-align: left">good <code class="language-plaintext highlighter-rouge">oreos</code></td>
+      <td style="text-align: left">hmm</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ok</td>
+      <td style="text-align: left">good <code class="language-plaintext highlighter-rouge">zoute</code> drop</td>
+      <td style="text-align: left">yumm</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="theres-a-horizontal-rule-below-this">There’s a horizontal rule below this.</h3>
+
+<hr />
+
+<h3 id="here-is-an-unordered-list">Here is an unordered list:</h3>
+
+<ul>
+  <li>Item foo</li>
+  <li>Item bar</li>
+  <li>Item baz</li>
+  <li>Item zip</li>
+</ul>
+
+<h3 id="and-an-ordered-list">And an ordered list:</h3>
+
+<ol>
+  <li>Item one</li>
+  <li>Item two</li>
+  <li>Item three</li>
+  <li>Item four</li>
+</ol>
+
+<h3 id="and-a-nested-list">And a nested list:</h3>
+
+<ul>
+  <li>level 1 item
+    <ul>
+      <li>level 2 item</li>
+      <li>level 2 item
+        <ul>
+          <li>level 3 item</li>
+          <li>level 3 item</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>level 1 item
+    <ul>
+      <li>level 2 item</li>
+      <li>level 2 item</li>
+      <li>level 2 item</li>
+    </ul>
+  </li>
+  <li>level 1 item
+    <ul>
+      <li>level 2 item</li>
+      <li>level 2 item</li>
+    </ul>
+  </li>
+  <li>level 1 item</li>
+</ul>
+
+<h3 id="small-image">Small image</h3>
+
+<p><img src="https://assets-cdn.github.com/images/icons/emoji/octocat.png" alt="" /></p>
+
+<h3 id="large-image">Large image</h3>
+
+<p><img src="https://guides.github.com/activities/hello-world/branching.png" alt="" /></p>
+
+<h3 id="definition-lists">Definition lists</h3>
+
+<dl>
+  <dt>Name</dt>
+  <dd>Godzilla</dd>
+  <dt>Born</dt>
+  <dd>1952</dd>
+  <dt>Birthplace</dt>
+  <dd>Japan</dd>
+  <dt>Color</dt>
+  <dd>Green</dd>
+</dl>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this. Or is it?
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The final element.
+</code></pre></div></div>
+
+<h2 id="hydejack-exclusives">Hydejack Exclusives</h2>
+<p>Hydejack offers a few additional features to markup your markdown.
+Don’t worry, these are merely CSS classes added with kramdown’s <code class="language-plaintext highlighter-rouge">{:.my-class}</code> syntax,
+so that your posts remain compatible with other Jekyll themes.</p>
+
+<h3 id="message-boxes">Message Boxes</h3>
+<p class="message">You can add a message box by adding the <code class="language-plaintext highlighter-rouge">message</code> class to a paragraph.</p>
+
+<h3 id="faded-text">Faded text</h3>
+<p class="faded">You can add gray text by adding the <code class="language-plaintext highlighter-rouge">faded</code> class.</p>
+
+<h3 id="lead-paragraphs">Lead Paragraphs</h3>
+<p class="lead">You can add large text by adding the <code class="language-plaintext highlighter-rouge">lead</code> class to a paragraph.</p>
+
+<h3 id="lead-quotes">Lead Quotes</h3>
+<blockquote class="lead">
+  <p>You can make a quote “pop out” by adding the <code class="language-plaintext highlighter-rouge">lead</code> class to a quote.</p>
+</blockquote>
+
+<h3 id="lead-images">Lead Images</h3>
+<p>You can make an image span the full width by adding the <code class="language-plaintext highlighter-rouge">lead</code> class:</p>
+
+<p><img src="https://placehold.it/800x100" alt="Full-width image" class="lead" /></p>
+
+<h2 id="tables">Tables</h2>
+<p>Large (data) tables:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+    </tr>
+    <tr>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center">**strong**</td>
+      <td style="text-align: right">baz</td>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center">**strong**</td>
+      <td style="text-align: right">baz</td>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center">**strong**</td>
+      <td style="text-align: right">baz</td>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center">**strong**</td>
+      <td style="text-align: right">baz</td>
+    </tr>
+    <tr>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+    </tr>
+    <tr>
+      <td>Second body</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Second body</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Second body</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Second body</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+    <tr>
+      <td>2 line</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>2 line</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>2 line</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>2 line</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+    <tr>
+      <td>Footer row</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Footer row</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Footer row</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Footer row</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Prevent line breaks within cells by adding the <code class="language-plaintext highlighter-rouge">scroll-table</code> class to a table:</p>
+
+<table class="scroll-table">
+  <thead>
+    <tr>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+    </tr>
+    <tr>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center">**strong**</td>
+      <td style="text-align: right">baz</td>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center">**strong**</td>
+      <td style="text-align: right">baz</td>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center">**strong**</td>
+      <td style="text-align: right">baz</td>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center">**strong**</td>
+      <td style="text-align: right">baz</td>
+    </tr>
+    <tr>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+    </tr>
+    <tr>
+      <td>Second body</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Second body</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Second body</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Second body</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+    <tr>
+      <td>2 line</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>2 line</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>2 line</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>2 line</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+    <tr>
+      <td>Footer row</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Footer row</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Footer row</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Footer row</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Flip the table by adding the <code class="language-plaintext highlighter-rouge">flip-table</code> class to a table:</p>
+
+<table class="flip-table">
+  <thead>
+    <tr>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+    </tr>
+    <tr>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center">**strong**</td>
+      <td style="text-align: right">baz</td>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center">**strong**</td>
+      <td style="text-align: right">baz</td>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center">**strong**</td>
+      <td style="text-align: right">baz</td>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center">**strong**</td>
+      <td style="text-align: right">baz</td>
+    </tr>
+    <tr>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+    </tr>
+    <tr>
+      <td>4th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>4th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>4th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>4th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+    </tr>
+    <tr>
+      <td>5th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>5th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>5th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>5th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+    </tr>
+    <tr>
+      <td>6th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>6th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>6th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>6th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+    </tr>
+    <tr>
+      <td>7th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>7th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>7th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>7th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+    </tr>
+    <tr>
+      <td>8th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>8th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>8th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>8th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+    </tr>
+    <tr>
+      <td>9th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>9th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>9th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>9th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+    </tr>
+    <tr>
+      <td>10th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>10th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>10th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>10th line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="math">Math</h3>
+<p>Inline math $$ f(x) = x^2 $$ and math blocks:</p>
+
+<p>$$
+\begin{aligned}
+  \phi(x,y) &amp;= \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right) \[2em]
+            &amp;= \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j)            \[2em]
+            &amp;= (x_1, \ldots, x_n)
+               \left(\begin{array}{ccc}
+                 \phi(e_1, e_1)  &amp; \cdots &amp; \phi(e_1, e_n) <br />
+                 \vdots          &amp; \ddots &amp; \vdots         <br />
+                 \phi(e_n, e_1)  &amp; \cdots &amp; \phi(e_n, e_n)
+               \end{array}\right)
+               \left(\begin{array}{c}
+                 y_1    <br />
+                 \vdots <br />
+                 y_n
+               \end{array}\right)
+\end{aligned}
+$$</p>]]></content><author><name>GitHub User</name></author><category term="hydejack" /><summary type="html"><![CDATA[This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.]]></summary></entry><entry><title type="html">Hydejack’s New Design</title><link href="http://localhost:4000/2017/11/17/hydejacks-new-design.html" rel="alternate" type="text/html" title="Hydejack’s New Design" /><published>2017-11-17T00:00:00+08:00</published><updated>2017-11-17T00:00:00+08:00</updated><id>http://localhost:4000/2017/11/17/hydejacks-new-design</id><content type="html" xml:base="http://localhost:4000/2017/11/17/hydejacks-new-design.html"><![CDATA[<p>While v7 brings an <a href="/CHANGELOG/#v700">insane amount of new stuff</a>, the most notable change is the new background image.
+It is no longer <em>anti-selling</em> the theme.
+The old image was a blurred version of Napoleon Bonaparte, which was just… weird. I could tell the story of how this came to be,
+but I’d rather show you the new and improved background image.</p>
+
+<h2 id="new-background-image">New background image</h2>
+<p>Yes, it’s an aerial shot of a beach (<a href="https://duckduckgo.com/?q=ios+11+background&amp;t=ffab&amp;iax=images&amp;ia=images">so hot right now</a>).</p>
+
+<p><img src="/assets/img/caleb-george.jpg" alt="Hydejack's background image" class="lead" /></p>
+
+<p>Q: What has this picture to do with Hydejack?
+Nothing really, I just like how it looks.
+However: Boat → Pirates → Hijacking → Hydejack (illuminati confirmed)</p>
+
+<p>Even though it is a free image from <a href="https://unsplash.com/">Unsplash</a> (…), it’s unique in the sense that
+I’ve modified it so it looks better inside the sidebar.
+Specifically, I’ve straightened out the beach and rotated the boat so that it sits at a nice 90 degree angle.</p>
+
+<p>For comparison, here is the non-euclidean mess the <a href="https://unsplash.com/photos/AtvuPUenaeI">original photo</a> was. Pretty OCD, I know.</p>
+
+<p><img src="/assets/img/caleb-george-old.jpg" alt="Original photo" class="lead" /></p>
+
+<h2 id="new-color-palette">New color palette</h2>
+<p>I’ve extracted the major colors from the background image, which now form Hydejack’s color palette:</p>
+
+<p><img src="/assets/img/COLOURlovers.com-Hydejack.png" alt="Hydejacks's color palette" style="border: 1px solid #ddd" /></p>
+
+<h2 id="new-logo">New logo</h2>
+<p>Hydejack also has a new logo, which is based on the new color palette.
+It also features the best font on Google Fonts, and probably the world: <a href="https://fonts.google.com/specimen/Roboto+Slab">Roboto Slab</a>
+(which is to say, I like it a lot).</p>
+
+<p><img src="/assets/icons/icon.png" alt="Hydejack's logo" /></p>]]></content><author><name>GitHub User</name></author><category term="hydejack" /><summary type="html"><![CDATA[This post introduces Hydejack's now background image, color palette and logo.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/caleb-george.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/caleb-george.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Better Gem Support (v6.5)</title><link href="http://localhost:4000/2017/07/27/better-gem-support.html" rel="alternate" type="text/html" title="Better Gem Support (v6.5)" /><published>2017-07-27T00:00:00+08:00</published><updated>2017-07-27T00:00:00+08:00</updated><id>http://localhost:4000/2017/07/27/better-gem-support</id><content type="html" xml:base="http://localhost:4000/2017/07/27/better-gem-support.html"><![CDATA[<p>This maintenance release includes various quality-of-life improvements,
+especially when using the gem-based version of the theme.
+These changes come in handy when using Hydejack for a quick (project-) page:
+The <code class="language-plaintext highlighter-rouge">home</code> layout, which is used when using <code class="language-plaintext highlighter-rouge">jekyll new</code>,
+is now a proper layout that displays a few posts/pages below the regular content,
+and it is again possible to define an author in <code class="language-plaintext highlighter-rouge">_config.yml</code>
+without setting up a <code class="language-plaintext highlighter-rouge">_data</code> directory (for more, see blow).</p>
+
+<p>Version 6.5 also includes smaller design adjustments.
+Most notably, the default font is now Noto Sans.
+With the benefit of hindsight,
+using a serif font in combination with the slab headings feels more like a bug in the design than anything else.
+However, should you be happy with Noto Serif (the previous default font), there is no need to worry
+— this only effects the default setting.</p>
+
+<p>For the full patch notes, read on.</p>
+
+<h2 id="patch-notes">Patch Notes</h2>
+<h3 id="added">Added</h3>
+<ul>
+  <li>
+    <p>Hydejack now uses additional Jekyll plugins by default, which make working with GitHub more convenient.
+They have been added to the <code class="language-plaintext highlighter-rouge">Gemfile</code> and <code class="language-plaintext highlighter-rouge">_config.yml</code>.
+Note that existing users need to update their <code class="language-plaintext highlighter-rouge">_config.yml</code>:</p>
+
+    <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">gems</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jekyll-default-layout</span> <span class="c1"># new</span>
+  <span class="pi">-</span> <span class="s">jekyll-feed</span>
+  <span class="pi">-</span> <span class="s">jekyll-optional-front-matter</span> <span class="c1"># new</span>
+  <span class="pi">-</span> <span class="s">jekyll-paginate</span>
+  <span class="pi">-</span> <span class="s">jekyll-redirect-from</span>
+  <span class="pi">-</span> <span class="s">jekyll-relative-links</span> <span class="c1"># new</span>
+  <span class="pi">-</span> <span class="s">jekyll-sitemap</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Added <code class="language-plaintext highlighter-rouge">licenses</code> folder that includes the full license texts of licenses mentioned in <code class="language-plaintext highlighter-rouge">NOTICE.md</code>.</li>
+  <li>
+    <p>You can, once again, define the author in <code class="language-plaintext highlighter-rouge">_config.yml</code>.
+Using <code class="language-plaintext highlighter-rouge">_data/authors.yml</code> is still recommended (and takes precedence),
+but this option is more convenient when setting up a quick (project-) page using the gem-based theme.
+Also, a mini-version of <code class="language-plaintext highlighter-rouge">_data/social.yml</code> can be provided as part <code class="language-plaintext highlighter-rouge">_config.yml</code>, e.g.:</p>
+
+    <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">author</span><span class="pi">:</span>
+  <span class="na">social</span><span class="pi">:</span>
+    <span class="na">github</span><span class="pi">:</span> <span class="s">https://github.com/qwtel/hydejack</span>
+    <span class="na">npm</span><span class="pi">:</span> <span class="s">https://www.npmjs.com/package/hydejack</span>
+    <span class="na">download</span><span class="pi">:</span> <span class="s">https://github.com/qwtel/hydejack/archive/v7.5.2.zip</span>
+
+<span class="na">data_social</span><span class="pi">:</span>
+  <span class="na">github</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">GitHub</span>
+    <span class="na">icon</span><span class="pi">:</span> <span class="s">icon-github</span>
+  <span class="na">npm</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">npm</span>
+    <span class="na">icon</span><span class="pi">:</span> <span class="s">icon-npm</span>
+  <span class="na">download</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">Download</span>
+    <span class="na">icon</span><span class="pi">:</span> <span class="s">icon-box-add</span>
+</code></pre></div>    </div>
+  </li>
+  <li>A download icon has been added to the default icon font and <code class="language-plaintext highlighter-rouge">_data/social.yml</code> has been updated.</li>
+  <li>Added <code class="language-plaintext highlighter-rouge">_includes/my-scripts.html</code>, <code class="language-plaintext highlighter-rouge">_sass/my-inline.scss</code> and <code class="language-plaintext highlighter-rouge">_sass/my-style.scss</code> to make it easier to add custom scripts and styles without modifying the source. This is especially handy when using the gem-based version of the theme.</li>
+</ul>
+
+<h3 id="changed">Changed</h3>
+<ul>
+  <li>Loading web fonts now starts earlier and content download no longer blocks
+swapping out the fallback font for the new font.
+Previously, a page containing lots of images could have delayed displaying the web fonts significantly.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">home</code> layout no longer contains a message suggesting that you don’t use it.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">home</code> layout now shows up to 5 blog posts and up to 5 pages blow the regular content.</li>
+  <li>The version history has been moved from <code class="language-plaintext highlighter-rouge">docs/&lt;version&gt;/versions.md</code> to <code class="language-plaintext highlighter-rouge">CHANGELOG.md</code>.</li>
+  <li>The license notices have been moved from <code class="language-plaintext highlighter-rouge">docs/&lt;version&gt;/licenses.md</code> to <code class="language-plaintext highlighter-rouge">NOTICE.md</code>.</li>
+  <li>Updated gem and npm dependencies</li>
+</ul>
+
+<h3 id="design">Design</h3>
+<ul>
+  <li>The default font has been changed from “Noto Serif” to “Noto Sans”.
+If you have a <code class="language-plaintext highlighter-rouge">font</code> entry in <code class="language-plaintext highlighter-rouge">_config.yml</code>, this will have no effect.</li>
+  <li><code class="language-plaintext highlighter-rouge">nap.jpg</code> is no longer used as default background image in the gem-based theme.</li>
+  <li>The sidebar content width is now limited to the width of the sidebar (this only effects large screens).</li>
+  <li>Project cards and pagination buttons now have slightly rounded borders for a less “rigid” look.</li>
+</ul>
+
+<h4 id="how-to-restore-the-old-styles">How to restore the old styles</h4>
+<p>If you would like to use the old font, add the following to <code class="language-plaintext highlighter-rouge">_config.yml</code>:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">font_heading</span><span class="pi">:</span> <span class="s2">"</span><span class="s">'Roboto</span><span class="nv"> </span><span class="s">Slab',</span><span class="nv"> </span><span class="s">Helvetica,</span><span class="nv"> </span><span class="s">Arial,</span><span class="nv"> </span><span class="s">sans-serif"</span>
+<span class="na">font</span><span class="pi">:</span>         <span class="s2">"</span><span class="s">'Noto</span><span class="nv"> </span><span class="s">Serif',</span><span class="nv"> </span><span class="s">Georgia,</span><span class="nv"> </span><span class="s">serif"</span>
+<span class="na">google\_fonts</span><span class="pi">:</span> <span class="s">\"Roboto+Slab:700|Noto+Serif:400,400i,700,700i\"</span>
+</code></pre></div></div>
+
+<p>If you were relying on the default setting for the background image, add the following to <code class="language-plaintext highlighter-rouge">_config.yml</code>:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">image</span><span class="pi">:</span> <span class="s">/hydejack/assets/img/nap.jpg</span>
+</code></pre></div></div>
+
+<p>Note that you have to replace <code class="language-plaintext highlighter-rouge">/hydejack</code> with your <code class="language-plaintext highlighter-rouge">baseurl</code>.</p>
+
+<p>To restore the old sidebar, open (or create) <code class="language-plaintext highlighter-rouge">_sass/my-inline.scss</code> and add the following:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@media</span> <span class="n">screen</span> <span class="p">{</span> <span class="nc">.sidebar-sticky</span> <span class="p">{</span> <span class="nl">left</span><span class="p">:</span> <span class="m">2rem</span><span class="p">;</span> <span class="nl">max-width</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<p>To remove the border radius, open (or create) <code class="language-plaintext highlighter-rouge">_sass/my-inline.scss</code> and add the following:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.card</span><span class="o">,</span> <span class="nc">.pagination-item</span> <span class="p">{</span> <span class="nl">border-radius</span><span class="p">:</span> <span class="m">0</span><span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div></div>]]></content><author><name>GitHub User</name></author><category term="hydejack" /><summary type="html"><![CDATA[Hydejack v6.5 includes various quality-of-life improvements, especially when using the gem-based version of the theme.]]></summary></entry><entry><title type="html">Related Projects and Data Tables (v6.4)</title><link href="http://localhost:4000/2017/06/21/related-projects-and-data-tables.html" rel="alternate" type="text/html" title="Related Projects and Data Tables (v6.4)" /><published>2017-06-21T00:00:00+08:00</published><updated>2017-06-21T00:00:00+08:00</updated><id>http://localhost:4000/2017/06/21/related-projects-and-data-tables</id><content type="html" xml:base="http://localhost:4000/2017/06/21/related-projects-and-data-tables.html"><![CDATA[<p>In this release I’ve added a “Other Projects” section to the bottom of each project page,
+making it easier for users to navigate through your collection and discover other projects.
+Also, it’s now possible to display larger (data-) tables that were previously cut off (especially on mobile devices).</p>
+
+<p>For more on how to add tables, see the new section in <a href="../docs/7.5.2/writing.md">docs/writing</a>.</p>
+
+<p>Smaller changes include a reduced usage of horizontal lines and a more “semantic” use of <code class="language-plaintext highlighter-rouge">hr</code> elements.
+Specifically, the semantics of the resume layout have been improved.
+This is best visualized when viewing the page with a text browser like <code class="language-plaintext highlighter-rouge">w3m</code>.
+For example, before 6.4 the skills section looked like</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Skills
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Web Development | Level: Master
+
+Keywords:
+
+  • HTML
+  • CSS
+  • Javascript
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Compression | Level: Master
+
+Keywords:
+
+  • Mpeg
+  • MP4
+  • GIF
+</code></pre></div></div>
+
+<p>(lots of <code class="language-plaintext highlighter-rouge">hr</code>s, skill level as part of the headline 😕)</p>
+
+<p>Now it looks like</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Skills
+
+Web Development
+    Level: Master
+    Keywords:
+      □ HTML
+      □ CSS
+      □ Javascript
+Compression
+    Level: Master
+    Keywords:
+      □ Mpeg
+      □ MP4
+      □ GIF
+</code></pre></div></div>
+
+<p>(using a <code class="language-plaintext highlighter-rouge">dl</code>, so that <code class="language-plaintext highlighter-rouge">Level -&gt; "Master"</code>, <code class="language-plaintext highlighter-rouge">Keywords -&gt; ul</code>, …)</p>
+
+<p>There’s many more minor changes and fixes that you can read below.</p>
+
+<h2 id="patch-notes">Patch Notes</h2>
+<h3 id="minor">Minor</h3>
+<ul>
+  <li>Added “Other Projects” section to the bottom of the project layout (similar to “Related Posts”)</li>
+  <li>Added CSS classes that make viewing larger (data-) tables possible</li>
+  <li>Added section on tables to <a href="../docs/7.5.2/writing.md">docs/writing</a></li>
+  <li>Reduced use of <code class="language-plaintext highlighter-rouge">&lt;hr/&gt;</code> elements, using CSS borders instead.</li>
+  <li>Improved semantic HTML of resume</li>
+  <li>Follow favicon best practices and include example icons</li>
+  <li>Added <code class="language-plaintext highlighter-rouge">no_google_fonts</code> option</li>
+</ul>
+
+<h3 id="design">Design</h3>
+<ul>
+  <li>Reduced number of horizontal lines, making many layouts feel less “cluttered” (esp. <code class="language-plaintext highlighter-rouge">blog</code> layout)</li>
+  <li>Made link hover styles consistent across the board</li>
+  <li>Visually separated <code class="language-plaintext highlighter-rouge">thead</code> and <code class="language-plaintext highlighter-rouge">tbody</code> and <code class="language-plaintext highlighter-rouge">tfoot</code> within tables.</li>
+  <li>Changed RSS and email icons</li>
+  <li>Removed top margin for consecutive headings, e.g. when using <code class="language-plaintext highlighter-rouge">h3</code> immediately after <code class="language-plaintext highlighter-rouge">h2</code>.</li>
+</ul>
+
+<h3 id="fixes">Fixes</h3>
+<ul>
+  <li>Fixed bug that caused inline math to be moved to the end of a paragraph when dynamically loading a page.</li>
+  <li>Fixed bug that caused layout to break in IE11.</li>
+  <li>Fixed bug that caused the project animation to “jump” when using long project titles.</li>
+  <li>No more empty attributes on <code class="language-plaintext highlighter-rouge">img</code> tags.</li>
+</ul>]]></content><author><name>GitHub User</name></author><category term="hydejack" /><summary type="html"><![CDATA[In Hydejack v6.4 I've added a "Other Projects" section to the bottom of each project page, making it easier for users to navigate through your collection and discover other projects.]]></summary></entry><entry><title type="html">Third Party Scripts (v6.3)</title><link href="http://localhost:4000/2017/06/06/third-party-scripts.html" rel="alternate" type="text/html" title="Third Party Scripts (v6.3)" /><published>2017-06-06T00:00:00+08:00</published><updated>2017-06-06T00:00:00+08:00</updated><id>http://localhost:4000/2017/06/06/third-party-scripts</id><content type="html" xml:base="http://localhost:4000/2017/06/06/third-party-scripts.html"><![CDATA[<p>This release makes including third party plugins easier.
+Until now, the push state approach to loading new pages has been interfering with embedded <code class="language-plaintext highlighter-rouge">script</code> tags.
+This version changes this by simulating the sequential loading of script tags on a fresh page load.</p>
+
+<p>This approach should work in a majority of cases, but can still cause problems with scripts that can’t be added more than once per page.
+If an issue can’t be resolved, there’s now the option to disable push state by setting <code class="language-plaintext highlighter-rouge">disable_push_state: true</code> in <code class="language-plaintext highlighter-rouge">config.yml</code>.</p>
+
+<h2 id="whats-happening">What’s happening?</h2>
+<p>The problem is as follows:
+When the browser encounters a <code class="language-plaintext highlighter-rouge">script</code> tag while parsing a HTML page it will stop (possibly to make a request to fetch
+an external script) and then execute the code before continuing parsing the page
+(it’s easy to how this can make your page really slow, but that’s a different topic).</p>
+
+<p>In any case, due of this behavior you can do things like include jQuery,
+then run code that depends on jQuery in the next script tag:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">".../jquery.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+  <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#tabs</span><span class="dl">'</span><span class="p">).</span><span class="nx">someJQueryFunction</span><span class="p">();</span> <span class="c1">// works</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<p>I’d consider this an anti-pattern for the reason mentioned above,
+but it remains common and has the advantage of being easy to understand.</p>
+
+<p>However, things break when Hydejack dynamically inserts new content into the page.
+It works fine for standard markdown content like <code class="language-plaintext highlighter-rouge">p</code> tags,
+but when inserting <code class="language-plaintext highlighter-rouge">script</code> tags the browser will execute them immediately and in parallel,
+because in most cases this is what you’d want.
+However, this means that <code class="language-plaintext highlighter-rouge">$('#tabs').someJQueryFunction();</code> will run while the HTTP request for jQuery is still
+in progress — and we get an error that <code class="language-plaintext highlighter-rouge">$</code> isn’t defined, or similar.</p>
+
+<p>From this description the solution should be obvious: Insert the <code class="language-plaintext highlighter-rouge">script</code> tags one-by-one,
+to simulate how they would get executed if it was a fresh page request.
+In fact this is how Hydejack is now handling things (and thanks to rxjs’ <code class="language-plaintext highlighter-rouge">concatMap</code> it was easy to implement),
+but unfortunately this is not a magic solution that can fix all problems:</p>
+
+<ul>
+  <li>Some scripts may throw when running on the same page twice</li>
+  <li>Some scripts rely on the document’s <code class="language-plaintext highlighter-rouge">load</code> event, which has fired long before the script was inserted</li>
+  <li>unkown-unkowns</li>
+</ul>
+
+<p>But what will “magically” solve all third party script problems, is disabling dynamic page loading altogether,
+for which there’s now an option.
+To make this a slightly less bitter pill to swallow,
+there’s now a CSS-only “intro” animation that looks similar to the dynamic one.
+Maybe you won’t even notice the difference.</p>
+
+<h2 id="patch-notes">Patch Notes</h2>
+<h3 id="minor">Minor</h3>
+<ul>
+  <li>Support embedding <code class="language-plaintext highlighter-rouge">script</code> tags in markdown content</li>
+  <li>Add <code class="language-plaintext highlighter-rouge">disable_push_state</code> option to <code class="language-plaintext highlighter-rouge">_config.yml</code></li>
+  <li>Add <code class="language-plaintext highlighter-rouge">disable_drawer</code> option to <code class="language-plaintext highlighter-rouge">_config.yml</code></li>
+  <li>Rename syntax highlighting file to <code class="language-plaintext highlighter-rouge">syntax.scss</code></li>
+  <li>Added <a href="../docs/7.5.2/scripts.md">chapter on third party scripts</a> to documentation</li>
+</ul>
+
+<h3 id="design">Design</h3>
+<ul>
+  <li>Add subtle intro animation</li>
+  <li>Rename “Check out X for more” to “See X for more” on welcome* page</li>
+  <li>Replace “»” with “→” in “read more”-type of links</li>
+</ul>
+
+<h3 id="fixes">Fixes</h3>
+<ul>
+  <li>Fix default color in gem-based theme</li>
+</ul>]]></content><author><name>GitHub User</name></author><category term="hydejack" /><summary type="html"><![CDATA[Hydejack v6.3 makes including third party plugins easier.]]></summary></entry><entry><title type="html">JavaScripten (v6)</title><link href="http://localhost:4000/2017/05/03/javascripten.html" rel="alternate" type="text/html" title="JavaScripten (v6)" /><published>2017-05-03T00:00:00+08:00</published><updated>2017-05-03T00:00:00+08:00</updated><id>http://localhost:4000/2017/05/03/javascripten</id><content type="html" xml:base="http://localhost:4000/2017/05/03/javascripten.html"><![CDATA[<p>Hydejack has always featured a JavaScript-heavy sidebar, but other than that, JS has been used sparingly.
+This changes with this release, which adds a ton of (optional) code that changes the feel of the theme dramatically.</p>
+
+<h2 id="major">Major</h2>
+<p>Pages are now loaded and swapped through JavaScript. This has a number of effects.
+First of all, it looks cool, but the animations aren’t just about aesthetics:
+They also help to hide the network time of fetching the next page, making the entire site feel faster.
+At the same time, the <abbr title="Flash of Unstyled Content">FOUC</abbr> introduced in the last release will no longer occur (except on the initial page load).</p>
+
+<ul>
+  <li>Most JS is now unified in the <code class="language-plaintext highlighter-rouge">_js</code> directory and written in ES2016.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">blog-by-tag</code> layout has been renamed to <code class="language-plaintext highlighter-rouge">list</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">public</code> folder has been renamed to <code class="language-plaintext highlighter-rouge">assets</code> to make the theme compatible with Jekyll’s gem-based themes.</li>
+  <li>Tags are now supported via Jekyll Collections instead of <code class="language-plaintext highlighter-rouge">_data</code>.</li>
+  <li>The sidebar can now add links to all kinds of pages.</li>
+  <li>Categories are now supported.</li>
+  <li>Author information moved to <code class="language-plaintext highlighter-rouge">_data/authors.yml</code></li>
+  <li>Added support for multiple authors.</li>
+  <li>Using <code class="language-plaintext highlighter-rouge">jekyll-feed</code> plugin (supported on GitHub Pages) instead of custom solution.</li>
+  <li>Added <code class="language-plaintext highlighter-rouge">about</code> layout.</li>
+  <li>Added <code class="language-plaintext highlighter-rouge">not-found</code> layout.</li>
+  <li>Added <code class="language-plaintext highlighter-rouge">redirect</code> layout</li>
+</ul>
+
+<p>See the <a href="../docs/7.5.2/upgrade.md">the migration guide</a> for instructions on how to upgrade.</p>
+
+<h2 id="minor">Minor</h2>
+<ul>
+  <li>The “accent” font (heading font) is now used for all headings.
+This gives the theme a “bolder” look and was necessary for the animation: link =&gt; heading.</li>
+  <li>Changed default text font from “PT Serif” to “Noto Serif”.</li>
+  <li>Added <a href="../docs/7.5.2/writing.md">CSS classes</a> for styling markdown content.</li>
+  <li>Links have a new style.
+They now always display an underline to make the choice of the link color less critical (darker colors were hard to
+distinguish from regular text).</li>
+  <li>Made social media icons larger and easier to tap.</li>
+  <li>Social media icons are now also part of the “about” sections of a post.</li>
+  <li>Added support for a copyright notice at the bottom. Can be set via the config variable <code class="language-plaintext highlighter-rouge">copyright</code>.</li>
+  <li>Changed responsive breakpoints and added support for very large displays.</li>
+  <li>The site is now printable.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">blog</code> layout now only shows the excerpt instead of the full post.</li>
+  <li>Links to external pages are now marked with a symbol.</li>
+  <li>Added margin above social media icons to prevent accidental tapping</li>
+  <li>Added gem files so that <code class="language-plaintext highlighter-rouge">bundle install</code> and <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code> work</li>
+  <li>Disabled HTML minification when running via <code class="language-plaintext highlighter-rouge">jekyll serve</code></li>
+  <li>Added dingbat to signal end of post</li>
+</ul>
+
+<h2 id="fixes">Fixes</h2>
+<ul>
+  <li>Related posts is no longer blank for posts that do not belong to a category.</li>
+  <li>Footnotes now use the text version of “leftwards arrow with hook” instead of the emoji on iOS.</li>
+  <li>Text is no longer invisible while waiting for Google Fonts to load.</li>
+  <li>Always show scrollbar to prevent layout “jumps”</li>
+</ul>
+
+<hr />
+
+<p><a href="https://github.com/qwtel/hydejack/releases/tag/v7.5.2">Get <em>JavaScripten</em> on GitHub</a></p>]]></content><author><name>GitHub User</name></author><category term="hydejack" /><summary type="html"><![CDATA[Hydejack v6 adds a layer of JavaScript, effectively turning the whole site into a single page app.]]></summary></entry><entry><title type="html">The Fast One (v5)</title><link href="http://localhost:4000/2016/09/17/the-fast-one.html" rel="alternate" type="text/html" title="The Fast One (v5)" /><published>2016-09-17T00:00:00+08:00</published><updated>2016-09-17T00:00:00+08:00</updated><id>http://localhost:4000/2016/09/17/the-fast-one</id><content type="html" xml:base="http://localhost:4000/2016/09/17/the-fast-one.html"><![CDATA[<p>This major release increases page load speed dramatically.
+The page now scores roughly 90/100 on <a href="https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fqwtel.com%2Fhydejack%2F">Google’s PageSpeed Insights</a> (up from ~50) and
+has a high score on similar tools.</p>
+
+<p class="message"><strong>NOTE</strong>: This post is outdated and only included for legacy reasons.
+See the <a href="../docs/7.5.2/index.md" class="heading flip-title">Documentation</a> for up-to-date instructions.</p>
+
+<p>Most importantly, the critical rendering path is no longer blocked by loading styles or scripts,
+meaning the site becomes visible faster.</p>
+
+<p>Page load speed matters to Google, but is also <em>very</em> apparent to visitors with slow internet connections.</p>
+
+<p>However, as a side effect of these optimizations, the site now has a visible <abbr title="Flash Of Unstyled Content">FOUC</abbr>.
+Future versions might address this,
+but it is the currency in which loading speed is being payed for and can not be fully avoided.</p>
+
+<h2 id="major">Major</h2>
+
+<ul>
+  <li>HTML, CSS and JS served minified.</li>
+  <li>JS downloading starts only after the rest of the page is rendered.</li>
+  <li>Critical CSS (above-the-fold) is inlined into the document, the rest is fetched later.</li>
+</ul>
+
+<p>In order to minify the CSS and make it more modular it has been rewritten in SCSS.</p>
+
+<h2 id="minor">Minor</h2>
+
+<ul>
+  <li>Colored focus outline in page color</li>
+  <li>Tabindex for tab navigation</li>
+  <li>Social media icons easier tappable with finger</li>
+</ul>
+
+<h2 id="trivia">Trivia</h2>
+
+<p>Not strictly part of the release, but the images have been blurred to increase text readability and
+help with loading speed as well (burred images get compressed by JPG much better).</p>
+
+<hr />
+
+<p><a href="https://github.com/qwtel/hydejack/releases">Get <em>The Fast One</em> on GitHub</a></p>]]></content><author><name>GitHub User</name></author><category term="hydejack" /><summary type="html"><![CDATA[Hydejack v5 dramatically increases page load speed which matters to Google and visitors with slow connections alike.]]></summary></entry><entry><title type="html">Social Media Impocalypse (v4)</title><link href="http://localhost:4000/2016/08/30/social-media-impocalypse.html" rel="alternate" type="text/html" title="Social Media Impocalypse (v4)" /><published>2016-08-30T00:00:00+08:00</published><updated>2016-08-30T00:00:00+08:00</updated><id>http://localhost:4000/2016/08/30/social-media-impocalypse</id><content type="html" xml:base="http://localhost:4000/2016/08/30/social-media-impocalypse.html"><![CDATA[<h2 id="breaking">Breaking</h2>
+<ul>
+  <li>Structure of <code class="language-plaintext highlighter-rouge">_config.yml</code> has changed
+    <ul>
+      <li>Social media usernames are now located under <code class="language-plaintext highlighter-rouge">author: social: &lt;platform&gt;: &lt;username&gt;</code>.</li>
+      <li><code class="language-plaintext highlighter-rouge">disqus</code> is now a top-level entry (moved from <code class="language-plaintext highlighter-rouge">author</code>).</li>
+      <li>Now has <code class="language-plaintext highlighter-rouge">font</code>, <code class="language-plaintext highlighter-rouge">font_accent</code> and <code class="language-plaintext highlighter-rouge">google_fonts</code> fields that are mandatory.</li>
+    </ul>
+  </li>
+  <li>Now defaults to the <code class="language-plaintext highlighter-rouge">blog</code> layout, old style is available via <code class="language-plaintext highlighter-rouge">blog-by-tag</code> layout, see <code class="language-plaintext highlighter-rouge">archive.html</code>.</li>
+</ul>
+
+<!--more-->
+
+<p class="message"><strong>NOTE</strong>: This post is outdated and only included for legacy reasons.
+See the <a href="../docs/7.5.2/index.md" class="heading flip-title">Documentation</a> for up-to-date instructions.</p>
+
+<h2 id="new-features">New features</h2>
+<ul>
+  <li>Added <em>a lot</em> of social media icons, configurable via <code class="language-plaintext highlighter-rouge">_config.yml</code>.</li>
+  <li>New <code class="language-plaintext highlighter-rouge">blog</code> layout. Classic, paginated.</li>
+  <li>Fonts are configurable via <code class="language-plaintext highlighter-rouge">_config.yml</code>.</li>
+</ul>
+
+<h2 id="design">Design</h2>
+<ul>
+  <li>Link underlines are now fixed-sized for all font sizes (no thicker lines for headlines, etc)</li>
+</ul>
+
+<h2 id="fixes">Fixes</h2>
+<ul>
+  <li>Correctly set the meta description field using either the <code class="language-plaintext highlighter-rouge">description</code> field or <code class="language-plaintext highlighter-rouge">post.excerpt</code> as a fallback (used
+to contain the unmodified markdown).</li>
+  <li>Fixed various URL bugs relating to <code class="language-plaintext highlighter-rouge">site.baseurl</code>.</li>
+</ul>
+
+<h2 id="internal">Internal</h2>
+<ul>
+  <li>Refactoring, preventing code duplications, heavier usage of <code class="language-plaintext highlighter-rouge">includes</code>.</li>
+</ul>
+
+<hr />
+
+<p><a href="https://github.com/qwtel/hydejack/releases">Get <em>Social Media Impocalypse</em> on GitHub</a></p>]]></content><author><name>GitHub User</name></author><category term="hydejack" /><summary type="html"><![CDATA[Hydejack v4 adds *a lot* of social media icons and introduces a new default layout. It also breaks things, hence a new major release number.]]></summary></entry><entry><title type="html">Introducing Hydejack (v3)</title><link href="http://localhost:4000/2016/03/08/introducing-hydejack.html" rel="alternate" type="text/html" title="Introducing Hydejack (v3)" /><published>2016-03-08T00:00:00+08:00</published><updated>2016-03-08T00:00:00+08:00</updated><id>http://localhost:4000/2016/03/08/introducing-hydejack</id><content type="html" xml:base="http://localhost:4000/2016/03/08/introducing-hydejack.html"><![CDATA[<h2 id="features">Features</h2>
+<p>Unlike Hyde, it’s very opinionated about how you are going to use it.</p>
+
+<p>Features include:</p>
+
+<ul>
+  <li>Touch-enabled sidebar / drawer for mobile, including fallback when JS is disabled.</li>
+  <li>Github Pages compatible tag support based on <a href="http://www.minddust.com/post/tags-and-categories-on-github-pages/">this post</a>.</li>
+  <li>Customizable link color and sidebar image, per-site, per-tag and per-post.</li>
+  <li>Optional author section at the bottom of each post.</li>
+  <li>Optional comment section powered by Disqus.</li>
+  <li>Layout for posts grouped by year</li>
+  <li>Wide array of social media icons on sidebar.</li>
+  <li>Math blocks via <a href="https://khan.github.io/KaTeX/">KaTeX</a>.</li>
+</ul>
+
+<!--more-->
+
+<p class="message"><strong>NOTE</strong>: This post is outdated and only included for legacy reasons.
+See the <a href="../docs/7.5.2/index.md" class="heading flip-title">Documentation</a> for up-to-date instructions.</p>
+
+<h2 id="download">Download</h2>
+<p>Hydejack is developed on and hosted with GitHub. Head to the <a href="https://github.com/qwtel/hydejack">GitHub repository</a>
+for downloads, bug reports, and feature requests.</p>
+
+<h2 id="sidebar">Sidebar</h2>
+<p>I love the original Hyde theme, but unfortunately the layout isn’t as great on small screens.
+Since the sidebar moves to the top, the user has to scroll down just to read the title of a blog post.</p>
+
+<p>By using a drawer component I was able to retain the original two column layout.
+It’s possible to move the drawer via touch input (with the help of a little JavaScript).</p>
+
+<p>Since the background image contributes to the feel of the page I’m letting it peek over the edge a bit.
+This also provides a hint to the user that an interaction is possible.</p>
+
+<h2 id="manual">Manual</h2>
+
+<h3 id="configuration">Configuration</h3>
+<p>You can configure important aspects of the theme via
+<a href="https://github.com/qwtel/hydejack/blob/v3/_config.yml"><code class="language-plaintext highlighter-rouge">_config.yml</code></a>.
+This includes:</p>
+
+<ul>
+  <li>the blog description in the sidebar</li>
+  <li>the (optional) author description and photo</li>
+  <li>default image and link color of the blog</li>
+  <li>the github and twitter usernames</li>
+</ul>
+
+<h3 id="how-to-change-the-image-and-color-of-a-post">How to Change the Image and Color of a Post</h3>
+<p>In the manifest of a blog post, simply add an url as <code class="language-plaintext highlighter-rouge">image</code> and a CSS color as <code class="language-plaintext highlighter-rouge">color</code>:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Introducing Hydejack</span>
+<span class="na">image</span><span class="pi">:</span> <span class="s">https://qwtel.com/hydejack/assets/img/hyde.jpg</span>
+<span class="na">color</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#949667'</span>
+</code></pre></div></div>
+
+<h3 id="how-to-add-a-new-tag">How to Add a New Tag</h3>
+<p>Tags are not meant to be used #instagram #style: #food #goodfood #happy #happylife #didimentionfood #yougetthepoint,
+as each tag requires some setup work. I tend to think of it as categories that can be combined.</p>
+
+<ol>
+  <li>
+    <p>Add an entry to <code class="language-plaintext highlighter-rouge">_data/tags.yml</code>, where the key represents a slug and provide at least a <code class="language-plaintext highlighter-rouge">name</code> value and
+optionally <code class="language-plaintext highlighter-rouge">image</code>, <code class="language-plaintext highlighter-rouge">color</code> and <code class="language-plaintext highlighter-rouge">description</code>.</p>
+
+    <p>Example <code class="language-plaintext highlighter-rouge">/_data/tags.yml</code>:</p>
+
+    <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">mytag</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">My Tag</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Make a new file in the <code class="language-plaintext highlighter-rouge">tag</code> folder, using the same name you’ve used as the key / slug and
+change the <code class="language-plaintext highlighter-rouge">tag</code> and <code class="language-plaintext highlighter-rouge">permalink</code> entries.</p>
+
+    <p>Example <code class="language-plaintext highlighter-rouge">/tag/mytag.md</code>:</p>
+
+    <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">layout</span><span class="pi">:</span> <span class="s">blog-by-tag</span>
+<span class="na">tag</span><span class="pi">:</span> <span class="s">mytag</span>
+<span class="na">permalink</span><span class="pi">:</span> <span class="s">/tag/mytag/</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Tag your blog posts using the <code class="language-plaintext highlighter-rouge">tags</code> key (color and image will only depend on the first tag).</p>
+
+    <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Introducing My New Tag</span>
+<span class="na">tags</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">mytag</span><span class="pi">,</span> <span class="nv">othertag</span><span class="pi">]</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>(optional) Add the tag to the sidebar, by adding it to <code class="language-plaintext highlighter-rouge">sidebar_tags</code> in <code class="language-plaintext highlighter-rouge">_config.yml</code>.
+They will appear in the listed order.</p>
+
+    <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">sidebar_tags</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">mytag</span><span class="pi">,</span> <span class="nv">othertag</span><span class="pi">]</span>
+</code></pre></div>    </div>
+  </li>
+</ol>]]></content><author><name>GitHub User</name></author><category term="hydejack" /><summary type="html"><![CDATA[Hydejack is a pretentious two-column [Jekyll](http://jekyllrb.com) theme, stolen by [@qwtel](https://twitter.com/qwtel) from [Hyde](http://hyde.getpoole.com). You could say it was.. [hydejacked](http://media3.giphy.com/media/makedRIckZBW8/giphy.gif).]]></summary></entry><entry><title type="html">Introducing Hyde</title><link href="http://localhost:4000/2013/12/28/introducing-hyde.html" rel="alternate" type="text/html" title="Introducing Hyde" /><published>2013-12-28T00:00:00+08:00</published><updated>2013-12-28T00:00:00+08:00</updated><id>http://localhost:4000/2013/12/28/introducing-hyde</id><content type="html" xml:base="http://localhost:4000/2013/12/28/introducing-hyde.html"><![CDATA[<p>Hyde is a brazen two-column <a href="http://jekyllrb.com">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. It’s based on <a href="http://getpoole.com">Poole</a>, the Jekyll butler.</p>
+
+<p class="message"><strong>NOTE</strong>: This post is outdated and only included for legacy reasons.
+See the <a href="../docs/7.5.2/index.md">Documentation</a> for up-to-date instructions.</p>
+
+<h3 id="built-on-poole">Built on Poole</h3>
+
+<p>Poole is the Jekyll Butler, serving as an upstanding and effective foundation for Jekyll themes by <a href="https://twitter.com/mdo">@mdo</a>. Poole, and every theme built on it (like Hyde here) includes the following:</p>
+
+<ul>
+  <li>Complete Jekyll setup included (layouts, config, <a href="/404">404</a>, <a href="/feed.xml" class="external">RSS feed</a>, posts, and <a href="/about/">example page</a>)</li>
+  <li>Mobile friendly design and development</li>
+  <li>Easily scalable text and component sizing with <code class="language-plaintext highlighter-rouge">rem</code> units in the CSS</li>
+  <li>Support for a wide gamut of HTML elements</li>
+  <li>Related posts (time-based, because Jekyll) below each post</li>
+  <li>Syntax highlighting, courtesy Pygments (the Python-based code snippet highlighter)</li>
+</ul>
+
+<h3 id="hyde-features">Hyde features</h3>
+
+<p>In addition to the features of Poole, Hyde adds the following:</p>
+
+<ul>
+  <li>Sidebar includes support for textual modules and a dynamically generated navigation with active link support</li>
+  <li>Two orientations for content and sidebar, default (left sidebar) and <a href="https://github.com/poole/lanyon#reverse-layout">reverse</a> (right sidebar), available via <code class="language-plaintext highlighter-rouge">&lt;body&gt;</code> classes</li>
+  <li><a href="https://github.com/poole/hyde#themes">Eight optional color schemes</a>, available via <code class="language-plaintext highlighter-rouge">&lt;body&gt;</code> classes</li>
+</ul>
+
+<p><a href="https://github.com/poole/hyde#readme">Head to the readme</a> to learn more.</p>
+
+<h3 id="browser-support">Browser support</h3>
+
+<p>Hyde is by preference a forward-thinking project. In addition to the latest versions of Chrome, Safari (mobile and desktop), and Firefox, it is only compatible with Internet Explorer 9 and above.</p>
+
+<h3 id="download">Download</h3>
+
+<p>Hyde is developed on and hosted with GitHub. Head to the <a href="https://github.com/poole/hyde">GitHub repository</a> for downloads, bug reports, and features requests.</p>
+
+<p>Thanks!</p>]]></content><author><name>&lt;firtname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="hyde" /><summary type="html"><![CDATA[Hyde is a brazen two-column [Jekyll](http://jekyllrb.com) theme that pairs a prominent sidebar with uncomplicated content.]]></summary></entry></feed>
