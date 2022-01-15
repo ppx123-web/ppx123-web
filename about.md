@@ -63,3 +63,21 @@ author: zcy
 ---
 ```
 
+## Jekyll公式渲染
+
+_config.yml添加markdown: kramdown
+
+_includes/head.html添加
+
+```html
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']]
+        }
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+```
+

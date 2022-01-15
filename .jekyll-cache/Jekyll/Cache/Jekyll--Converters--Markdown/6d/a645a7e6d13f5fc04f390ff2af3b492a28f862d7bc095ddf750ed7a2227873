@@ -1,0 +1,15 @@
+I"�<blockquote>
+  <p>Archlinux安装过程中的一些问题，后续配置需要注意的一些事项，以及linux中遇到的一些问题</p>
+</blockquote>
+
+<h1 id="archlinux的安装">Archlinux的安装</h1>
+
+<p>可以看这一篇：https://zhuanlan.zhihu.com/p/138951848  （注意：建议wiki，安装细节有可能随着更新改变）</p>
+
+<ol>
+  <li>制作好镜像</li>
+  <li>启动后，联网，更新，安装vim</li>
+  <li>cfdisk分盘</li>
+  <li>mount挂载，在有windows的情况下</li>
+</ol>
+:ET
