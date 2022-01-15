@@ -11,6 +11,9 @@ author: author1
 
 > Archlinux安装过程中的一些问题，后续配置需要注意的一些事项，以及linux中遇到的一些问题
 
+* this unordered seed list will be replaced by toc as unordered list
+{:toc}
+
 # Archlinux的安装
 
 可以看这一篇：https://zhuanlan.zhihu.com/p/138951848  （注意：建议wiki，安装细节有可能随着更新改变）
@@ -132,4 +135,60 @@ author: author1
 
    15. 添加archlinuxcn源
 
-   16. 
+       ```shell
+       [archlinuxcn]
+       Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
+       并取消multilib的注释
+       ```
+
+       ```shell
+       pacman -Syu && pacman -S archlinuxcn-keyring
+       ```
+
+       ```shell
+       pacman -S ttf-sarasa-gothic noto-fonts-cjk
+       ```
+
+       重启
+
+## 遇到的问题
+
+### 显卡驱动
+
+如果安装时使用核显，则后续怎么都转不了独显的驱动
+
+所以建议直接从头到尾使用独显，驱动问题轻松解决
+
+### 独显下屏幕亮度调节
+
+wiki Nvidia中
+
+创建/etc/X11/xorg.conf.d/20-nvidia.conf 
+
+```
+Section "Device"
+        Identifier      "Device0"
+        Driver          "nvidia"
+        VendorName      "NVIDIA Corporation"
+        Option "RegistryDwords" "EnableBrightnessControl=1"
+EndSection
+```
+
+然后更新grub
+
+### boot空间不足（100M）
+
+https://wusiyu.me/archlinux-remove-initramfs-linux-fallback-img/
+
+删除fallback.img
+
+然后在/etc/mkinitcpio.d/linux.preset中去掉fall back的部分
+
+### 选择kde
+
+新的gnome十分难用，不建议使用
+
+### v2ray代理
+
+开启系统代理，命令行用proxychains
+

@@ -81,3 +81,6 @@ _includes/head.html添加
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 ```
 
+## 本地调试
+
+需要修改_config.yaml中的配置

@@ -4,8 +4,9 @@
 # IMPORTANT: Set the URL of your site.
 # Set to https://<username>.github.io when hosting on GitHub Pages
 # (unless you are using a custom domain).
-#url:                   https://ppx123-web.github.io
-url:                    127.0.0.1:4000
+url:                   https://ppx123-web.github.io
+#url:                    127.0.0.1:4000
+
 # IMPORTANT: Set The "base URL" of your site.
 #
 # When hosting your site in a subdirectory of a server, set to /<name of directory>
@@ -15,8 +16,9 @@ url:                    127.0.0.1:4000
 # When using GitHub Pages, set to '' when hosting a user- or organization page,
 # i.e. when the name of the repository looks like <username>.github.io.
 # Otherwise, set to /<name of repository> (with leading /, but without the < >).
-#baseurl:               '/ppx123-web'
-baseurl:                ''
+baseurl:               '/ppx123-web'
+#baseurl:''
+
 # Language of your content in 2-letter code, e.g.: en, de.
 # You may also provide a location, e.g.: en-us, de_AT.
 lang:                  en
