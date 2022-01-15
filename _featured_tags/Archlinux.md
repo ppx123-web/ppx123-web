@@ -1,7 +1,7 @@
 ---
 layout: list
-title: Linux
-slug: hyde
+title: ArchLinux
+slug: ArchLinux
 menu: true
 order: 1
 description: >

@@ -1,0 +1,25 @@
+I"f<h1 id="about">About</h1>
+
+<h2 id="list管理">List管理</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Directory: _featured_tags
+</code></pre></div></div>
+
+<p>在文件夹中添加文件，头部格式</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: list
+title: [content]
+slug: [tag] #用于链接到该list的文件
+menu: true
+order: num
+description: &gt;
+  content
+accent_color: '#268bd2'
+accent_image:
+  background: '#202020'
+  overlay:    false
+---
+</code></pre></div></div>
+
+:ET
