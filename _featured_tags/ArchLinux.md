@@ -7,7 +7,5 @@ order: 1
 description: >
   Archlinux install and config
 accent_color: '#268bd2'
-accent_image:
-  background: '#202020'
-  overlay:    false
+accent_image:  /assets/img/R1.jpeg
 ---
