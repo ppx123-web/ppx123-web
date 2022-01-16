@@ -16,43 +16,23 @@ author: author1
 
 
 
-
-
-
-
 > Archlinux安装过程中的一些问题，后续配置需要注意的一些事项，以及linux中遇到的一些问题
-
-
 
 * this unordered seed list will be replaced by toc as unordered list
 
 {:toc}
 
-
-
 #  Archlinux的安装
-
-
 
 可以看这一篇：https://zhuanlan.zhihu.com/p/138951848  （注意：建议wiki，安装细节有可能随着更新改变）
 
-
-
 1. 制作好镜像
-
-
 
 2. 启动后，联网，更新，安装vim
 
-
-
 3. cfdisk分盘
 
-
-
 4. mount挂载，在有windows的情况下，分的硬盘挂到/mnt上，把efi挂载到/mnt/boot上，然后按照wiki开始安装
-
-
 
    ```shell
 
@@ -60,15 +40,9 @@ author: author1
 
    ```
 
-
-
    
 
-
-
 5. 生成fstab文件
-
-
 
    ```shell
 
@@ -76,11 +50,7 @@ author: author1
 
    ```
 
-
-
 6. 配置系统
-
-
 
    1. ```shell
 
@@ -88,11 +58,7 @@ author: author1
 
       ```
 
-
-
    2. 建议swap文件，用于休眠
-
-
 
       ```shell
 
@@ -108,11 +74,7 @@ author: author1
 
       ```
 
-
-
    3. 设置时区
-
-
 
       ```shell
 
@@ -122,11 +84,7 @@ author: author1
 
       ```
 
-
-
    4. 取消/etc/locale.gen文件中的en_US UTF-8和zh_CN UTF-8的注释
-
-
 
       ```shell
 
@@ -134,19 +92,11 @@ author: author1
 
       ```
 
-
-
       创建/etc/locale.cong, 输入LANG=en_US.UTF-8
-
-
 
       创建/etc/hostname   $name
 
-
-
    5. 修改/etc/hosts
-
-
 
       ```shell
 
@@ -158,11 +108,7 @@ author: author1
 
       ```
 
-
-
    6. root用户密码passwd
-
-
 
    7. ```shell
 
@@ -170,15 +116,9 @@ author: author1
 
       ```
 
-
-
       使用grub作为启动器
 
-
-
       安装intel-ucode或amd-ucode
-
-
 
    8. ```shell
 
@@ -192,11 +132,7 @@ author: author1
 
       ```
 
-
-
    9. 退出，取消挂载，重启,使用root账户登录
-
-
 
    10. ```shell
 
@@ -206,8 +142,6 @@ author: author1
 
        ```
 
-
-
    11. ```shell
 
        useradd -m -G wheel $user
@@ -216,11 +150,7 @@ author: author1
 
        ```
 
-
-
        创建用户
-
-
 
        ```shell
 
@@ -230,11 +160,7 @@ author: author1
 
        ```
 
-
-
    12. 安装显卡驱动
-
-
 
        ```shell
 
@@ -244,19 +170,13 @@ author: author1
 
        ```
 
-
-
    13. ```shell
 
        pacman -S xorg
 
        ```
 
-
-
    14. 桌面环境及后续
-
-
 
        ```shell
 
@@ -266,11 +186,7 @@ author: author1
 
        ```
 
-
-
    15. 添加archlinuxcn源
-
-
 
        ```shell
 
@@ -282,15 +198,11 @@ author: author1
 
        ```
 
-
-
        ```shell
 
        pacman -Syu && pacman -S archlinuxcn-keyring
 
        ```
-
-
 
        ```shell
 
@@ -298,39 +210,21 @@ author: author1
 
        ```
 
-
-
        重启
-
-
 
 ##  遇到的问题
 
-
-
-## #  显卡驱动
-
-
+###  显卡驱动
 
 如果安装时使用核显，则后续怎么都转不了独显的驱动
 
-
-
 所以建议直接从头到尾使用独显，驱动问题轻松解决
 
-
-
-## #  独显下屏幕亮度调节
-
-
+###  独显下屏幕亮度调节
 
 wiki Nvidia中
 
-
-
 创建/etc/X11/xorg.conf.d/20-nvidia.conf 
-
-
 
 ```
 
@@ -348,41 +242,21 @@ EndSection
 
 ```
 
-
-
 然后更新grub
 
-
-
-## #  boot空间不足（100M）
-
-
+###  boot空间不足（100M）
 
 https://wusiyu.me/archlinux-remove-initramfs-linux-fallback-img/
 
-
-
 删除fallback.img
-
-
 
 然后在/etc/mkinitcpio.d/linux.preset中去掉fall back的部分
 
-
-
-## #  选择kde
-
-
+###  选择kde
 
 新的gnome十分难用，不建议使用
 
-
-
-## #  v2ray代理
-
-
+###  v2ray代理
 
 开启系统代理，命令行用proxychains
-
-
 
