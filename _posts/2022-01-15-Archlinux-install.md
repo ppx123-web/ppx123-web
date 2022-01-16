@@ -10,7 +10,7 @@ author: author1
 
 > Archlinux安装过程中的一些问题，后续配置需要注意的一些事项，以及linux中遇到的一些问题
 
-# List
+## List
 
 {:.no_toc}
 0. this unordered seed list will be replaced by toc as unordered list

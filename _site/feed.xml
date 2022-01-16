@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/ppx123-web/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ppx123-web/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-01-16T15:48:23+08:00</updated><id>http://localhost:4000/ppx123-web/feed.xml</id><title type="html">Zhao Chaoyi</title><subtitle>Notes
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/ppx123-web/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ppx123-web/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-01-16T17:58:16+08:00</updated><id>http://localhost:4000/ppx123-web/feed.xml</id><title type="html">Zhao Chaoyi</title><subtitle>Notes
 </subtitle><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><entry><title type="html">Archlinux install</title><link href="http://localhost:4000/ppx123-web/2022/01/15/Archlinux-install/" rel="alternate" type="text/html" title="Archlinux install" /><published>2022-01-15T00:00:00+08:00</published><updated>2022-01-15T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/01/15/Archlinux-install</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/01/15/Archlinux-install/"><![CDATA[<blockquote>
   <p>Archlinux安装过程中的一些问题，后续配置需要注意的一些事项，以及linux中遇到的一些问题</p>
 </blockquote>
@@ -6,21 +6,19 @@
 <h1 id="list">List</h1>
 
 <ol class="no_toc" id="markdown-toc">
-  <li><a href="#list" id="markdown-toc-list">List</a></li>
-  <li><a href="#archlinux的安装" id="markdown-toc-archlinux的安装">Archlinux的安装</a>    <ol>
-      <li><a href="#遇到的问题" id="markdown-toc-遇到的问题">遇到的问题</a>        <ol>
-          <li><a href="#显卡驱动" id="markdown-toc-显卡驱动">显卡驱动</a></li>
-          <li><a href="#独显下屏幕亮度调节" id="markdown-toc-独显下屏幕亮度调节">独显下屏幕亮度调节</a></li>
-          <li><a href="#boot空间不足100m" id="markdown-toc-boot空间不足100m">boot空间不足（100M）</a></li>
-          <li><a href="#选择kde" id="markdown-toc-选择kde">选择kde</a></li>
-          <li><a href="#v2ray代理" id="markdown-toc-v2ray代理">v2ray代理</a></li>
-        </ol>
-      </li>
+  <li><a href="#list" id="markdown-toc-list">List</a>    <ol>
+      <li><a href="#archlinux的安装" id="markdown-toc-archlinux的安装">Archlinux的安装</a></li>
+      <li><a href="#显卡驱动" id="markdown-toc-显卡驱动">显卡驱动</a></li>
+      <li><a href="#独显下屏幕亮度调节" id="markdown-toc-独显下屏幕亮度调节">独显下屏幕亮度调节</a></li>
+      <li><a href="#boot空间不足100m" id="markdown-toc-boot空间不足100m">boot空间不足（100M）</a></li>
+      <li><a href="#选择kde" id="markdown-toc-选择kde">选择kde</a></li>
+      <li><a href="#v2ray代理" id="markdown-toc-v2ray代理">v2ray代理</a></li>
+      <li><a href="#pytorch的安装" id="markdown-toc-pytorch的安装">pytorch的安装</a></li>
     </ol>
   </li>
 </ol>
 
-<h1 id="archlinux的安装">Archlinux的安装</h1>
+<h2 id="archlinux的安装">Archlinux的安装</h2>
 
 <p>可以看这一篇：https://zhuanlan.zhihu.com/p/138951848 （注意：建议wiki，安装细节有可能随着更新改变）</p>
 
@@ -152,15 +150,13 @@ pacman <span class="nt">-S</span> ttf-sarasa-gothic noto-fonts-cjk
   <li>重启</li>
 </ol>
 
-<h2 id="遇到的问题">遇到的问题</h2>
-
-<h3 id="显卡驱动">显卡驱动</h3>
+<h2 id="显卡驱动">显卡驱动</h2>
 
 <p>如果安装时使用核显，则后续怎么都转不了独显的驱动</p>
 
 <p>所以建议直接从头到尾使用独显，驱动问题轻松解决</p>
 
-<h3 id="独显下屏幕亮度调节">独显下屏幕亮度调节</h3>
+<h2 id="独显下屏幕亮度调节">独显下屏幕亮度调节</h2>
 
 <p>wiki Nvidia中</p>
 
@@ -176,7 +172,7 @@ EndSection
 
 <p>然后更新grub</p>
 
-<h3 id="boot空间不足100m">boot空间不足（100M）</h3>
+<h2 id="boot空间不足100m">boot空间不足（100M）</h2>
 
 <p>https://wusiyu.me/archlinux-remove-initramfs-linux-fallback-img/</p>
 
@@ -184,13 +180,19 @@ EndSection
 
 <p>然后在/etc/mkinitcpio.d/linux.preset中去掉fall back的部分</p>
 
-<h3 id="选择kde">选择kde</h3>
+<h2 id="选择kde">选择kde</h2>
 
 <p>新的gnome十分难用，不建议使用</p>
 
-<h3 id="v2ray代理">v2ray代理</h3>
+<h2 id="v2ray代理">v2ray代理</h2>
 
-<p>开启系统代理，命令行用proxychains</p>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="ArchLinux" /><summary type="html"><![CDATA[Install Archlinux]]></summary></entry><entry><title type="html">高级算法作业</title><link href="http://localhost:4000/ppx123-web/2022/01/15/advanced-alogrithm-A3/" rel="alternate" type="text/html" title="高级算法作业" /><published>2022-01-15T00:00:00+08:00</published><updated>2022-01-15T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/01/15/advanced-alogrithm-A3</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/01/15/advanced-alogrithm-A3/"><![CDATA[<h1 id="高级算法第三次作业">高级算法第三次作业</h1>
+<p>开启系统代理，命令行用proxychains</p>
+
+<h2 id="pytorch的安装">pytorch的安装</h2>
+
+<p>2021-1-16  python3.10好像有点问题，安装不了torch</p>
+
+<p>yay安装python39</p>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="ArchLinux" /><summary type="html"><![CDATA[Install Archlinux]]></summary></entry><entry><title type="html">高级算法作业</title><link href="http://localhost:4000/ppx123-web/2022/01/15/advanced-alogrithm-A3/" rel="alternate" type="text/html" title="高级算法作业" /><published>2022-01-15T00:00:00+08:00</published><updated>2022-01-15T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/01/15/advanced-alogrithm-A3</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/01/15/advanced-alogrithm-A3/"><![CDATA[<h1 id="高级算法第三次作业">高级算法第三次作业</h1>
 
 <p>匡亚明学院 赵超懿 191870271</p>
 
