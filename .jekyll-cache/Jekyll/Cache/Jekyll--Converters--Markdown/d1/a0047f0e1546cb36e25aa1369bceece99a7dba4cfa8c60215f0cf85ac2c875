@@ -1,0 +1,179 @@
+I"8<blockquote>
+  <p>孙老师线性代数课程复习</p>
+</blockquote>
+
+<h3 id="线性代数定理">线性代数定理</h3>
+
+<h4 id="矩阵秩相关">矩阵秩相关：</h4>
+
+<p>矩阵$A_{m\times n}$的秩为r的充要条件：存在一个r阶子式不为0，r+1阶子式均为0</p>
+
+<p>​		1. $r(A+b)\leq r(A)+r(B)$</p>
+
+<p>​		2. $r(AB)\leq min{r(A),r(B)}$</p>
+
+<h4 id="线性方程组">线性方程组：</h4>
+
+<p>$Ax = b\Leftrightarrow$系数矩阵与增广矩阵有相同的秩</p>
+
+<h4 id="基变化过度矩阵">基变化，过度矩阵：</h4>
+
+<p>$Z={z_1,z_2,…,z_n}$和$W={w_1,w_2,…,w_n}$为两组基，则</p>
+
+<p>$W=ZP$，则称P是Z到W的过渡矩阵</p>
+
+<p>总结：$B=AP$，P为A到B的过渡矩阵，坐标变换为$y = P^{-1}x$，其中x为旧坐标（A中的坐标），y为B中的新坐标</p>
+
+<h4 id="线性变换的矩阵表示">线性变换的矩阵表示：</h4>
+
+<p>线性变化$L(V\rightarrow W)$，Z是V的一组基，$L(z_i) = \sum\limits_{j = 1}^n a_{ji}z_i$</p>
+
+<p>$(L(z_1),L(z_2),…,L(z_3))=(z_1,z_2,…,z_n)A$</p>
+
+<p>则A是线性变换L在基Z下的矩阵</p>
+
+<h4 id="相似矩阵">相似矩阵：</h4>
+
+<p>$A\sim B\Leftrightarrow \exists X,X可逆m=,s.t. \quad B=X^{-1}AX$,可逆是一个等价关系</p>
+
+<p>线性变化L在不同基之下的矩阵是相似的:如何证明？</p>
+
+<p>特征值与特征向量：</p>
+
+<p>​		线性变换的的特征值与特征向量$L\xi =\lambda\xi$</p>
+
+<p>​		矩阵的特征值与特征向量：</p>
+
+<p>​					$A\xi=\lambda \xi$</p>
+
+<p>​				$det(\lambda I_n-A) = 0 \Leftrightarrow (\lambda I_n-A)\xi = 0$</p>
+
+<p>性质：</p>
+
+<p>相似矩阵有相同的特征值
+		<strong>不同特征值</strong>的特征向量一定<strong>线性无关</strong>
+		方阵$A_{nn}$可对角化$\Leftrightarrow $n个线性无关的特征向量
+		若n阶方阵有n个不同的特征值，则此方阵可对角化
+		相似矩阵有相同的迹。
+		A的特征值$\lambda_1,\lambda_2,…,\lambda_n$,则A的迹$trace(A) = \sum_\limits{i = 1}^na_{ii}=\sum\limits_{i=1}^n\lambda_i$</p>
+
+<h4 id="欧氏空间">欧氏空间：</h4>
+
+<p>考虑实空间，复空间再加上共轭：</p>
+
+<p>定义了  内积，模长，角度，内积的计算具有线性</p>
+
+<p>欧式空间需要满足条件</p>
+
+\[(\alpha,\beta)=(\beta,\alpha)\\
+(k\alpha,\beta)=k(\alpha,\beta),k\in R\\
+(\alpha+\beta,\gamma)=(\alpha,\gamma)+(\beta,\gamma)\\
+(\alpha,\alpha)\geq 0\Leftrightarrow \alpha = \vec{0},(\alpha,\alpha) = 0\]
+
+<p>$|x|\geq 0;\quad ||\lambda x||=||\lambda||\cdot||X||$</p>
+
+<p>$||x\pm y||\leq ||x||+||y||$</p>
+
+<p>柯西不等式:(柯西-布涅柯夫斯基不等式)</p>
+
+\[|(x,y)|\leq \|\|x\|\|\cdot \|\|y\|\|\]
+
+<p>等号成立当且仅当x与y线性相关。</p>
+
+<p>即</p>
+
+\[(\alpha,\beta)\leq(\alpha,\alpha)\cdot(\beta,\beta)\]
+
+<p>欧式空间不同基的度量矩阵是合同的。</p>
+
+<p>欧氏空间内积在基${\eta_1,\eta_2,…,\eta_n}$下的的度量矩阵表示：</p>
+
+\[(\alpha,\beta) =X^TAY\]
+
+<p>其中A是基${\eta_1,\eta_2,…,\eta_n}$度量矩阵，X和Y分别是是$\alpha,\beta$在这一组基之下的坐标。</p>
+
+<h4 id="线性空间">线性空间：</h4>
+
+<p>线性子空间：满足数乘运算和加法运算的封闭。</p>
+
+<h4 id="度量矩阵">度量矩阵：</h4>
+
+<p>$(a_{ij})<em>{n\times n}=(&lt;z_i,z_j&gt;)</em>{n\times n}$是一个正定对称矩阵，称为$(V,&lt;,&gt;)$为基$(z_1,z_2,…,z_n)$之下的度量矩阵。</p>
+
+<p>合同：A，B两个n阶方阵，若存在可逆阵C，s.t. $B=C^TAC$</p>
+
+<h4 id="正交化方法">正交化方法：</h4>
+
+<p><img src="C:\Users\赵超懿\AppData\Roaming\Typora\typora-user-images\image-20210101132747112.png" alt="image-20210101132747112" /></p>
+
+<h4 id="投影">投影：</h4>
+
+<p>向量$\vec{\alpha}$在平面${\vec{\eta_1},\vec{\eta_2},…,\vec{\eta_n}}$的投影,其中$\vec{\eta_i}$是一组<strong>标准正交基。</strong></p>
+
+\[(\vec{\eta_1},\vec{\eta_2},...,\vec{\eta_n})
+\left (
+\begin{matrix}
+	\vec{\eta_1}\\
+	\vec{\eta_2}\\
+	\vdots\\
+	\vec{\eta_n}
+\end{matrix}
+\right )\vec{x}
+=\vec{B_m}\vec{B_m}^T\vec{x}\]
+
+<h4 id="正交矩阵">正交矩阵</h4>
+
+<p>$AA^T=I_n$</p>
+
+<p>正交矩阵的实特征根只能是1或-1</p>
+
+<h4 id="正交变换">正交变换</h4>
+
+<p>保内积，保范数，保距离</p>
+
+<p>欧式空间上的线性变换$&lt;Ux,Uy&gt; = &lt;x,y&gt;$</p>
+
+<p>$||Ux||=||x||$</p>
+
+<p>若${\vec{\eta_1},\vec{\eta_2},…,\vec{\eta_n}}$是一组标准正交基，则${U\vec{\eta_1},U\vec{\eta_2},…,U\vec{\eta_n}}$也是一组标准正交基。</p>
+
+<h4 id="实对称阵的对角化">实对称阵的对角化</h4>
+
+<p>实对称阵即相似又合同于某对角阵</p>
+
+<p>$U^TAU = diag[\lambda_1,\lambda_2,…,\lambda_n]$,对n阶对称阵A，存在正交阵U，s.t.其中$\lambda_i,i = 1,2,..,n$是A的特征值</p>
+
+<p>性质：</p>
+
+<p>实对称阵的特征值是实数</p>
+
+<p><strong>实对称阵不同的特征值的特征向量正交</strong>，实对称线性变换的特征子空间是正交的。</p>
+
+<h4 id="二次型">二次型</h4>
+
+<p>标准型：没有交叉项</p>
+
+<p>规范型：标准型且系数为0或$\pm 1$</p>
+
+<p>正惯性指数：A的正特征值的个数</p>
+
+<p>正定：</p>
+
+\[x^TAx\geq 0,x^TAx = 0\Leftrightarrow x = 0\\
+\begin{align}
+\Leftrightarrow &amp; 正惯性指数等于维数\\
+\Leftrightarrow &amp; A的特征值都&gt;0\\
+\Leftrightarrow &amp; A的任意阶主子式都大于0
+\end{align}\]
+
+<p>求规范法：</p>
+
+<p>​		配方法：注意配方法中的线性变换要求非退化。</p>
+
+<p>​		合同变换法：每一次行变换要有相应的列变换。</p>
+
+<p>​		正交变换法：求特征值特征向量然后求标准正交化。</p>
+
+<p>​</p>
+
+:ET
