@@ -182,3 +182,8 @@ https://wusiyu.me/archlinux-remove-initramfs-linux-fallback-img/
 
 开启系统代理，命令行用proxychains
 
+### pytorch的安装
+
+2021-1-16  python3.10好像有点问题，安装不了torch
+
+yay安装python39
