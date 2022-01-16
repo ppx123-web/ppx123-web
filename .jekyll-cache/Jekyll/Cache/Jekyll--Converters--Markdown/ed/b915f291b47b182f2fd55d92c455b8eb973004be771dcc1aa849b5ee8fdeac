@@ -1,0 +1,257 @@
+I"�<blockquote>
+  <p>Archlinux安装过程中的一些问题，后续配置需要注意的一些事项，以及linux中遇到的一些问题</p>
+</blockquote>
+
+<h1 class="no_toc" id="list">List</h1>
+<ol id="markdown-toc">
+  <li><a href="#archlinux的安装" id="markdown-toc-archlinux的安装">Archlinux的安装</a>    <ol>
+      <li><a href="#boot空间不足100m" id="markdown-toc-boot空间不足100m">boot空间不足（100M）</a></li>
+      <li><a href="#选择kde" id="markdown-toc-选择kde">选择kde</a></li>
+      <li><a href="#v2ray代理" id="markdown-toc-v2ray代理">v2ray代理</a></li>
+    </ol>
+  </li>
+</ol>
+
+<h1 id="archlinux的安装">Archlinux的安装</h1>
+
+<p>可以看这一篇：https://zhuanlan.zhihu.com/p/138951848 （注意：建议wiki，安装细节有可能随着更新改变）</p>
+
+<ol>
+  <li>
+    <p>制作好镜像</p>
+  </li>
+  <li>
+    <p>启动后，联网，更新，安装vim</p>
+  </li>
+  <li>
+    <p>cfdisk分盘</p>
+  </li>
+  <li>
+    <p>mount挂载，在有windows的情况下，分的硬盘挂到/mnt上，把efi挂载到/mnt/boot上，然后按照wiki开始安装</p>
+
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> pacstrap /mnt base linux linux-firmware nano
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>生成fstab文件</p>
+  </li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  genfstab <span class="nt">-U</span> /mnt <span class="o">&gt;&gt;</span> /mnt/etc/fstab
+</code></pre></div></div>
+
+<ol>
+  <li>
+    <p>配置系统</p>
+  </li>
+  <li>
+    <p>进入/mnt</p>
+  </li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  arch-root /mnt
+</code></pre></div></div>
+
+<ol>
+  <li>建议swap文件，用于休眠</li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+   <span class="nb">dd </span><span class="k">if</span><span class="o">=</span>/dev/zero <span class="nv">of</span><span class="o">=</span>/swapfile <span class="nv">bs</span><span class="o">=</span>2048 <span class="nv">count</span><span class="o">=</span>1048576 <span class="nv">status</span><span class="o">=</span>progress
+
+   <span class="nb">chmod </span>600 /swapfile
+
+   mkswap /swapfile
+
+   swapon /swapfile
+
+   vim /etc/fstab 在文件末尾输入 /swapfile none swap defaults 0 0
+
+</code></pre></div></div>
+
+<ol>
+  <li>设置时区</li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+   timedatectl set-timezone Asia/Shanghai
+
+   hwclock
+
+</code></pre></div></div>
+
+<ol>
+  <li>取消/etc/locale.gen文件中的en_US UTF-8和zh_CN UTF-8的注释</li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+   locale-gen
+
+</code></pre></div></div>
+
+<p>创建/etc/locale.cong, 输入LANG=en_US.UTF-8</p>
+
+<p>创建/etc/hostname  $name</p>
+
+<ol>
+  <li>修改/etc/hosts</li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   127.0.0.1	localhost
+   ::1			localhost
+   127.0.1.1	<span class="nv">$name</span>.localdomain		<span class="nv">$name</span>
+</code></pre></div></div>
+
+<ol>
+  <li>
+    <p>root用户密码passwd</p>
+  </li>
+  <li>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pacman <span class="nt">-S</span> grub efibootmgr networkmanager network-manager-applet dialog wireless_tools wpa_supplicant os-prober mtools dosfstools ntfs-3g base-devel linux-headers reflector git <span class="nb">sudo</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>使用grub作为启动器</p>
+
+<p>安装intel-ucode或amd-ucode</p>
+
+<ol>
+  <li>```shell
+vim /etc/default/grub
+加一行 GRUB_DISABLE_OS_PROBER=false
+grub-install –target=x86_64-efi –efi-directory=/boot –bootloader-id=Arch</li>
+</ol>
+
+<p>grub-mkconfig -o /boot/grub/grub.cfg</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+  9.  退出，取消挂载，重启,使用root账户登录
+
+  10. ```shell
+
+    systemctl enable --now NetworkManager
+
+    nmtui联网
+
+    ```
+
+  11. ```shell
+
+    useradd -m -G wheel $user
+
+    passwd $user
+
+    ```
+
+    创建用户
+
+    ```shell
+
+    EDITOR=vim visudo
+
+    取消wheel ALL=(ALL) ALL的注释
+
+    ```
+
+  12. 安装显卡驱动
+
+    ```shell
+
+    pacman -S nvidia nvidia-util
+
+    pacman -S xf86-video-amdgpu
+
+    ```
+
+  13. ```shell
+
+    pacman -S xorg
+
+    ```
+
+  14. 桌面环境及后续
+
+    ```shell
+
+    pacman -S sddm
+
+    pacman -S plasma packagekit-qt5 kate git kconsole
+
+    ```
+
+  15. 添加archlinuxcn源
+
+    ```shell
+
+    [archlinuxcn]
+
+    Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
+
+    并取消multilib的注释
+
+    ```
+
+    ```shell
+
+    pacman -Syu &amp;&amp; pacman -S archlinuxcn-keyring
+
+    ```
+
+    ```shell
+
+    pacman -S ttf-sarasa-gothic noto-fonts-cjk
+
+    ```
+
+    重启
+
+## 遇到的问题
+
+### 显卡驱动
+
+如果安装时使用核显，则后续怎么都转不了独显的驱动
+
+所以建议直接从头到尾使用独显，驱动问题轻松解决
+
+### 独显下屏幕亮度调节
+
+wiki Nvidia中
+
+创建/etc/X11/xorg.conf.d/20-nvidia.conf 
+
+</code></pre></div></div>
+
+<p>Section “Device”</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Identifier   "Device0"
+
+Driver     "nvidia"
+
+VendorName   "NVIDIA Corporation"
+
+Option "RegistryDwords" "EnableBrightnessControl=1"
+</code></pre></div></div>
+
+<p>EndSection</p>
+
+<p>```</p>
+
+<p>然后更新grub</p>
+
+<h3 id="boot空间不足100m">boot空间不足（100M）</h3>
+
+<p>https://wusiyu.me/archlinux-remove-initramfs-linux-fallback-img/</p>
+
+<p>删除fallback.img</p>
+
+<p>然后在/etc/mkinitcpio.d/linux.preset中去掉fall back的部分</p>
+
+<h3 id="选择kde">选择kde</h3>
+
+<p>新的gnome十分难用，不建议使用</p>
+
+<h3 id="v2ray代理">v2ray代理</h3>
+
+<p>开启系统代理，命令行用proxychains</p>
+
+:ET

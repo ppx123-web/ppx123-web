@@ -1,0 +1,61 @@
+I"�<blockquote>
+  <p>Archlinux安装过程中的一些问题，后续配置需要注意的一些事项，以及linux中遇到的一些问题</p>
+</blockquote>
+
+<h1 id="list">List</h1>
+
+<ol class="no_toc" id="markdown-toc">
+  <li><a href="#list" id="markdown-toc-list">List</a></li>
+  <li><a href="#archlinux的安装" id="markdown-toc-archlinux的安装">Archlinux的安装</a>    <ol>
+      <li><a href="#boot空间不足100m" id="markdown-toc-boot空间不足100m">boot空间不足（100M）</a></li>
+      <li><a href="#选择kde" id="markdown-toc-选择kde">选择kde</a></li>
+      <li><a href="#v2ray代理" id="markdown-toc-v2ray代理">v2ray代理</a></li>
+    </ol>
+  </li>
+</ol>
+
+<h1 id="archlinux的安装">Archlinux的安装</h1>
+
+<p>可以看这一篇：https://zhuanlan.zhihu.com/p/138951848 （注意：建议wiki，安装细节有可能随着更新改变）</p>
+
+<ol>
+  <li>
+    <p>制作好镜像</p>
+  </li>
+  <li>
+    <p>启动后，联网，更新，安装vim</p>
+  </li>
+  <li>
+    <p>cfdisk分盘</p>
+  </li>
+  <li>
+    <p>mount挂载，在有windows的情况下，分的硬盘挂到/mnt上，把efi挂载到/mnt/boot上，然后按照wiki开始安装</p>
+
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> pacstrap /mnt base linux linux-firmware nano
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>生成fstab文件</p>
+  </li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  genfstab <span class="nt">-U</span> /mnt <span class="o">&gt;&gt;</span> /mnt/etc/fstab
+</code></pre></div></div>
+
+<h3 id="boot空间不足100m">boot空间不足（100M）</h3>
+
+<p>https://wusiyu.me/archlinux-remove-initramfs-linux-fallback-img/</p>
+
+<p>删除fallback.img</p>
+
+<p>然后在/etc/mkinitcpio.d/linux.preset中去掉fall back的部分</p>
+
+<h3 id="选择kde">选择kde</h3>
+
+<p>新的gnome十分难用，不建议使用</p>
+
+<h3 id="v2ray代理">v2ray代理</h3>
+
+<p>开启系统代理，命令行用proxychains</p>
+
+:ET

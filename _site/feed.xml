@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/ppx123-web/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ppx123-web/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-01-16T15:13:34+08:00</updated><id>http://localhost:4000/ppx123-web/feed.xml</id><title type="html">Zhao Chaoyi</title><subtitle>Notes
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/ppx123-web/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ppx123-web/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-01-16T15:48:06+08:00</updated><id>http://localhost:4000/ppx123-web/feed.xml</id><title type="html">Zhao Chaoyi</title><subtitle>Notes
 </subtitle><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><entry><title type="html">Archlinux install</title><link href="http://localhost:4000/ppx123-web/2022/01/15/Archlinux-install/" rel="alternate" type="text/html" title="Archlinux install" /><published>2022-01-15T00:00:00+08:00</published><updated>2022-01-15T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/01/15/Archlinux-install</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/01/15/Archlinux-install/"><![CDATA[<blockquote>
   <p>Archlinux安装过程中的一些问题，后续配置需要注意的一些事项，以及linux中遇到的一些问题</p>
 </blockquote>
 
-<h1 class="no_toc" id="list">List</h1>
-<ol id="markdown-toc">
+<h1 id="list">List</h1>
+
+<ol class="no_toc" id="markdown-toc">
+  <li><a href="#list" id="markdown-toc-list">List</a></li>
   <li><a href="#archlinux的安装" id="markdown-toc-archlinux的安装">Archlinux的安装</a>    <ol>
       <li><a href="#遇到的问题" id="markdown-toc-遇到的问题">遇到的问题</a>        <ol>
           <li><a href="#显卡驱动" id="markdown-toc-显卡驱动">显卡驱动</a></li>
@@ -34,216 +36,121 @@
   </li>
   <li>
     <p>mount挂载，在有windows的情况下，分的硬盘挂到/mnt上，把efi挂载到/mnt/boot上，然后按照wiki开始安装</p>
+
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> pacstrap /mnt base linux linux-firmware nano
+</code></pre></div>    </div>
   </li>
-</ol>
+  <li>
+    <p>生成fstab文件</p>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-  pacstrap /mnt base linux linux-firmware nano
-
-</code></pre></div></div>
-
-<ol>
-  <li>生成fstab文件</li>
-</ol>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-  genfstab <span class="nt">-U</span> /mnt <span class="o">&gt;&gt;</span> /mnt/etc/fstab
-
-</code></pre></div></div>
-
-<ol>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> genfstab <span class="nt">-U</span> /mnt <span class="o">&gt;&gt;</span> /mnt/etc/fstab
+</code></pre></div>    </div>
+  </li>
   <li>
     <p>配置系统</p>
   </li>
   <li>
-    <p>```shell</p>
+    <p>进入/mnt</p>
+
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>arch-root /mnt
+</code></pre></div>    </div>
   </li>
-</ol>
+  <li>
+    <p>建议swap文件，用于休眠</p>
 
-<p>arch-root /mnt</p>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">dd </span><span class="k">if</span><span class="o">=</span>/dev/zero <span class="nv">of</span><span class="o">=</span>/swapfile <span class="nv">bs</span><span class="o">=</span>2048 <span class="nv">count</span><span class="o">=</span>1048576 <span class="nv">status</span><span class="o">=</span>progress
+<span class="nb">chmod </span>600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+vim /etc/fstab 在文件末尾输入 /swapfile none swap defaults 0 0
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>设置时区</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-  2. 建议swap文件，用于休眠
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>timedatectl set-timezone Asia/Shanghai
+hwclock
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>取消/etc/locale.gen文件中的en_US UTF-8和zh_CN UTF-8的注释</p>
 
-   ```shell
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>locale-gen
+</code></pre></div>    </div>
 
-   dd if=/dev/zero of=/swapfile bs=2048 count=1048576 status=progress
+    <p>创建/etc/locale.cong, 输入LANG=en_US.UTF-8</p>
 
-   chmod 600 /swapfile
+    <p>创建/etc/hostname  $name</p>
+  </li>
+  <li>
+    <p>修改/etc/hosts</p>
 
-   mkswap /swapfile
-
-   swapon /swapfile
-
-   vim /etc/fstab 在文件末尾输入 /swapfile none swap defaults 0 0
-
-</code></pre></div></div>
-
-<ol>
-  <li>设置时区</li>
-</ol>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-   timedatectl set-timezone Asia/Shanghai
-
-   hwclock
-
-</code></pre></div></div>
-
-<ol>
-  <li>取消/etc/locale.gen文件中的en_US UTF-8和zh_CN UTF-8的注释</li>
-</ol>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-   locale-gen
-
-</code></pre></div></div>
-
-<p>创建/etc/locale.cong, 输入LANG=en_US.UTF-8</p>
-
-<p>创建/etc/hostname  $name</p>
-
-<ol>
-  <li>修改/etc/hosts</li>
-</ol>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-   127.0.0.1	localhost
-
-   ::1			localhost
-
-   127.0.1.1	<span class="nv">$name</span>.localdomain		<span class="nv">$name</span>
-
-</code></pre></div></div>
-
-<ol>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>127.0.0.1	localhost
+::1			localhost
+127.0.1.1	<span class="nv">$name</span>.localdomain		<span class="nv">$name</span>
+</code></pre></div>    </div>
+  </li>
   <li>
     <p>root用户密码passwd</p>
   </li>
   <li>
-    <p>```shell</p>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pacman <span class="nt">-S</span> grub efibootmgr networkmanager network-manager-applet dialog wireless_tools wpa_supplicant os-prober mtools dosfstools ntfs-3g base-devel linux-headers reflector git <span class="nb">sudo</span>
+</code></pre></div>    </div>
+
+    <p>使用grub作为启动器
+安装intel-ucode或amd-ucode</p>
   </li>
-</ol>
-
-<p>pacman -S grub efibootmgr networkmanager network-manager-applet dialog wireless_tools wpa_supplicant os-prober mtools dosfstools ntfs-3g base-devel linux-headers reflector git sudo</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-   使用grub作为启动器
-
-   安装intel-ucode或amd-ucode
-
-  8. ```shell
-
-   vim /etc/default/grub
-
-   加一行 GRUB_DISABLE_OS_PROBER=false
-
-   grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=Arch
-
-   grub-mkconfig -o /boot/grub/grub.cfg
-
-</code></pre></div></div>
-
-<ol>
   <li>
     <p>退出，取消挂载，重启,使用root账户登录</p>
   </li>
   <li>
-    <p>```shell</p>
-  </li>
-</ol>
+    <p>登录后</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl enable --now NetworkManager
-
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl <span class="nb">enable</span> <span class="nt">--now</span> NetworkManager
 nmtui联网
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>创建普通用户</p>
 
-```
-</code></pre></div></div>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>useradd <span class="nt">-m</span> <span class="nt">-G</span> wheel <span class="nv">$user</span>
+passwd <span class="nv">$user</span>
+<span class="nv">EDITOR</span><span class="o">=</span>vim visudo
+取消wheel <span class="nv">ALL</span><span class="o">=(</span>ALL<span class="o">)</span> ALL的注释
+</code></pre></div>    </div>
 
-<ol>
-  <li>```shell</li>
-</ol>
+    <p>安装显卡驱动</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>useradd -m -G wheel $user
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pacman <span class="nt">-S</span> nvidia nvidia-util
+pacman <span class="nt">-S</span> xf86-video-amdgpu
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>安装</p>
 
-passwd $user
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pacman <span class="nt">-S</span> xorg
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>桌面环境及后续</p>
 
-```
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pacman <span class="nt">-S</span> sddm
+pacman <span class="nt">-S</span> plasma packagekit-qt5 kate git kconsole
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>添加archlinuxcn源</p>
 
-创建用户
-
-```shell
-
-EDITOR=vim visudo
-
-取消wheel ALL=(ALL) ALL的注释
-
-```
-</code></pre></div></div>
-
-<ol>
-  <li>安装显卡驱动</li>
-</ol>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```shell
-
-pacman -S nvidia nvidia-util
-
-pacman -S xf86-video-amdgpu
-
-```
-</code></pre></div></div>
-
-<ol>
-  <li>```shell</li>
-</ol>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pacman -S xorg
-
-```
-</code></pre></div></div>
-
-<ol>
-  <li>桌面环境及后续</li>
-</ol>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```shell
-
-pacman -S sddm
-
-pacman -S plasma packagekit-qt5 kate git kconsole
-
-```
-</code></pre></div></div>
-
-<ol>
-  <li>添加archlinuxcn源</li>
-</ol>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```shell
-
-[archlinuxcn]
-
-Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
-
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>archlinuxcn]
+Server <span class="o">=</span> https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/<span class="nv">$arch</span>
 并取消multilib的注释
 
-```
-
-```shell
-
-pacman -Syu &amp;&amp; pacman -S archlinuxcn-keyring
-
-```
-
-```shell
-
-pacman -S ttf-sarasa-gothic noto-fonts-cjk
-
-```
-
-重启
-</code></pre></div></div>
+pacman <span class="nt">-Syu</span> <span class="o">&amp;&amp;</span> pacman <span class="nt">-S</span> archlinuxcn-keyring
+pacman <span class="nt">-S</span> ttf-sarasa-gothic noto-fonts-cjk
+</code></pre></div>    </div>
+  </li>
+  <li>重启</li>
+</ol>
 
 <h2 id="遇到的问题">遇到的问题</h2>
 
@@ -259,19 +166,12 @@ pacman -S ttf-sarasa-gothic noto-fonts-cjk
 
 <p>创建/etc/X11/xorg.conf.d/20-nvidia.conf</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-Section "Device"
-
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Section "Device"
     Identifier   "Device0"
-
     Driver     "nvidia"
-
     VendorName   "NVIDIA Corporation"
-
     Option "RegistryDwords" "EnableBrightnessControl=1"
-
 EndSection
-
 </code></pre></div></div>
 
 <p>然后更新grub</p>
