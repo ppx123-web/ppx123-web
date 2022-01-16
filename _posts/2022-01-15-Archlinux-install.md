@@ -16,7 +16,7 @@ author: author1
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-# Archlinux的安装
+## Archlinux的安装
 
 可以看这一篇：https://zhuanlan.zhihu.com/p/138951848 （注意：建议wiki，安装细节有可能随着更新改变）
 
@@ -141,15 +141,13 @@ author: author1
 
 20. 重启
 
-## 遇到的问题
-
-### 显卡驱动
+## 显卡驱动
 
 如果安装时使用核显，则后续怎么都转不了独显的驱动
 
 所以建议直接从头到尾使用独显，驱动问题轻松解决
 
-### 独显下屏幕亮度调节
+## 独显下屏幕亮度调节
 
 wiki Nvidia中
 
@@ -166,7 +164,7 @@ EndSection
 
 然后更新grub
 
-### boot空间不足（100M）
+## boot空间不足（100M）
 
 https://wusiyu.me/archlinux-remove-initramfs-linux-fallback-img/
 
@@ -174,15 +172,15 @@ https://wusiyu.me/archlinux-remove-initramfs-linux-fallback-img/
 
 然后在/etc/mkinitcpio.d/linux.preset中去掉fall back的部分
 
-### 选择kde
+## 选择kde
 
 新的gnome十分难用，不建议使用
 
-### v2ray代理
+## v2ray代理
 
 开启系统代理，命令行用proxychains
 
-### pytorch的安装
+## pytorch的安装
 
 2021-1-16  python3.10好像有点问题，安装不了torch
 
