@@ -1,7 +1,11 @@
-I"<h1 class="no_toc" id="list">List</h1>
-<ol id="markdown-toc">
-  <li><a href="#运算符重载与仿函数" id="markdown-toc-运算符重载与仿函数">运算符()重载与仿函数</a></li>
-  <li><a href="#unordered_map等的hash-function" id="markdown-toc-unordered_map等的hash-function">unordered_map等的hash function</a></li>
+I"'<h1 id="list">List</h1>
+
+<ol class="no_toc" id="markdown-toc">
+  <li><a href="#list" id="markdown-toc-list">List</a>    <ol>
+      <li><a href="#运算符重载与仿函数" id="markdown-toc-运算符重载与仿函数">运算符()重载与仿函数</a></li>
+      <li><a href="#unordered_map等的hash-function" id="markdown-toc-unordered_map等的hash-function">unordered_map等的hash function</a></li>
+    </ol>
+  </li>
 </ol>
 
 <h2 id="运算符重载与仿函数">运算符()重载与仿函数</h2>
@@ -43,8 +47,17 @@
     return a.first * 3005 + a.second;
 }
 unordered_map&lt;edge,int,size_t(*)(const pair&lt;int,int&gt; &amp;)&gt;es(n,hash);
+
+unordered_map(size_type __n,
+        const hasher&amp; __hf = hasher(),
+        const key_equal&amp; __eql = key_equal(),
+        const allocator_type&amp; __a = allocator_type())
+: _M_h(__n, __hf, __eql, __a)
+{ }
 </code></pre>
 
-<p>在上述中使用哈希表需要传递hash function，</p>
+<p>在上述中使用哈希表需要传递hash function，从声明中知有size和hasher，key_equal()使用==操作符，pair已经有重载</p>
+
+<p>除了上述的直接构建实例(注意static，成员函数指针和静态函数指针不同)，还可以使用前面提到的仿函数</p>
 
 :ET
