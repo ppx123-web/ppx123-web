@@ -1,5 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/ppx123-web/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ppx123-web/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-01-21T15:40:28+08:00</updated><id>http://localhost:4000/ppx123-web/feed.xml</id><title type="html">Zhao Chaoyi</title><subtitle>Notes
-</subtitle><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><entry><title type="html">A Little</title><link href="http://localhost:4000/ppx123-web/2022/01/21/Django/" rel="alternate" type="text/html" title="A Little" /><published>2022-01-21T00:00:00+08:00</published><updated>2022-01-21T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/01/21/Django</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/01/21/Django/"><![CDATA[<blockquote>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/ppx123-web/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ppx123-web/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-02-19T17:46:04+08:00</updated><id>http://localhost:4000/ppx123-web/feed.xml</id><title type="html">Zhao Chaoyi</title><subtitle>Notes
+</subtitle><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><entry><title type="html">C++</title><link href="http://localhost:4000/ppx123-web/2022/02/19/C++/" rel="alternate" type="text/html" title="C++" /><published>2022-02-19T00:00:00+08:00</published><updated>2022-02-19T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/02/19/C++</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/02/19/C++/"><![CDATA[<h1 class="no_toc" id="list">List</h1>
+<ol id="markdown-toc">
+  <li><a href="#运算符重载与仿函数" id="markdown-toc-运算符重载与仿函数">运算符()重载与仿函数</a></li>
+  <li><a href="#unordered_map等的hash-function" id="markdown-toc-unordered_map等的hash-function">unordered_map等的hash function</a></li>
+</ol>
+
+<h2 id="运算符重载与仿函数">运算符()重载与仿函数</h2>
+
+<p>运算符 ()</p>
+
+<p>在stl queue等容器中，需要重载比较运算符()而不是 &lt;</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="nc">cmp</span> <span class="p">{</span>
+    <span class="kt">bool</span> <span class="k">operator</span> <span class="p">()</span> <span class="p">(</span><span class="n">triple</span> <span class="n">e1</span><span class="p">,</span><span class="n">triple</span> <span class="n">e2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">e1</span><span class="p">.</span><span class="n">dist</span> <span class="o">&gt;</span> <span class="n">e2</span><span class="p">.</span><span class="n">dist</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+<span class="n">priority_queue</span><span class="o">&lt;</span><span class="n">triple</span><span class="p">,</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">triple</span><span class="o">&gt;</span><span class="p">,</span><span class="n">cmp</span><span class="o">&gt;</span> <span class="n">pq</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>cmp中的()运算符重载是仿函数</p>
+
+<p>既能想普通函数一样传入给定数量的参数，还能存储或者处理更多我们需要的有用信息</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ShorterThan</span> <span class="p">{</span>
+    <span class="nl">public:</span>
+        <span class="k">explicit</span> <span class="n">ShorterThan</span><span class="p">(</span><span class="kt">int</span> <span class="n">maxLength</span><span class="p">)</span> <span class="o">:</span> <span class="n">length</span><span class="p">(</span><span class="n">maxLength</span><span class="p">)</span> <span class="p">{}</span>
+        <span class="kt">bool</span> <span class="k">operator</span><span class="p">()</span> <span class="p">(</span><span class="k">const</span> <span class="n">string</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">str</span><span class="p">.</span><span class="n">length</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">length</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="nl">private:</span>
+        <span class="k">const</span> <span class="kt">int</span> <span class="n">length</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">count_if</span><span class="p">(</span><span class="n">myVector</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">myVector</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">ShorterThan</span><span class="p">(</span><span class="n">length</span><span class="p">))</span>
+<span class="c1">//count_if规定了第三个参数只能接受一个参数，但要使得方便修改，利用仿函数即可</span>
+<span class="err">}</span>
+</code></pre></div></div>
+
+<h2 id="unordered_map等的hash-function">unordered_map等的hash function</h2>
+
+<pre><code class="language-C++">static size_t hash(const pair&lt;int,int&gt; &amp; a) {
+    return a.first * 3005 + a.second;
+}
+unordered_map&lt;edge,int,size_t(*)(const pair&lt;int,int&gt; &amp;)&gt;es(n,hash);
+
+unordered_map(size_type __n,
+        const hasher&amp; __hf = hasher(),
+        const key_equal&amp; __eql = key_equal(),
+        const allocator_type&amp; __a = allocator_type())
+: _M_h(__n, __hf, __eql, __a)
+{ }
+</code></pre>
+
+<p>在上述中使用哈希表需要传递hash function，从声明中知有size和hasher，key_equal()使用==操作符，pair已经有重载</p>
+
+<p>除了上述的直接构建实例(注意static，成员函数指针和静态函数指针不同)，还可以使用前面提到的仿函数</p>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="Programming" /><summary type="html"><![CDATA[C++ programming]]></summary></entry><entry><title type="html">Python</title><link href="http://localhost:4000/ppx123-web/2022/02/19/Python/" rel="alternate" type="text/html" title="Python" /><published>2022-02-19T00:00:00+08:00</published><updated>2022-02-19T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/02/19/Python</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/02/19/Python/"><![CDATA[]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="Programming" /><summary type="html"><![CDATA[Python programming]]></summary></entry><entry><title type="html">A Little</title><link href="http://localhost:4000/ppx123-web/2022/01/21/Django/" rel="alternate" type="text/html" title="A Little" /><published>2022-01-21T00:00:00+08:00</published><updated>2022-01-21T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/01/21/Django</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/01/21/Django/"><![CDATA[<blockquote>
   <p>How to use Django and config</p>
 
   <p>HTML CSS JS</p>
@@ -33,6 +89,15 @@
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span>content<span class="nt">&lt;/p&gt;</span>
 </code></pre></div></div>
+
+<p>字体</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;i</span> <span class="na">id=</span><span class="s">""</span><span class="nt">&gt;&lt;/i&gt;</span>斜体
+<span class="nt">&lt;b</span> <span class="na">id=</span><span class="s">""</span><span class="nt">&gt;&lt;/b&gt;</span>粗体
+<span class="nt">&lt;u</span> <span class="na">id=</span><span class="s">""</span><span class="nt">&gt;&lt;/u&gt;</span>下划线
+</code></pre></div></div>
+
+<p>class和id的区别，id在一个页面只能出现一次，而class可以出现多次</p>
 
 <p>列表</p>
 
@@ -80,7 +145,9 @@
 
 <p>style.css</p>
 
-<p>CSS将HTML的元素作为盒子，对每一个元素的各个属性可以进行编辑如width,background-color,color,text-shadow,display,text-align等</p>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="ArchLinux" /><summary type="html"><![CDATA[HTML CSS JS WEB]]></summary></entry><entry><title type="html">Archlinux install</title><link href="http://localhost:4000/ppx123-web/2022/01/15/Archlinux-install/" rel="alternate" type="text/html" title="Archlinux install" /><published>2022-01-15T00:00:00+08:00</published><updated>2022-01-15T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/01/15/Archlinux-install</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/01/15/Archlinux-install/"><![CDATA[<blockquote>
+<p>CSS将HTML的元素作为盒子，对每一个元素的各个属性可以进行编辑如width,background-color,color,text-shadow,display,text-align等</p>
+
+<h2 id="js">JS</h2>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="ArchLinux" /><summary type="html"><![CDATA[HTML CSS JS WEB]]></summary></entry><entry><title type="html">Archlinux install</title><link href="http://localhost:4000/ppx123-web/2022/01/15/Archlinux-install/" rel="alternate" type="text/html" title="Archlinux install" /><published>2022-01-15T00:00:00+08:00</published><updated>2022-01-15T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/01/15/Archlinux-install</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/01/15/Archlinux-install/"><![CDATA[<blockquote>
   <p>Archlinux安装过程中的一些问题，后续配置需要注意的一些事项，以及linux中遇到的一些问题</p>
 </blockquote>
 
@@ -9065,435 +9132,4 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <h4 id="x和y不相关">X和Y不相关</h4>
 
-<p>$\Leftrightarrow \rho_{XY} = 0\Leftrightarrow cov(X,Y)=0\Leftrightarrow E(XY)=E(X)E(Y)\Leftrightarrow D(X+Y)=D(X)+D(Y)$.</p>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="Courses" /><summary type="html"><![CDATA[计概率论总结]]></summary></entry><entry><title type="html">线性代数</title><link href="http://localhost:4000/ppx123-web/2021/01/15/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" rel="alternate" type="text/html" title="线性代数" /><published>2021-01-15T00:00:00+08:00</published><updated>2021-01-15T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2021/01/15/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2021/01/15/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"><![CDATA[<blockquote>
-  <p>孙老师线性代数课程复习</p>
-</blockquote>
-
-<h1 class="no_toc" id="list">List</h1>
-<ol id="markdown-toc">
-  <li><a href="#线性代数定理" id="markdown-toc-线性代数定理">线性代数定理</a>    <ol>
-      <li><a href="#矩阵秩相关" id="markdown-toc-矩阵秩相关">矩阵秩相关：</a></li>
-      <li><a href="#线性方程组" id="markdown-toc-线性方程组">线性方程组：</a></li>
-      <li><a href="#基变化过度矩阵" id="markdown-toc-基变化过度矩阵">基变化，过度矩阵：</a></li>
-      <li><a href="#线性变换的矩阵表示" id="markdown-toc-线性变换的矩阵表示">线性变换的矩阵表示：</a></li>
-      <li><a href="#相似矩阵" id="markdown-toc-相似矩阵">相似矩阵：</a></li>
-      <li><a href="#欧氏空间" id="markdown-toc-欧氏空间">欧氏空间：</a></li>
-      <li><a href="#线性空间" id="markdown-toc-线性空间">线性空间：</a></li>
-      <li><a href="#度量矩阵" id="markdown-toc-度量矩阵">度量矩阵：</a></li>
-      <li><a href="#正交化方法" id="markdown-toc-正交化方法">正交化方法：</a></li>
-      <li><a href="#投影" id="markdown-toc-投影">投影：</a></li>
-      <li><a href="#正交矩阵" id="markdown-toc-正交矩阵">正交矩阵</a></li>
-      <li><a href="#正交变换" id="markdown-toc-正交变换">正交变换</a></li>
-      <li><a href="#实对称阵的对角化" id="markdown-toc-实对称阵的对角化">实对称阵的对角化</a></li>
-      <li><a href="#二次型" id="markdown-toc-二次型">二次型</a></li>
-    </ol>
-  </li>
-</ol>
-
-<h3 id="线性代数定理">线性代数定理</h3>
-
-<h4 id="矩阵秩相关">矩阵秩相关：</h4>
-
-<p>矩阵$A_{m\times n}$的秩为r的充要条件：存在一个r阶子式不为0，r+1阶子式均为0</p>
-
-<p>​		1. $r(A+b)\leq r(A)+r(B)$</p>
-
-<p>​		2. $r(AB)\leq min{r(A),r(B)}$</p>
-
-<h4 id="线性方程组">线性方程组：</h4>
-
-<p>$Ax = b\Leftrightarrow$系数矩阵与增广矩阵有相同的秩</p>
-
-<h4 id="基变化过度矩阵">基变化，过度矩阵：</h4>
-
-<p>$Z={z_1,z_2,…,z_n}$和$W={w_1,w_2,…,w_n}$为两组基，则</p>
-
-<p>$W=ZP$，则称P是Z到W的过渡矩阵</p>
-
-<p>总结：$B=AP$，P为A到B的过渡矩阵，坐标变换为$y = P^{-1}x$，其中x为旧坐标（A中的坐标），y为B中的新坐标</p>
-
-<h4 id="线性变换的矩阵表示">线性变换的矩阵表示：</h4>
-
-<p>线性变化$L(V\rightarrow W)$，Z是V的一组基，$L(z_i) = \sum\limits_{j = 1}^n a_{ji}z_i$</p>
-
-<p>$(L(z_1),L(z_2),…,L(z_3))=(z_1,z_2,…,z_n)A$</p>
-
-<p>则A是线性变换L在基Z下的矩阵</p>
-
-<h4 id="相似矩阵">相似矩阵：</h4>
-
-<p>$A\sim B\Leftrightarrow \exists X,X可逆m=,s.t. \quad B=X^{-1}AX$,可逆是一个等价关系</p>
-
-<p>线性变化L在不同基之下的矩阵是相似的:如何证明？</p>
-
-<p>特征值与特征向量：</p>
-
-<p>​		线性变换的的特征值与特征向量$L\xi =\lambda\xi$</p>
-
-<p>​		矩阵的特征值与特征向量：</p>
-
-<p>​					$A\xi=\lambda \xi$</p>
-
-<p>​				$det(\lambda I_n-A) = 0 \Leftrightarrow (\lambda I_n-A)\xi = 0$</p>
-
-<p>性质：</p>
-
-<p>相似矩阵有相同的特征值
-		<strong>不同特征值</strong>的特征向量一定<strong>线性无关</strong>
-		方阵$A_{nn}$可对角化$\Leftrightarrow $n个线性无关的特征向量
-		若n阶方阵有n个不同的特征值，则此方阵可对角化
-		相似矩阵有相同的迹。
-		A的特征值$\lambda_1,\lambda_2,…,\lambda_n$,则A的迹$trace(A) = \sum_\limits{i = 1}^na_{ii}=\sum\limits_{i=1}^n\lambda_i$</p>
-
-<h4 id="欧氏空间">欧氏空间：</h4>
-
-<p>考虑实空间，复空间再加上共轭：</p>
-
-<p>定义了  内积，模长，角度，内积的计算具有线性</p>
-
-<p>欧式空间需要满足条件</p>
-
-\[(\alpha,\beta)=(\beta,\alpha)\\
-(k\alpha,\beta)=k(\alpha,\beta),k\in R\\
-(\alpha+\beta,\gamma)=(\alpha,\gamma)+(\beta,\gamma)\\
-(\alpha,\alpha)\geq 0\Leftrightarrow \alpha = \vec{0},(\alpha,\alpha) = 0\]
-
-<p>$|x|\geq 0;\quad ||\lambda x||=||\lambda||\cdot||X||$</p>
-
-<p>$||x\pm y||\leq ||x||+||y||$</p>
-
-<p>柯西不等式:(柯西-布涅柯夫斯基不等式)</p>
-
-\[|(x,y)|\leq \|\|x\|\|\cdot \|\|y\|\|\]
-
-<p>等号成立当且仅当x与y线性相关。</p>
-
-<p>即</p>
-
-\[(\alpha,\beta)\leq(\alpha,\alpha)\cdot(\beta,\beta)\]
-
-<p>欧式空间不同基的度量矩阵是合同的。</p>
-
-<p>欧氏空间内积在基${\eta_1,\eta_2,…,\eta_n}$下的的度量矩阵表示：</p>
-
-\[(\alpha,\beta) =X^TAY\]
-
-<p>其中A是基${\eta_1,\eta_2,…,\eta_n}$度量矩阵，X和Y分别是是$\alpha,\beta$在这一组基之下的坐标。</p>
-
-<h4 id="线性空间">线性空间：</h4>
-
-<p>线性子空间：满足数乘运算和加法运算的封闭。</p>
-
-<h4 id="度量矩阵">度量矩阵：</h4>
-
-<p>$(a_{ij})<em>{n\times n}=(&lt;z_i,z_j&gt;)</em>{n\times n}$是一个正定对称矩阵，称为$(V,&lt;,&gt;)$为基$(z_1,z_2,…,z_n)$之下的度量矩阵。</p>
-
-<p>合同：A，B两个n阶方阵，若存在可逆阵C，s.t. $B=C^TAC$</p>
-
-<h4 id="正交化方法">正交化方法：</h4>
-
-<p><img src="C:\Users\赵超懿\AppData\Roaming\Typora\typora-user-images\image-20210101132747112.png" alt="image-20210101132747112" /></p>
-
-<h4 id="投影">投影：</h4>
-
-<p>向量$\vec{\alpha}$在平面${\vec{\eta_1},\vec{\eta_2},…,\vec{\eta_n}}$的投影,其中$\vec{\eta_i}$是一组<strong>标准正交基。</strong></p>
-
-\[(\vec{\eta_1},\vec{\eta_2},...,\vec{\eta_n})
-\left (
-\begin{matrix}
-	\vec{\eta_1}\\
-	\vec{\eta_2}\\
-	\vdots\\
-	\vec{\eta_n}
-\end{matrix}
-\right )\vec{x}
-=\vec{B_m}\vec{B_m}^T\vec{x}\]
-
-<h4 id="正交矩阵">正交矩阵</h4>
-
-<p>$AA^T=I_n$</p>
-
-<p>正交矩阵的实特征根只能是1或-1</p>
-
-<h4 id="正交变换">正交变换</h4>
-
-<p>保内积，保范数，保距离</p>
-
-<p>欧式空间上的线性变换$&lt;Ux,Uy&gt; = &lt;x,y&gt;$</p>
-
-<p>$||Ux||=||x||$</p>
-
-<p>若${\vec{\eta_1},\vec{\eta_2},…,\vec{\eta_n}}$是一组标准正交基，则${U\vec{\eta_1},U\vec{\eta_2},…,U\vec{\eta_n}}$也是一组标准正交基。</p>
-
-<h4 id="实对称阵的对角化">实对称阵的对角化</h4>
-
-<p>实对称阵即相似又合同于某对角阵</p>
-
-<p>$U^TAU = diag[\lambda_1,\lambda_2,…,\lambda_n]$,对n阶对称阵A，存在正交阵U，s.t.其中$\lambda_i,i = 1,2,..,n$是A的特征值</p>
-
-<p>性质：</p>
-
-<p>实对称阵的特征值是实数</p>
-
-<p><strong>实对称阵不同的特征值的特征向量正交</strong>，实对称线性变换的特征子空间是正交的。</p>
-
-<h4 id="二次型">二次型</h4>
-
-<p>标准型：没有交叉项</p>
-
-<p>规范型：标准型且系数为0或$\pm 1$</p>
-
-<p>正惯性指数：A的正特征值的个数</p>
-
-<p>正定：</p>
-
-\[x^TAx\geq 0,x^TAx = 0\Leftrightarrow x = 0\\
-\begin{align}
-\Leftrightarrow &amp; 正惯性指数等于维数\\
-\Leftrightarrow &amp; A的特征值都&gt;0\\
-\Leftrightarrow &amp; A的任意阶主子式都大于0
-\end{align}\]
-
-<p>求规范法：</p>
-
-<p>​		配方法：注意配方法中的线性变换要求非退化。</p>
-
-<p>​		合同变换法：每一次行变换要有相应的列变换。</p>
-
-<p>​		正交变换法：求特征值特征向量然后求标准正交化。</p>
-
-<p>​</p>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="Courses" /><summary type="html"><![CDATA[线性代数]]></summary></entry><entry><title type="html">常微分方程</title><link href="http://localhost:4000/ppx123-web/2021/01/05/ode/" rel="alternate" type="text/html" title="常微分方程" /><published>2021-01-05T00:00:00+08:00</published><updated>2021-01-05T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2021/01/05/ode</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2021/01/05/ode/"><![CDATA[<blockquote>
-  <p>孙老师ODE课程复习</p>
-</blockquote>
-
-<ol class="no_toc" id="markdown-toc">
-  <li><a href="#ode" id="markdown-toc-ode">ODE</a>    <ol>
-      <li><a href="#一阶齐次与非齐次方程" id="markdown-toc-一阶齐次与非齐次方程">一阶齐次与非齐次方程</a>        <ol>
-          <li><a href="#bernoulli-方程" id="markdown-toc-bernoulli-方程">Bernoulli 方程</a></li>
-          <li><a href="#riccati-方程" id="markdown-toc-riccati-方程">Riccati 方程</a></li>
-          <li><a href="#欧拉方程" id="markdown-toc-欧拉方程">欧拉方程</a></li>
-        </ol>
-      </li>
-      <li><a href="#二阶线性方程" id="markdown-toc-二阶线性方程">二阶线性方程</a></li>
-      <li><a href="#零化子" id="markdown-toc-零化子">零化子：</a></li>
-      <li><a href="#常数变易法" id="markdown-toc-常数变易法">常数变易法</a></li>
-      <li><a href="#一般理论" id="markdown-toc-一般理论">一般理论：</a></li>
-      <li><a href="#liouville-定理" id="markdown-toc-liouville-定理">Liouville 定理</a></li>
-      <li><a href="#一阶线性方程组" id="markdown-toc-一阶线性方程组">一阶线性方程组</a></li>
-      <li><a href="#线性微分方程的一般理论" id="markdown-toc-线性微分方程的一般理论">线性微分方程的一般理论</a></li>
-    </ol>
-  </li>
-  <li><a href="#ode常用技巧" id="markdown-toc-ode常用技巧">ODE常用技巧</a>    <ol>
-      <li><a href="#一阶线性微分方程的初等解法" id="markdown-toc-一阶线性微分方程的初等解法">一阶线性微分方程的初等解法</a></li>
-      <li><a href="#恰当方程与积分因子" id="markdown-toc-恰当方程与积分因子">恰当方程与积分因子</a></li>
-      <li><a href="#一阶隐式微分方程与参数表示" id="markdown-toc-一阶隐式微分方程与参数表示">一阶隐式微分方程与参数表示：</a></li>
-      <li><a href="#高阶线性非齐次方程" id="markdown-toc-高阶线性非齐次方程">高阶线性非齐次方程：</a></li>
-      <li><a href="#克莱罗方程" id="markdown-toc-克莱罗方程">克莱罗方程：</a></li>
-      <li><a href="#高阶方程" id="markdown-toc-高阶方程">高阶方程</a></li>
-      <li><a href="#一阶线性方程组-1" id="markdown-toc-一阶线性方程组-1">一阶线性方程组</a></li>
-    </ol>
-  </li>
-</ol>
-
-<h1 id="ode">ODE</h1>
-
-<h4 id="一阶齐次与非齐次方程">一阶齐次与非齐次方程</h4>
-
-\[\dfrac{dy}{dx}+a(x)y=0\\
-y = e^{-\int a(x)dx}\]
-
-\[\dfrac{dy}{dx}+p(x)y=q(x)\\
-y = e^{-\int p(x)dx}(c+\int e^{\int p(x)dx}q(x)dx)\]
-
-<p>两边同时乘以$e^{\int p(x)dx}$</p>
-
-<h5 id="bernoulli-方程">Bernoulli 方程</h5>
-
-\[\dfrac{dy}{dx}+p(x)y = q(x)y^{\alpha},\alpha\neq 0,1\\
-y^{-\alpha}\dfrac{dy}{dx}+p(x)y^{1-\alpha}=q(x)\\
-z(x)=y(x)^{1-\alpha}\\
-z^{'}+(1-\alpha)pz=(1-\alpha)q(x)\]
-
-<h5 id="riccati-方程">Riccati 方程</h5>
-
-\[y^{'}+p(x)y+q(x)y^2=f(x)\\\]
-
-<p>假设$y_1(x)$是方程的一个特解，则$z(x)=y(x)-y_1(x),z^{‘}=y^{‘}(x)-y_1^{‘}(x)$</p>
-
-\[z^{'}+y^{'}+p(x)(y_1+z)+q(x)(y_1+z)^2=f(x)\\
-z^{'}+p(x)z+q(x)(z^2+2y_1z)=0\\
-z^{'}+(p+2qy_1)z+qz^2 = 0\]
-
-<p>得到的是Bernoulli方程</p>
-
-<h5 id="欧拉方程">欧拉方程</h5>
-
-<p>形如</p>
-
-\[a_nx^ny^{(n)}+a_{n-1}x^{n-1}y^{(n-1)}+\cdots+a_1xy^{(1)}+a_0y=f(x)\]
-
-<p>其中$a_i,i=0,1,2,…,n$为常数</p>
-
-<p>经过自变量变换$x=e^t,D=\dfrac{d}{dt},\dfrac{dy}{dx}=\dfrac{1}{x}Dy,\dfrac{d^ky}{dx^k}=\dfrac{1}{x^k}D(D-1)\cdots (D-k)y$</p>
-
-\[a_nD(D-1)\cdots (D-n)y+\cdots+a_1Dy+a_0y=f(e^t)\]
-
-<h4 id="二阶线性方程">二阶线性方程</h4>
-
-<p>二阶常系数齐次方程：求其特征方程</p>
-
-<p>二阶线性方程：先求二阶线性其次方程的通解$c_1y_1+c_2y_2$，再求非齐次方程的一个特解$y^{<em>}$，则通解为$y^{</em>}+c_1y_1+c_2y_2$</p>
-
-<h4 id="零化子">零化子：</h4>
-
-<p>注意：升阶后还需要降阶，即带入原方程。可变参数与原方程的结束相同。</p>
-
-<p>多项式：$x^{k},D^k$</p>
-
-<p>指数函数：$e^{\lambda x},D-\lambda$</p>
-
-<p>​					$x^ke^{\lambda x},(D-\lambda)^{k+1}$</p>
-
-<p>三角函数：$(D^2+b^2)cosbx$</p>
-
-<p>​					$(D^2+b^2)sinbx$</p>
-
-<p>​					$(D^2+b^2)^{k+1}x^ksinbx$</p>
-
-<p>​					$(D^2-2aD+a^2+b^2)e^{ax}cosbx$</p>
-
-<h4 id="常数变易法">常数变易法</h4>
-
-<p>例如： $y^{‘’}+ay^{‘}+by=f(x)$，（a,b为常数）可以先计算出其次方程的通解，然后使用常数变易法求解出特解。</p>
-
-<p>定理：假设$y^{‘’}+p(x)y^{‘}+q(x)y=0$有一基础解系，$y_1(x),y_2(x)$满足$w(x)\neq 0$,则非齐次方程$y^{‘’}+p(x)y^{‘}+q(x)y=f(x)$的一个特解为</p>
-
-\[y_{*}(x)=-y_1(x)\int_{x_0}^x\dfrac{f(t)y_2(t)}{w(t)}dt+y_2(x)\int_{x_0}^{x}\dfrac{f(t)y(t)}{w(t)}dt\]
-
-<h4 id="一般理论">一般理论：</h4>
-
-<p>​	（仅对于二阶）</p>
-
-\[y^{''}+p(x)y^{'}+q(x)y = 0,\qquad \phi=\{方程的解\}\\
-Then \quad \forall y_1,y_2\in \phi,\forall c_1,c_2\in R,c_1y_1+c_2y_2\in \phi\]
-
-\[if \quad y_1(x),y_2(x)是方程y^{''}+p(x)y^{'}+q(x)y = 0的一个基础解系，\\则对任意一个解:y\in \phi,存在c_1,c_2,s.t.\quad y(x) = c_1y_1(x)+c_2y_2(x)\]
-
-<p>Wronski行列式，<strong>对于方程的解</strong>，一点线性无关，点点线性无关</p>
-
-<p>对于一阶线性齐次方程组，同样可以有类似的结论：齐次方程组存在几个线性无关的解，$\vec{y_1(x)},\vec{y_2(x)},\cdots,\vec{y_n(x)}$，使得任意一组解都可以用其表示。</p>
-
-<h4 id="liouville-定理">Liouville 定理</h4>
-
-<p>(特殊情况下的)</p>
-
-<p>设$y_1,y_2$是齐次方程$y^{‘’}+p(x)y^{‘}+q(x)y = 0$的两个解</p>
-
-\[w(x) = 
-\left \|
-\begin{matrix}
-	y_1(x) &amp; y_2(x)\\
-	y_1^{'}(x) &amp;y_2^{'}(x)
-\end{matrix}
-\right \|
-=w(x_0)e^{-\int_{x_0}^xp(t)dt}\]
-
-<p>通过对$w(x)$求导$\dfrac{dw}{dx}=-pw(x)$</p>
-
-<p>证明可以由对$w(x)$求导得到。</p>
-
-<p>对于高阶线性方程Wronski行列式是特殊情况，对于一阶线性方程组为一般情况。</p>
-
-<p>对于一组向量值函数$\vec{y_1(x)},\vec{y_2(x)},\cdots,\vec{y_n(x)}$,称$det(\vec{y_1(x)},\vec{y_2(x)},\cdots,\vec{y_n(x)})$为$\vec{y_1(x)},\vec{y_2(x)},\cdots,\vec{y_n(x)}$的Wrongski行列式</p>
-
-<p>仍然满足（对于方程的解）一点线性无关，点点线性无关。</p>
-
-<p>$\vec{y_1(x)},\vec{y_2(x)},\cdots,\vec{y_n(x)}$线性相关当且仅当$W(x)\equiv 0$</p>
-
-<p>对于线性齐次方程组</p>
-
-\[W(x)=w(x_0)e^{-\int_{x_0}^xTrace(A(t))dt}\\
-W(x)=det(\vec{y_1(x)},\vec{y_2(x)},\cdots,\vec{y_n(x)})\]
-
-<h4 id="一阶线性方程组">一阶线性方程组</h4>
-
-<p>一阶其次常系数</p>
-
-<p>​	解法：高斯消元</p>
-
-<p>​		特征值：对于一阶其次常系数方程组，特征方程$|\lambda I_n-A| = 0$,</p>
-
-<p>​		若A可以对角化，则A有n个线性无关的特征向量</p>
-
-\[\vec{\xi_1},\vec{\xi_2},\cdots,\vec{\xi_n}\\
-\lambda_1,\lambda_2,\cdots,\lambda_n\\
-方程通解为\\
-\vec{y}=c_1\vec{\xi_1}e^{\lambda_1x}+c_2\vec{\xi_2}e^{\lambda_2x}+\cdots+c_n\vec{\xi_n}e^{\lambda_nx}\]
-
-<p>特解由初值确定</p>
-
-<p>​		对于不能对角化的，高斯消元法</p>
-
-<p>​		对于一阶非齐次</p>
-
-\[\dfrac{d\vec{y}}{dx}=A\vec{y}+\vec{f(x)}\]
-
-<p>​				先求一阶非齐次的解：</p>
-
-\[c_1\vec{y_1}(x)+c_2\vec{y_2}(x)+\cdots+c_n\vec{y_n}(x)=Y(x)\vec{C}\]
-
-<p>​				带入可得</p>
-
-\[y_{*}=Y(x)(\vec{C}+\int Y^{-1}(x)\vec{f(x)}dx\]
-
-<h4 id="线性微分方程的一般理论">线性微分方程的一般理论</h4>
-
-\[\dfrac{d\vec{y}}{dx}=A(x)\vec{y}+\vec{f(x)}\]
-
-<p>见前面一般理论</p>
-
-<p>性质有：</p>
-
-<p>​		$\sum\limits_{i = 1}^nc_i\vec{y_i(x)}$是解，且任一形式都是如上形式</p>
-
-<p>​		解矩阵$Y(x)=(\vec{y_1(x)},\vec{y_2(x)},\cdots,\vec{y_n(x)})$是基解矩阵$\Leftrightarrow W(x)\neq 0$</p>
-
-<p>​		$Y(x),Z(x)$是两个基解矩阵，则存在可逆阵P，$s.t.\quad Z(x)=Y(x)P$</p>
-
-<p>高阶线性方程可以改写为一阶线性方程组</p>
-
-<h1 id="ode常用技巧">ODE常用技巧</h1>
-
-<h2 id="一阶线性微分方程的初等解法">一阶线性微分方程的初等解法</h2>
-
-<h2 id="恰当方程与积分因子">恰当方程与积分因子</h2>
-
-<p>$M(x,y)dx+N(x,y)dy=0$方程为恰当方程$M(x,y)dx+N(x,y)dy=du(x,y)$的充要条件为$\dfrac{\partial M}{\partial y} = \dfrac{\partial N}{\partial x}$</p>
-
-\[u=\int M(x,y)\partial x+\int[N(x,y)-\dfrac{\partial}{\partial y}\int M(x,y)\partial x]dy\]
-
-<h2 id="一阶隐式微分方程与参数表示">一阶隐式微分方程与参数表示：</h2>
-
-\[F(x,y,y^{'}) = 0\]
-
-<h2 id="高阶线性非齐次方程">高阶线性非齐次方程：</h2>
-
-<p>​		已知基础解系，常数变易法即可求出特解</p>
-
-<p>​		已知几个特解：特解相减判断线性无关即可求出基础解系</p>
-
-<h2 id="克莱罗方程">克莱罗方程：</h2>
-
-\[y=xp+f(p),p=\dfrac{dy}{dx}\]
-
-<p>其解为直线簇，通过令p=c带入方程可得通解</p>
-
-<h2 id="高阶方程">高阶方程</h2>
-
-<p>欧拉方程</p>
-
-<p>观察是否缺x或y，如果有，进行变量替换</p>
-
-<p>观察$y,y^{‘}$是否齐次，齐次可以采用$y^{‘}=yz$进行替换</p>
-
-<h2 id="一阶线性方程组-1">一阶线性方程组</h2>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="Courses" /><summary type="html"><![CDATA[ODE]]></summary></entry></feed>
+<p>$\Leftrightarrow \rho_{XY} = 0\Leftrightarrow cov(X,Y)=0\Leftrightarrow E(XY)=E(X)E(Y)\Leftrightarrow D(X+Y)=D(X)+D(Y)$.</p>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="Courses" /><summary type="html"><![CDATA[计概率论总结]]></summary></entry></feed>
