@@ -1,6 +1,6 @@
-I"<ol class="no_toc" id="markdown-toc">
+I"<ol id="markdown-toc">
   <li><a href="#运算符重载与仿函数" id="markdown-toc-运算符重载与仿函数">运算符()重载与仿函数</a></li>
-  <li><a href="#unordered_map等的hash-function" id="markdown-toc-unordered_map等的hash-function">unordered_map等的hash function</a></li>
+  <li><a href="#unordered_map等的hash_function" id="markdown-toc-unordered_map等的hash_function">unordered_map等的hash_function</a></li>
   <li><a href="#c函数" id="markdown-toc-c函数">C++函数</a>    <ol>
       <li><a href="#引用" id="markdown-toc-引用">引用</a></li>
       <li><a href="#默认参数" id="markdown-toc-默认参数">默认参数</a></li>
@@ -46,7 +46,7 @@
 <span class="err">}</span>
 </code></pre></div></div>
 
-<h2 id="unordered_map等的hash-function">unordered_map等的hash function</h2>
+<h2 id="unordered_map等的hash_function">unordered_map等的hash_function</h2>
 
 <pre><code class="language-C++">static size_t hash(const pair&lt;int,int&gt; &amp; a) {
     return a.first * 3005 + a.second;
