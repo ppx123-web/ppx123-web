@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/ppx123-web/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ppx123-web/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-02-25T16:02:38+08:00</updated><id>http://localhost:4000/ppx123-web/feed.xml</id><title type="html">Zhao Chaoyi</title><subtitle>Notes
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/ppx123-web/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ppx123-web/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-02-26T09:37:40+08:00</updated><id>http://localhost:4000/ppx123-web/feed.xml</id><title type="html">Zhao Chaoyi</title><subtitle>Notes
 </subtitle><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><entry><title type="html">Cpp</title><link href="http://localhost:4000/ppx123-web/2022/02/19/CPP/" rel="alternate" type="text/html" title="Cpp" /><published>2022-02-19T00:00:00+08:00</published><updated>2022-02-19T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/02/19/CPP</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/02/19/CPP/"><![CDATA[<ol class="no_toc" id="markdown-toc">
   <li><a href="#运算符重载与仿函数" id="markdown-toc-运算符重载与仿函数">运算符()重载与仿函数</a></li>
-  <li><a href="#unordered_map等的hash-function" id="markdown-toc-unordered_map等的hash-function">unordered_map等的hash function</a></li>
+  <li><a href="#unordered_map等的hash_function" id="markdown-toc-unordered_map等的hash_function">unordered_map等的hash_function</a></li>
   <li><a href="#c函数" id="markdown-toc-c函数">C++函数</a>    <ol>
       <li><a href="#引用" id="markdown-toc-引用">引用</a></li>
       <li><a href="#默认参数" id="markdown-toc-默认参数">默认参数</a></li>
@@ -47,7 +47,7 @@
 <span class="err">}</span>
 </code></pre></div></div>
 
-<h2 id="unordered_map等的hash-function">unordered_map等的hash function</h2>
+<h2 id="unordered_map等的hash_function">unordered_map等的hash_function</h2>
 
 <pre><code class="language-C++">static size_t hash(const pair&lt;int,int&gt; &amp; a) {
     return a.first * 3005 + a.second;
