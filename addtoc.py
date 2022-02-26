@@ -7,6 +7,7 @@ pattern_use = re.compile(r"^(#+ +)\<span.*\>(?P<p3>.+)\</span\>\n$")
 pattern_head = r"(---.*---[\n]+(\>[^\n]*\n)*)"
 pattern_toc = re.compile(r"^[-* \t]+ +\[(?P<p4>.+)\]\(#head[0-9]+\)\n$")
 head_sign = re.compile(r"^---\n$")
+directory = "writing"
 global cnt
 cnt = 0
 ## <span id="head1">运算符()重载与仿函数</span>
@@ -34,7 +35,7 @@ def modify(file):
     cnt = 0
     filedata = ""
     toc = ""
-    with open(f"./_posts/{file}","r+") as f:
+    with open(f"./{directory}/{file}","r+") as f:
         for line in f.readlines():
             if len(pattern_toc.findall(line)) > 0:
                 # 当匹配到一条toc时，跳过
@@ -60,15 +61,16 @@ def modify(file):
 
 if __name__=='__main__':
     filenames = []
+    print("处理writing文件夹中文件输出到_post")
     if len(sys.argv) == 1:
-        filedir = os.listdir("_posts")
+        filedir = os.listdir(directory)
         for name in filedir:
             if fnmatch.fnmatch(name, "*.md"):
                 filenames.append(name)
     else:
         if sys.argv[1] == "bak":
-            print("以备份到backup文件夹")
-            subprocess.call(r"cp ./_posts/*.md ./backup/",shell=True)
+            print("备份到bak文件夹")
+            subprocess.call(r"cp ./backup/*.md ./bak/",shell=True)
         for u in range(1,len(sys.argv)):
             filenames.append(sys.argv[u])
     print(f"处理的文件有:{filenames}")
