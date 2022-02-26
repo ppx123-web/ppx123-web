@@ -10,20 +10,11 @@ author: author1
 
 > Archlinux安装过程中的一些问题，后续配置需要注意的一些事项，以及linux中遇到的一些问题
 
-- [List](#head1)
-- [Archlinux的安装](#head2)
-- [显卡驱动](#head3)
-- [独显下屏幕亮度调节](#head4)
-- [boot空间不足（100M）](#head5)
-- [选择kde](#head6)
-- [v2ray代理](#head7)
-- [pytorch的安装](#head8)
-
-## <span id="head1">List</span>
+## List
 
 
 
-## <span id="head2">Archlinux的安装</span>
+## Archlinux的安装
 
 可以看这一篇：https://zhuanlan.zhihu.com/p/138951848 （注意：建议wiki，安装细节有可能随着更新改变）
 
@@ -148,13 +139,13 @@ author: author1
 
 20. 重启
 
-## <span id="head3">显卡驱动</span>
+## 显卡驱动
 
 如果安装时使用核显，则后续怎么都转不了独显的驱动
 
 所以建议直接从头到尾使用独显，驱动问题轻松解决
 
-## <span id="head4">独显下屏幕亮度调节</span>
+## 独显下屏幕亮度调节
 
 wiki Nvidia中
 
@@ -171,7 +162,7 @@ EndSection
 
 然后更新grub
 
-## <span id="head5">boot空间不足（100M）</span>
+## boot空间不足（100M）
 
 https://wusiyu.me/archlinux-remove-initramfs-linux-fallback-img/
 
@@ -179,15 +170,15 @@ https://wusiyu.me/archlinux-remove-initramfs-linux-fallback-img/
 
 然后在/etc/mkinitcpio.d/linux.preset中去掉fall back的部分
 
-## <span id="head6">选择kde</span>
+## 选择kde
 
 新的gnome十分难用，不建议使用
 
-## <span id="head7">v2ray代理</span>
+## v2ray代理
 
 开启系统代理，命令行用proxychains
 
-## <span id="head8">pytorch的安装</span>
+## pytorch的安装
 
 2021-1-16  python3.10好像有点问题，安装不了torch
 

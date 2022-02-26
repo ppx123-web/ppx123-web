@@ -7,36 +7,19 @@ tags: [Courses]
 author: author1
 ---
 
-
-- [高级算法第三次作业](#head1)
-- [第一题](#head2)
-	- [(1)](#head3)
-	- [(2)](#head4)
-- [第二题](#head5)
-	- [(1)](#head6)
-	- [(2)](#head7)
-	- [(3)](#head8)
-- [第三题](#head9)
-- [第四题](#head10)
-	- [(1)](#head11)
-	- [(2)](#head12)
-- [第五题](#head13)
-	- [(1)](#head14)
-	- [(2)](#head15)
-	- [(3)](#head16)
-# <span id="head1">高级算法第三次作业</span>
+# 高级算法第三次作业
 
 匡亚明学院 赵超懿 191870271
 
-## <span id="head2">第一题</span>
+## 第一题
 
-### <span id="head3">(1)</span>
+### (1)
 
 显然当$a\in A\wedge a\in B\Rightarrow$，这样的位置$F_C$和$A\cap B$的bloom filters是一样的。
 
 当$a\in A\wedge a\notin B$时，只要$\exists b\in B\wedge b\notin A,\exists i,j,1\leq i,j\leq k,s.t.\quad h_j(b)=h_i(a)$，且对于$A\cap B$中的元素没有哈希到$h_j(b)$这个位置，则$A\cap B$的bloom filters至少有一位和$F_A\wedge F_B$不同
 
-### <span id="head4">(2)</span>
+### (2)
 
 记$a_i,b_i$分别是A和B的bloom filters产生的m个bit的第i位,a,b为A,B中元素
 
@@ -64,20 +47,20 @@ $Pr[a_i=b_i] = 2((1-\dfrac{1}{m})^k-(1-\dfrac{1}{m})^{2k})\dfrac{\\|A\cap B\\|}{
 
 $E[differ] = n - n(2((1-\dfrac{1}{m})^k-(1-\dfrac{1}{m})^{2k})\dfrac{\\|A\cap B\\|}{n^2}+1-2(1-\dfrac{1}{m})^k+2(1-\dfrac{1}{m})^{2k})$
 
-## <span id="head5">第二题</span>
+## 第二题
 
 对于$\dfrac{n}{2}$个球,uniformly at random的期望为$\Theta(\dfrac{\log \dfrac{n}{2}}{\log\log\dfrac{n}{2}})$,two choice $\dfrac{n}{2}$的期望为$\Theta(\log\log \dfrac{n}{2})$，当某一半是uniformly at random的时候，期望则为uniformly at random的期望，因为 $\log\log\dfrac{n}{2} = o(\dfrac{\log \dfrac{n}{2}}{\log\log\dfrac{n}{2}}))$
 
 
-### <span id="head6">(1)</span>
+### (1)
 
 前一半随机选择仍为$\Theta(\dfrac{\log n/2}{\log\log\dfrac{n}{2}})=\Theta(\dfrac{\log }{\log\log n})$
 
-### <span id="head7">(2)</span>
+### (2)
 
 $\Theta(\dfrac{\log \dfrac{n}{2}}{\log\log\dfrac{n}{2}}) + \Theta(\log\log \dfrac{n}{2}) = \Theta(\dfrac{\log \dfrac{n}{2}}{\log\log\dfrac{n}{2}}) = \Theta(\dfrac{\log }{\log\log n})$
 
-### <span id="head8">(3)</span>
+### (3)
 
 将一个随机选取和two choice视为一个操作，共有$\dfrac{n}{2}$个操作，记第i个盒子的球的个数为$X_i$
 
@@ -101,7 +84,7 @@ $Pr[X_i\geq L] \leq (\dfrac{e}{L})^L\leq \dfrac{1}{n^2}$
 
 下界显然是随机选取$\dfrac{n}{2}$的下界$\Theta(\dfrac{\log \dfrac{n}{2}}{\log\log\dfrac{n}{2}}) = \Theta(\dfrac{\log n}{\log\log n})$，所以结果仍为$L=\Theta(\dfrac{\log n}{\log\log n})$
 
-## <span id="head9">第三题</span>
+## 第三题
 
 设$Y_i=I[(1-\epsilon)Z\leq \hat{Z_i}\leq (1+\epsilon)Z]$,$E[Y_i]\geq \dfrac{3}{4}$
 
@@ -115,9 +98,9 @@ $Y=\sum\limits_{i=1}^sY_i,\mu = E[Y]\geq \dfrac{3}{4}s$
 
 即$e^{-\dfrac{s}{24}\leq \delta}\Rightarrow S\geq 24\ln \dfrac{1}{\delta},S=\Omega(\log \dfrac{1}{\delta})$
 
-## <span id="head10">第四题</span>
+## 第四题
 
-### <span id="head11">(1)</span>
+### (1)
 
 $Pr[\\|X\\|\geq \delta]\leq \dfrac{\sum\limits_{k=1}^{+\infty}\dfrac{t^k}{k!}E[\\|X\\|^k]}{\sum\limits_{k=1}^{+\infty}\dfrac{t^k}{k!}\delta^k}$
 
@@ -133,19 +116,19 @@ $\forall i\in N,\dfrac{a_i}{b_i}\geq c\Rightarrow a_i\geq cb_i$
 
 所以一定存在k阶矩强于chernoff bound
 
-### <span id="head12">(2)</span>
+### (2)
 
 矩阵生成函数容易计算，而特定的k阶矩难以找到
 
-## <span id="head13">第五题</span>
+## 第五题
 
-### <span id="head14">(1)</span>
+### (1)
 
 记$h_k=\prod\limits_{i=1}^{k}f_i(X_i)$，显然$h_k$不减
 
 $E[h_n]=E[h_{n-1}\cdot f_n(X_n)]\leq E[h_{n-1}]E[f_n(X_n)]]\leq ......\leq \prod\limits_{i=1}^{k}E[f_i(x_i)]$
 
-### <span id="head15">(2)</span>
+### (2)
 
 $X=\sum\limits_{i=1}^nX_i,E[x]=\mu$
 
@@ -155,7 +138,7 @@ $Pr[X\leq (1-\delta)\mu]\leq Pr[e^{\lambda X}\geq e^{(1-\delta)\mu\lambda}]\leq 
 
 Qed.
 
-### <span id="head16">(3)</span>
+### (3)
 
 记$p=\\|I\\|,q=\\|J\\|$,记$X_i\in I,X_{i_1},X_{i_2},...,X_{i_p}$,记$X_j\in J,X_{j_1},X_{j_2},...,X_{j_q}$.$I$和$J$对应将$B_{i,k}$划分后的集合
 
