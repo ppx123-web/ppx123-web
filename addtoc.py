@@ -76,4 +76,4 @@ if __name__=='__main__':
     print(f"处理的文件有:{filenames}")
     # input('按回车以确认...')
     for file in filenames:
-        modify(file)
+        modify(os.path.basename(file))
