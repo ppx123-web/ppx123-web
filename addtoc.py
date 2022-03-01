@@ -56,7 +56,7 @@ def modify(file):
     with open(f"./_posts/{file}","w",encoding="utf-8") as f:
         match = re.match(pattern_head, filedata,re.S | re.M)
         f.write(match.group(1)+'\n')
-        f.write(toc)
+        f.write(toc + '\n')
         f.write(filedata[len(match.group(1)):])
 
 if __name__=='__main__':
