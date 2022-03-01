@@ -1,20 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/ppx123-web/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ppx123-web/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-02-26T09:41:42+08:00</updated><id>http://localhost:4000/ppx123-web/feed.xml</id><title type="html">Zhao Chaoyi</title><subtitle>Notes
-</subtitle><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><entry><title type="html">Cpp</title><link href="http://localhost:4000/ppx123-web/2022/02/19/CPP/" rel="alternate" type="text/html" title="Cpp" /><published>2022-02-19T00:00:00+08:00</published><updated>2022-02-19T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/02/19/CPP</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/02/19/CPP/"><![CDATA[<ol id="markdown-toc">
-  <li><a href="#运算符重载与仿函数" id="markdown-toc-运算符重载与仿函数">运算符()重载与仿函数</a></li>
-  <li><a href="#unordered_map等的hash_function" id="markdown-toc-unordered_map等的hash_function">unordered_map等的hash_function</a></li>
-  <li><a href="#c函数" id="markdown-toc-c函数">C++函数</a>    <ol>
-      <li><a href="#引用" id="markdown-toc-引用">引用</a></li>
-      <li><a href="#默认参数" id="markdown-toc-默认参数">默认参数</a></li>
-      <li><a href="#函数重载" id="markdown-toc-函数重载">函数重载</a></li>
-      <li><a href="#模板" id="markdown-toc-模板">模板</a>        <ol>
-          <li><a href="#显式具体化" id="markdown-toc-显式具体化">显式具体化</a></li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-</ol>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/ppx123-web/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ppx123-web/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-03-01T11:21:36+08:00</updated><id>http://localhost:4000/ppx123-web/feed.xml</id><title type="html">Zhao Chaoyi</title><subtitle>Notes
+</subtitle><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><entry><title type="html">Cpp</title><link href="http://localhost:4000/ppx123-web/2022/02/19/CPP/" rel="alternate" type="text/html" title="Cpp" /><published>2022-02-19T00:00:00+08:00</published><updated>2022-02-19T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/02/19/CPP</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/02/19/CPP/"><![CDATA[<blockquote>
+  <p>From C++ Primer Plus</p>
+</blockquote>
 
-<h2 id="运算符重载与仿函数">运算符()重载与仿函数</h2>
+<ul>
+  <li><a href="#head1">运算符()重载与仿函数</a></li>
+  <li><a href="#head2">hash_function</a></li>
+  <li><a href="#head3">C++函数</a>
+    <ul>
+      <li><a href="#head4">引用</a></li>
+      <li><a href="#head5">默认参数</a></li>
+      <li><a href="#head6">函数重载</a></li>
+      <li><a href="#head7">模板</a>
+        <ul>
+          <li><a href="#head8">显式具体化</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="运算符重载与仿函数"><span id="head1">运算符()重载与仿函数</span></h2>
 
 <p>运算符 ()</p>
 
@@ -47,7 +53,7 @@
 <span class="err">}</span>
 </code></pre></div></div>
 
-<h2 id="unordered_map等的hash_function">unordered_map等的hash_function</h2>
+<h2 id="hash_function"><span id="head2">hash_function</span></h2>
 
 <pre><code class="language-C++">static size_t hash(const pair&lt;int,int&gt; &amp; a) {
     return a.first * 3005 + a.second;
@@ -66,9 +72,9 @@ unordered_map(size_type __n,
 
 <p>除了上述的直接构建实例(注意static，成员函数指针和静态函数指针不同)，还可以使用前面提到的仿函数</p>
 
-<h2 id="c函数">C++函数</h2>
+<h2 id="c函数"><span id="head3">C++函数</span></h2>
 
-<h3 id="引用">引用</h3>
+<h3 id="引用"><span id="head4">引用</span></h3>
 
 <p>可以多层函数嵌套对对象进行修改，但是需要注意避免返回函数终止时不再存在的内存单元引用</p>
 
@@ -88,22 +94,22 @@ function(arg) = newarg (此时则不允许这样)
 
 <p>当实参与引用参数不匹配，C++将生成临时变量。目前当参数为const时：（1）实参的类型正确，但不是左值（可被引用的数据对象）（2）类型不正确，但可以转换为正确的类型</p>
 
-<h3 id="默认参数">默认参数</h3>
+<h3 id="默认参数"><span id="head5">默认参数</span></h3>
 
 <pre><code class="language-C++">int function(int tk = 1,int m = 2,int n = 3)
 </code></pre>
 
 <p>有默认参数的右侧的参数也必须都有默认参数</p>
 
-<h3 id="函数重载">函数重载</h3>
+<h3 id="函数重载"><span id="head6">函数重载</span></h3>
 
 <p>函数重载的关键是特征标——函数的参数列表，而不是函数的返回类型。因此函数重载返回类型可以不同。</p>
 
-<h3 id="模板">模板</h3>
+<h3 id="模板"><span id="head7">模板</span></h3>
 
 <p>模板同样可以重载</p>
 
-<h4 id="显式具体化">显式具体化</h4>
+<h4 id="显式具体化"><span id="head8">显式具体化</span></h4>
 
 <p>函数有多个原型，则编译器在选择原型时，优先选择非模板版本，显式具体化优先于模板</p>
 
@@ -123,15 +129,80 @@ void swap(T &amp;,T &amp;);
 template &lt;&gt; void swap&lt;int&gt; (int ,int ) //显式具体化
 template &lt;&gt; void swap (int ,int )      //显式具体化
 template &lt;&gt;表示不要使用swap模板来生成一个使用int类型的实例
-</code></pre>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="Programming" /><summary type="html"><![CDATA[C++ programming tips]]></summary></entry><entry><title type="html">Python</title><link href="http://localhost:4000/ppx123-web/2022/02/19/Python/" rel="alternate" type="text/html" title="Python" /><published>2022-02-19T00:00:00+08:00</published><updated>2022-02-19T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/02/19/Python</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/02/19/Python/"><![CDATA[]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="Programming" /><summary type="html"><![CDATA[Python programming]]></summary></entry><entry><title type="html">A Little</title><link href="http://localhost:4000/ppx123-web/2022/01/21/Django/" rel="alternate" type="text/html" title="A Little" /><published>2022-01-21T00:00:00+08:00</published><updated>2022-01-21T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/01/21/Django</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/01/21/Django/"><![CDATA[<blockquote>
+</code></pre>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="Programming" /><summary type="html"><![CDATA[C++ programming tips]]></summary></entry><entry><title type="html">Python</title><link href="http://localhost:4000/ppx123-web/2022/02/19/Python/" rel="alternate" type="text/html" title="Python" /><published>2022-02-19T00:00:00+08:00</published><updated>2022-02-19T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/02/19/Python</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/02/19/Python/"><![CDATA[<blockquote>
+  <p>日常遇到的一些问题</p>
+</blockquote>
+
+<ul>
+  <li><a href="#head1">正则表达式</a></li>
+</ul>
+
+<h2 id="正则表达式"><span id="head1">正则表达式</span></h2>
+
+<p>注意</p>
+
+<pre><code class="language-Python">re.sub(pattern, string, replace,count= ,flags=)
+</code></pre>
+
+<p>flags控制了多行匹配，dotall等，注意”.”通常情况下不会去匹配换行符，建议使用\s\S</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>模式</th>
+      <th style="text-align: right">功能</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>.</td>
+      <td style="text-align: right">匹配任意一个字符，除了\n</td>
+    </tr>
+    <tr>
+      <td>\d</td>
+      <td style="text-align: right">匹配数字</td>
+    </tr>
+    <tr>
+      <td>\D</td>
+      <td style="text-align: right">匹配非数字</td>
+    </tr>
+    <tr>
+      <td>\s</td>
+      <td style="text-align: right">匹配空白，\n,\t,空格</td>
+    </tr>
+    <tr>
+      <td>\S</td>
+      <td style="text-align: right">匹配非空白</td>
+    </tr>
+    <tr>
+      <td>\w</td>
+      <td style="text-align: right">匹配非特殊字符a-z,A-Z,0-9,_,汉字</td>
+    </tr>
+    <tr>
+      <td>\W</td>
+      <td style="text-align: right">匹配特殊字符，即非上面的字符</td>
+    </tr>
+  </tbody>
+</table>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="Programming" /><summary type="html"><![CDATA[Python programming]]></summary></entry><entry><title type="html">A Little</title><link href="http://localhost:4000/ppx123-web/2022/01/21/Django/" rel="alternate" type="text/html" title="A Little" /><published>2022-01-21T00:00:00+08:00</published><updated>2022-01-21T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/01/21/Django</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/01/21/Django/"><![CDATA[<blockquote>
   <p>How to use Django and config</p>
 
   <p>HTML CSS JS</p>
 </blockquote>
 
-<h1 id="一些常用的内容">一些常用的内容</h1>
+<ul>
+  <li><a href="#head1">一些常用的内容</a></li>
+  <li><a href="#head2">HTML</a></li>
+  <li><a href="#head3">CSS</a>
+    <ul>
+      <li><a href="#head4">链接</a></li>
+    </ul>
+  </li>
+  <li><a href="#head5">JS</a></li>
+</ul>
 
-<h2 id="html">HTML</h2>
+<h1 id="一些常用的内容"><span id="head1">一些常用的内容</span></h1>
+
+<h2 id="html"><span id="head2">HTML</span></h2>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span> — 文档类型。混沌初分，HTML 尚在襁褓（大约是 1991/92 年）之时，DOCTYPE 用来链接一些 HTML 编写守则，比如自动查错之类。DOCTYPE 在当今作用有限，仅用于保证文档正常读取。现在知道这些就足够了。
 <span class="nt">&lt;html&gt;&lt;/html&gt;</span> — <span class="nt">&lt;html&gt;</span> 元素。该元素包含整个页面的内容，也称作根元素。
@@ -179,7 +250,7 @@ template &lt;&gt;表示不要使用swap模板来生成一个使用int类型的�
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"site"</span><span class="nt">&gt;</span>content <span class="nt">&lt;/a&gt;</span>
 </code></pre></div></div>
 
-<h2 id="css">CSS</h2>
+<h2 id="css"><span id="head3">CSS</span></h2>
 
 <p>规则集</p>
 
@@ -204,7 +275,7 @@ template &lt;&gt;表示不要使用swap模板来生成一个使用int类型的�
 
 <p>在每个规则集里要用分号（;）将各个声明分隔开。</p>
 
-<h3 id="链接">链接</h3>
+<h3 id="链接"><span id="head4">链接</span></h3>
 
 <p>指明链接的文件以及在这个文件作为什么</p>
 
@@ -215,24 +286,24 @@ template &lt;&gt;表示不要使用swap模板来生成一个使用int类型的�
 
 <p>CSS将HTML的元素作为盒子，对每一个元素的各个属性可以进行编辑如width,background-color,color,text-shadow,display,text-align等</p>
 
-<h2 id="js">JS</h2>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="ArchLinux" /><summary type="html"><![CDATA[HTML CSS JS WEB]]></summary></entry><entry><title type="html">Archlinux install</title><link href="http://localhost:4000/ppx123-web/2022/01/15/Archlinux-install/" rel="alternate" type="text/html" title="Archlinux install" /><published>2022-01-15T00:00:00+08:00</published><updated>2022-01-15T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/01/15/Archlinux-install</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/01/15/Archlinux-install/"><![CDATA[<blockquote>
+<h2 id="js"><span id="head5">JS</span></h2>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="ArchLinux" /><summary type="html"><![CDATA[HTML CSS JS WEB]]></summary></entry><entry><title type="html">Archlinux install</title><link href="http://localhost:4000/ppx123-web/2022/01/15/Archlinux-install/" rel="alternate" type="text/html" title="Archlinux install" /><published>2022-01-15T00:00:00+08:00</published><updated>2022-01-15T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/01/15/Archlinux-install</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/01/15/Archlinux-install/"><![CDATA[<blockquote>
   <p>Archlinux安装过程中的一些问题，后续配置需要注意的一些事项，以及linux中遇到的一些问题</p>
 </blockquote>
 
-<h2 id="list">List</h2>
+<ul>
+  <li><a href="#head1">List</a></li>
+  <li><a href="#head2">Archlinux的安装</a></li>
+  <li><a href="#head3">显卡驱动</a></li>
+  <li><a href="#head4">独显下屏幕亮度调节</a></li>
+  <li><a href="#head5">boot空间不足（100M）</a></li>
+  <li><a href="#head6">选择kde</a></li>
+  <li><a href="#head7">v2ray代理</a></li>
+  <li><a href="#head8">pytorch的安装</a></li>
+</ul>
 
-<ol class="no_toc" id="markdown-toc">
-  <li><a href="#list" id="markdown-toc-list">List</a></li>
-  <li><a href="#archlinux的安装" id="markdown-toc-archlinux的安装">Archlinux的安装</a></li>
-  <li><a href="#显卡驱动" id="markdown-toc-显卡驱动">显卡驱动</a></li>
-  <li><a href="#独显下屏幕亮度调节" id="markdown-toc-独显下屏幕亮度调节">独显下屏幕亮度调节</a></li>
-  <li><a href="#boot空间不足100m" id="markdown-toc-boot空间不足100m">boot空间不足（100M）</a></li>
-  <li><a href="#选择kde" id="markdown-toc-选择kde">选择kde</a></li>
-  <li><a href="#v2ray代理" id="markdown-toc-v2ray代理">v2ray代理</a></li>
-  <li><a href="#pytorch的安装" id="markdown-toc-pytorch的安装">pytorch的安装</a></li>
-</ol>
+<h2 id="list"><span id="head1">List</span></h2>
 
-<h2 id="archlinux的安装">Archlinux的安装</h2>
+<h2 id="archlinux的安装"><span id="head2">Archlinux的安装</span></h2>
 
 <p>可以看这一篇：https://zhuanlan.zhihu.com/p/138951848 （注意：建议wiki，安装细节有可能随着更新改变）</p>
 
@@ -364,13 +435,13 @@ pacman <span class="nt">-S</span> ttf-sarasa-gothic noto-fonts-cjk
   <li>重启</li>
 </ol>
 
-<h2 id="显卡驱动">显卡驱动</h2>
+<h2 id="显卡驱动"><span id="head3">显卡驱动</span></h2>
 
 <p>如果安装时使用核显，则后续怎么都转不了独显的驱动</p>
 
 <p>所以建议直接从头到尾使用独显，驱动问题轻松解决</p>
 
-<h2 id="独显下屏幕亮度调节">独显下屏幕亮度调节</h2>
+<h2 id="独显下屏幕亮度调节"><span id="head4">独显下屏幕亮度调节</span></h2>
 
 <p>wiki Nvidia中</p>
 
@@ -386,7 +457,7 @@ EndSection
 
 <p>然后更新grub</p>
 
-<h2 id="boot空间不足100m">boot空间不足（100M）</h2>
+<h2 id="boot空间不足100m"><span id="head5">boot空间不足（100M）</span></h2>
 
 <p>https://wusiyu.me/archlinux-remove-initramfs-linux-fallback-img/</p>
 
@@ -394,31 +465,61 @@ EndSection
 
 <p>然后在/etc/mkinitcpio.d/linux.preset中去掉fall back的部分</p>
 
-<h2 id="选择kde">选择kde</h2>
+<h2 id="选择kde"><span id="head6">选择kde</span></h2>
 
 <p>新的gnome十分难用，不建议使用</p>
 
-<h2 id="v2ray代理">v2ray代理</h2>
+<h2 id="v2ray代理"><span id="head7">v2ray代理</span></h2>
 
 <p>开启系统代理，命令行用proxychains</p>
 
-<h2 id="pytorch的安装">pytorch的安装</h2>
+<h2 id="pytorch的安装"><span id="head8">pytorch的安装</span></h2>
 
 <p>2021-1-16  python3.10好像有点问题，安装不了torch</p>
 
-<p>yay安装python39</p>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="ArchLinux" /><summary type="html"><![CDATA[Install Archlinux]]></summary></entry><entry><title type="html">高级算法作业</title><link href="http://localhost:4000/ppx123-web/2022/01/15/advanced-alogrithm-A3/" rel="alternate" type="text/html" title="高级算法作业" /><published>2022-01-15T00:00:00+08:00</published><updated>2022-01-15T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/01/15/advanced-alogrithm-A3</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/01/15/advanced-alogrithm-A3/"><![CDATA[<h1 id="高级算法第三次作业">高级算法第三次作业</h1>
+<p>yay安装python39</p>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="ArchLinux" /><summary type="html"><![CDATA[Install Archlinux]]></summary></entry><entry><title type="html">高级算法作业</title><link href="http://localhost:4000/ppx123-web/2022/01/15/advanced-alogrithm-A3/" rel="alternate" type="text/html" title="高级算法作业" /><published>2022-01-15T00:00:00+08:00</published><updated>2022-01-15T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/01/15/advanced-alogrithm-A3</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/01/15/advanced-alogrithm-A3/"><![CDATA[<blockquote>
+  <p>高级算法第三次作业</p>
+</blockquote>
 
-<p>匡亚明学院 赵超懿 191870271</p>
+<ul>
+  <li><a href="#head1">第一题</a>
+    <ul>
+      <li><a href="#head2">(1)</a></li>
+      <li><a href="#head3">(2)</a></li>
+    </ul>
+  </li>
+  <li><a href="#head4">第二题</a>
+    <ul>
+      <li><a href="#head5">(1)</a></li>
+      <li><a href="#head6">(2)</a></li>
+      <li><a href="#head7">(3)</a></li>
+    </ul>
+  </li>
+  <li><a href="#head8">第三题</a></li>
+  <li><a href="#head9">第四题</a>
+    <ul>
+      <li><a href="#head10">(1)</a></li>
+      <li><a href="#head11">(2)</a></li>
+    </ul>
+  </li>
+  <li><a href="#head12">第五题</a>
+    <ul>
+      <li><a href="#head13">(1)</a></li>
+      <li><a href="#head14">(2)</a></li>
+      <li><a href="#head15">(3)</a></li>
+    </ul>
+  </li>
+</ul>
 
-<h2 id="第一题">第一题</h2>
+<h2 id="第一题"><span id="head1">第一题</span></h2>
 
-<h3 id="1">(1)</h3>
+<h3 id="1"><span id="head2">(1)</span></h3>
 
 <p>显然当$a\in A\wedge a\in B\Rightarrow$，这样的位置$F_C$和$A\cap B$的bloom filters是一样的。</p>
 
 <p>当$a\in A\wedge a\notin B$时，只要$\exists b\in B\wedge b\notin A,\exists i,j,1\leq i,j\leq k,s.t.\quad h_j(b)=h_i(a)$，且对于$A\cap B$中的元素没有哈希到$h_j(b)$这个位置，则$A\cap B$的bloom filters至少有一位和$F_A\wedge F_B$不同</p>
 
-<h3 id="2">(2)</h3>
+<h3 id="2"><span id="head3">(2)</span></h3>
 
 <p>记$a_i,b_i$分别是A和B的bloom filters产生的m个bit的第i位,a,b为A,B中元素</p>
 
@@ -446,19 +547,19 @@ EndSection
 
 <p>$E[differ] = n - n(2((1-\dfrac{1}{m})^k-(1-\dfrac{1}{m})^{2k})\dfrac{\|A\cap B\|}{n^2}+1-2(1-\dfrac{1}{m})^k+2(1-\dfrac{1}{m})^{2k})$</p>
 
-<h2 id="第二题">第二题</h2>
+<h2 id="第二题"><span id="head4">第二题</span></h2>
 
 <p>对于$\dfrac{n}{2}$个球,uniformly at random的期望为$\Theta(\dfrac{\log \dfrac{n}{2}}{\log\log\dfrac{n}{2}})$,two choice $\dfrac{n}{2}$的期望为$\Theta(\log\log \dfrac{n}{2})$，当某一半是uniformly at random的时候，期望则为uniformly at random的期望，因为 $\log\log\dfrac{n}{2} = o(\dfrac{\log \dfrac{n}{2}}{\log\log\dfrac{n}{2}}))$</p>
 
-<h3 id="1-1">(1)</h3>
+<h3 id="1-1"><span id="head5">(1)</span></h3>
 
 <p>前一半随机选择仍为$\Theta(\dfrac{\log n/2}{\log\log\dfrac{n}{2}})=\Theta(\dfrac{\log }{\log\log n})$</p>
 
-<h3 id="2-1">(2)</h3>
+<h3 id="2-1"><span id="head6">(2)</span></h3>
 
 <p>$\Theta(\dfrac{\log \dfrac{n}{2}}{\log\log\dfrac{n}{2}}) + \Theta(\log\log \dfrac{n}{2}) = \Theta(\dfrac{\log \dfrac{n}{2}}{\log\log\dfrac{n}{2}}) = \Theta(\dfrac{\log }{\log\log n})$</p>
 
-<h3 id="3">(3)</h3>
+<h3 id="3"><span id="head7">(3)</span></h3>
 
 <p>将一个随机选取和two choice视为一个操作，共有$\dfrac{n}{2}$个操作，记第i个盒子的球的个数为$X_i$</p>
 
@@ -482,7 +583,7 @@ EndSection
 
 <p>下界显然是随机选取$\dfrac{n}{2}$的下界$\Theta(\dfrac{\log \dfrac{n}{2}}{\log\log\dfrac{n}{2}}) = \Theta(\dfrac{\log n}{\log\log n})$，所以结果仍为$L=\Theta(\dfrac{\log n}{\log\log n})$</p>
 
-<h2 id="第三题">第三题</h2>
+<h2 id="第三题"><span id="head8">第三题</span></h2>
 
 <p>设$Y_i=I[(1-\epsilon)Z\leq \hat{Z_i}\leq (1+\epsilon)Z]$,$E[Y_i]\geq \dfrac{3}{4}$</p>
 
@@ -496,9 +597,9 @@ EndSection
 
 <p>即$e^{-\dfrac{s}{24}\leq \delta}\Rightarrow S\geq 24\ln \dfrac{1}{\delta},S=\Omega(\log \dfrac{1}{\delta})$</p>
 
-<h2 id="第四题">第四题</h2>
+<h2 id="第四题"><span id="head9">第四题</span></h2>
 
-<h3 id="1-2">(1)</h3>
+<h3 id="1-2"><span id="head10">(1)</span></h3>
 
 <p>$Pr[\|X\|\geq \delta]\leq \dfrac{\sum\limits_{k=1}^{+\infty}\dfrac{t^k}{k!}E[\|X\|^k]}{\sum\limits_{k=1}^{+\infty}\dfrac{t^k}{k!}\delta^k}$</p>
 
@@ -514,19 +615,19 @@ EndSection
 
 <p>所以一定存在k阶矩强于chernoff bound</p>
 
-<h3 id="2-2">(2)</h3>
+<h3 id="2-2"><span id="head11">(2)</span></h3>
 
 <p>矩阵生成函数容易计算，而特定的k阶矩难以找到</p>
 
-<h2 id="第五题">第五题</h2>
+<h2 id="第五题"><span id="head12">第五题</span></h2>
 
-<h3 id="1-3">(1)</h3>
+<h3 id="1-3"><span id="head13">(1)</span></h3>
 
 <p>记$h_k=\prod\limits_{i=1}^{k}f_i(X_i)$，显然$h_k$不减</p>
 
 <p>$E[h_n]=E[h_{n-1}\cdot f_n(X_n)]\leq E[h_{n-1}]E[f_n(X_n)]]\leq ……\leq \prod\limits_{i=1}^{k}E[f_i(x_i)]$</p>
 
-<h3 id="2-3">(2)</h3>
+<h3 id="2-3"><span id="head14">(2)</span></h3>
 
 <p>$X=\sum\limits_{i=1}^nX_i,E[x]=\mu$</p>
 
@@ -536,7 +637,7 @@ EndSection
 
 <p>Qed.</p>
 
-<h3 id="3-1">(3)</h3>
+<h3 id="3-1"><span id="head15">(3)</span></h3>
 
 <p>记$p=\|I\|,q=\|J\|$,记$X_i\in I,X_{i_1},X_{i_2},…,X_{i_p}$,记$X_j\in J,X_{j_1},X_{j_2},…,X_{j_q}$.$I$和$J$对应将$B_{i,k}$划分后的集合</p>
 
@@ -564,47 +665,49 @@ EndSection
   <p>主体来自于Maxwell：https://maxwell-lyu.github.io/，在其基础上简单修改</p>
 </blockquote>
 
-<h1 class="no_toc" id="list">List</h1>
-<ol id="markdown-toc">
-  <li><a href="#数据库概论期末复习" id="markdown-toc-数据库概论期末复习">数据库概论期末复习</a>    <ol>
-      <li><a href="#样卷总结" id="markdown-toc-样卷总结">样卷总结</a>        <ol>
-          <li><a href="#大题" id="markdown-toc-大题">大题</a></li>
-        </ol>
-      </li>
-      <li><a href="#证明" id="markdown-toc-证明">证明：</a>        <ol>
-          <li><a href="#冲突冲突可串行化冲突可串行化的判定定理-证明" id="markdown-toc-冲突冲突可串行化冲突可串行化的判定定理-证明">冲突，冲突可串行化，冲突可串行化的判定定理 证明：</a></li>
-          <li><a href="#两阶段封锁协议与冲突可串行化的关系证明" id="markdown-toc-两阶段封锁协议与冲突可串行化的关系证明">两阶段封锁协议与冲突可串行化的关系证明：</a></li>
-          <li><a href="#bcnf-3nf的证明" id="markdown-toc-bcnf-3nf的证明">BCNF-&gt;3NF的证明</a></li>
-          <li><a href="#4nf与bcnf-证明" id="markdown-toc-4nf与bcnf-证明">4NF与BCNF 证明</a></li>
-          <li><a href="#关系模型概念" id="markdown-toc-关系模型概念">关系模型（概念）</a></li>
-          <li><a href="#关系的表示" id="markdown-toc-关系的表示">关系的表示</a></li>
-          <li><a href="#关系模型与关系代数" id="markdown-toc-关系模型与关系代数">关系模型与关系代数</a></li>
-          <li><a href="#关系代数中的扩充运算" id="markdown-toc-关系代数中的扩充运算">关系代数中的扩充运算</a></li>
-          <li><a href="#关系代数的应用" id="markdown-toc-关系代数的应用">关系代数的应用</a></li>
-          <li><a href="#关系演算" id="markdown-toc-关系演算">关系演算</a></li>
-          <li><a href="#sql概貌" id="markdown-toc-sql概貌">SQL概貌</a></li>
-          <li><a href="#sql数据定义功能" id="markdown-toc-sql数据定义功能">SQL数据定义功能</a></li>
-          <li><a href="#sql数据操纵功能" id="markdown-toc-sql数据操纵功能">SQL数据操纵功能</a></li>
-          <li><a href="#sql的更新功能" id="markdown-toc-sql的更新功能">SQL的更新功能</a></li>
-          <li><a href="#视图" id="markdown-toc-视图">视图</a></li>
-          <li><a href="#函数依赖fd" id="markdown-toc-函数依赖fd">函数依赖（FD）</a></li>
-          <li><a href="#与函数依赖有关的范式" id="markdown-toc-与函数依赖有关的范式">与函数依赖有关的范式</a></li>
-          <li><a href="#多值依赖与第四范式" id="markdown-toc-多值依赖与第四范式">多值依赖与第四范式</a></li>
-          <li><a href="#关系代数" id="markdown-toc-关系代数">关系代数</a></li>
-          <li><a href="#关系演算-1" id="markdown-toc-关系演算-1">关系演算</a></li>
-          <li><a href="#函数依赖" id="markdown-toc-函数依赖">函数依赖</a></li>
-          <li><a href="#能不能冲突串行" id="markdown-toc-能不能冲突串行">能不能冲突串行</a></li>
-        </ol>
-      </li>
-    </ol>
+<ul>
+  <li><a href="#head1">List</a></li>
+  <li><a href="#head2">数据库概论期末复习</a></li>
+  <li><a href="#head3">样卷总结</a>
+    <ul>
+      <li><a href="#head4">大题</a></li>
+    </ul>
   </li>
-</ol>
+  <li><a href="#head5">证明：</a>
+    <ul>
+      <li><a href="#head6">冲突，冲突可串行化，冲突可串行化的判定定理 证明：</a></li>
+      <li><a href="#head7">两阶段封锁协议与冲突可串行化的关系证明：</a></li>
+      <li><a href="#head8">BCNF-&gt;3NF的证明</a></li>
+      <li><a href="#head9">4NF与BCNF 证明</a></li>
+      <li><a href="#head10">关系模型（概念）</a></li>
+      <li><a href="#head11">关系的表示</a></li>
+      <li><a href="#head12">关系模型与关系代数</a></li>
+      <li><a href="#head13">关系代数中的扩充运算</a></li>
+      <li><a href="#head14">关系代数的应用</a></li>
+      <li><a href="#head15">关系演算</a></li>
+      <li><a href="#head16">SQL概貌</a></li>
+      <li><a href="#head17">SQL数据定义功能</a></li>
+      <li><a href="#head18">SQL数据操纵功能</a></li>
+      <li><a href="#head19">SQL的更新功能</a></li>
+      <li><a href="#head20">视图</a></li>
+      <li><a href="#head21">函数依赖（FD）</a></li>
+      <li><a href="#head22">与函数依赖有关的范式</a></li>
+      <li><a href="#head23">多值依赖与第四范式</a></li>
+      <li><a href="#head24">关系代数</a></li>
+      <li><a href="#head25">关系演算</a></li>
+      <li><a href="#head26">函数依赖</a></li>
+      <li><a href="#head27">能不能冲突串行</a></li>
+    </ul>
+  </li>
+</ul>
 
-<h1 id="数据库概论期末复习">数据库概论期末复习</h1>
+<h1 id="list"><span id="head1">List</span></h1>
 
-<h2 id="样卷总结">样卷总结</h2>
+<h1 id="数据库概论期末复习"><span id="head2">数据库概论期末复习</span></h1>
 
-<h3 id="大题">大题</h3>
+<h2 id="样卷总结"><span id="head3">样卷总结</span></h2>
+
+<h3 id="大题"><span id="head4">大题</span></h3>
 
 <p>关系代数与关系演算</p>
 
@@ -616,9 +719,9 @@ EndSection
 
 <p>事务处理</p>
 
-<h2 id="证明">证明：</h2>
+<h2 id="证明"><span id="head5">证明：</span></h2>
 
-<h3 id="冲突冲突可串行化冲突可串行化的判定定理-证明">冲突，冲突可串行化，冲突可串行化的判定定理 证明：</h3>
+<h3 id="冲突冲突可串行化冲突可串行化的判定定理-证明"><span id="head6">冲突，冲突可串行化，冲突可串行化的判定定理 证明：</span></h3>
 
 <p>如果调度S的事务优先图中无环，则S是冲突可串行化调度。</p>
 
@@ -628,13 +731,13 @@ EndSection
 
 <p>反证法：假设存在一个冲突可串行化调度，冲突等价于串行调度$S={T_1,T_2,…,T_n}$，根据事务优先图$T_1$先于$T_2$,$T_2$先于$T_3$，$T_{n-1}$先于$T_n$，$T_n$先于$T_1$，产生矛盾</p>
 
-<h3 id="两阶段封锁协议与冲突可串行化的关系证明">两阶段封锁协议与冲突可串行化的关系证明：</h3>
+<h3 id="两阶段封锁协议与冲突可串行化的关系证明"><span id="head7">两阶段封锁协议与冲突可串行化的关系证明：</span></h3>
 
 <p>归纳法：</p>
 
 <p>k-1时成立，考虑k时，考虑第一个有解锁动作的事务$T_i$，则$T_i$可以冲突等价于$T_i$，和其他剩下的事务，后面k-1由归纳假设，也冲突等价于一个串行化调度，Qed</p>
 
-<h3 id="bcnf-3nf的证明">BCNF-&gt;3NF的证明</h3>
+<h3 id="bcnf-3nf的证明"><span id="head8">BCNF-&gt;3NF的证明</span></h3>
 
 <p>$R\in BCNF$,$R\notin 3NF$有三种情况</p>
 
@@ -644,7 +747,7 @@ EndSection
 
 <p>$R\notin 3NF$,有传递函数依赖</p>
 
-<h3 id="4nf与bcnf-证明">4NF与BCNF 证明</h3>
+<h3 id="4nf与bcnf-证明"><span id="head9">4NF与BCNF 证明</span></h3>
 
 <p>4NF：函数依赖满足BCNF</p>
 
@@ -655,8 +758,6 @@ EndSection
 <p>===========================================================================================================================================================================================</p>
 
 <p>基本概念</p>
-
-<hr />
 
 <ul>
   <li>
@@ -680,8 +781,6 @@ EndSection
 
 <p>数据库系统的特点</p>
 
-<hr />
-
 <ul>
   <li>
     <p>数据<strong>集成化</strong>: 统一的数据结构/数据模式</p>
@@ -704,8 +803,6 @@ EndSection
 </ul>
 
 <p>数据库内部结构体系</p>
-
-<hr />
 
 <ul>
   <li>
@@ -748,8 +845,6 @@ EndSection
 <p>==========================================================================================================================================================</p>
 
 <p>数据模型的基本概念</p>
-
-<hr />
 
 <ul>
   <li>
@@ -794,8 +889,6 @@ EndSection
 
 <p>数据模型的四个世界</p>
 
-<hr />
-
 <ul>
   <li>
     <p><strong>现实世界</strong>: 客观世界中的应用环境</p>
@@ -814,8 +907,6 @@ EndSection
 <table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br /><span class="line">2</span><br /><span class="line">3</span><br /><span class="line">4</span><br /><span class="line">5</span><br /><span class="line">6</span><br /><span class="line">7</span><br /><span class="line">8</span><br /><span class="line">9</span><br /></pre></td><td class="code"><pre><span class="line">现实世界              用户1  ...  用户n</span><br /><span class="line"> |                 |       |</span><br /><span class="line">概念世界------&gt;概念模型       |       |   </span><br /><span class="line"> |       |          |       |</span><br /><span class="line"> |       |      +---&gt;外模式1  ... 外模式n   </span><br /><span class="line">信息世界------&gt;逻辑模型-------|   |       |</span><br /><span class="line"> |       |      +---&gt;概念模式---------+</span><br /><span class="line"> |       |          | </span><br /><span class="line">计算机世界----&gt;物理模型-----------&gt;内模式</span><br /></pre></td></tr></tbody></table>
 
 <p>概念世界与概念模型</p>
-
-<hr />
 
 <ul>
   <li>
@@ -894,8 +985,6 @@ EndSection
 
 <p>信息世界和逻辑模型</p>
 
-<hr />
-
 <ul>
   <li>
     <p>关系模型</p>
@@ -930,8 +1019,6 @@ EndSection
 
 <p>计算机世界与物理模型</p>
 
-<hr />
-
 <ul>
   <li>
     <p>逻辑模型的物理存储</p>
@@ -965,11 +1052,7 @@ EndSection
 
 <p>关系数据库系统概述</p>
 
-<hr />
-
 <p>关系数据库系统的衡量准则</p>
-
-<hr />
 
 <ul>
   <li>完全关系型的十二条衡量准则</li>
@@ -1056,9 +1139,7 @@ EndSection
 
 <p>关系模型数学理论—关系代数</p>
 
-<hr />
-
-<h3 id="关系模型概念">关系模型（概念）</h3>
+<h3 id="关系模型概念"><span id="head10">关系模型（概念）</span></h3>
 
 <ul>
   <li>
@@ -1158,7 +1239,7 @@ EndSection
   </li>
 </ul>
 
-<h3 id="关系的表示">关系的表示</h3>
+<h3 id="关系的表示"><span id="head11">关系的表示</span></h3>
 
 <ul>
   <li>关系的表示</li>
@@ -1256,7 +1337,7 @@ EndSection
   </li>
 </ul>
 
-<h3 id="关系模型与关系代数">关系模型与关系代数</h3>
+<h3 id="关系模型与关系代数"><span id="head12">关系模型与关系代数</span></h3>
 
 <ul>
   <li>
@@ -1282,7 +1363,7 @@ EndSection
   </li>
 </ul>
 
-<h3 id="关系代数中的扩充运算">关系代数中的扩充运算</h3>
+<h3 id="关系代数中的扩充运算"><span id="head13">关系代数中的扩充运算</span></h3>
 
 <ul>
   <li>
@@ -1340,7 +1421,7 @@ EndSection
   <li>扩充运算的应用实例</li>
 </ul>
 
-<h3 id="关系代数的应用">关系代数的应用</h3>
+<h3 id="关系代数的应用"><span id="head14">关系代数的应用</span></h3>
 
 <blockquote>
   <p>写在后面的大题部分</p>
@@ -1416,7 +1497,7 @@ EndSection
   </ul>
 </blockquote>
 
-<h3 id="关系演算">关系演算</h3>
+<h3 id="关系演算"><span id="head15">关系演算</span></h3>
 
 <ul>
   <li>
@@ -1549,9 +1630,7 @@ EndSection
 
 <p>关系数据库语言SQL’92</p>
 
-<hr />
-
-<h3 id="sql概貌">SQL概貌</h3>
+<h3 id="sql概貌"><span id="head16">SQL概貌</span></h3>
 
 <ul>
   <li>
@@ -1582,7 +1661,7 @@ EndSection
   </li>
 </ul>
 
-<h3 id="sql数据定义功能">SQL数据定义功能</h3>
+<h3 id="sql数据定义功能"><span id="head17">SQL数据定义功能</span></h3>
 
 <blockquote>
   <p>啥也没有?怎么回事啊, 算了写一点乱七八糟的吧</p>
@@ -1622,7 +1701,7 @@ EndSection
 
 <table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br /></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> tabname</span><br /></pre></td></tr></tbody></table>
 
-<h3 id="sql数据操纵功能">SQL数据操纵功能</h3>
+<h3 id="sql数据操纵功能"><span id="head18">SQL数据操纵功能</span></h3>
 
 <ul>
   <li>
@@ -1794,7 +1873,7 @@ EndSection
   </li>
 </ul>
 
-<h3 id="sql的更新功能">SQL的更新功能</h3>
+<h3 id="sql的更新功能"><span id="head19">SQL的更新功能</span></h3>
 
 <ul>
   <li>
@@ -1813,7 +1892,7 @@ EndSection
 
 <table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br /><span class="line">2</span><br /><span class="line">3</span><br /></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> tabname </span><br /><span class="line"><span class="keyword">SET</span> colname=expr | <span class="literal">NULL</span> | subquery, ...</span><br /><span class="line">[<span class="keyword">WHERE</span> cond]</span><br /></pre></td></tr></tbody></table>
 
-<h3 id="视图">视图</h3>
+<h3 id="视图"><span id="head20">视图</span></h3>
 
 <ul>
   <li>
@@ -1854,8 +1933,6 @@ EndSection
 <p>=============================================================================================================================================================================================================================================================</p>
 
 <p>数据库的安全性保护</p>
-
-<hr />
 
 <ul>
   <li>
@@ -1916,8 +1993,6 @@ EndSection
 </code></pre></div></div>
 
 <p>数据库的完整性保护</p>
-
-<hr />
 
 <ul>
   <li>
@@ -1982,8 +2057,6 @@ EndSection
 <p>===================================================================================================================================================================================================================================================================================</p>
 
 <p>事务处理（概念）</p>
-
-<hr />
 
 <ul>
   <li>
@@ -2052,8 +2125,6 @@ EndSection
 </ul>
 
 <p>并发控制技术（概念）</p>
-
-<hr />
 
 <ul>
   <li>
@@ -2388,8 +2459,6 @@ EndSection
 
 <p>数据库恢复技术</p>
 
-<hr />
-
 <ul>
   <li>
     <p>数据库恢复的含义: 在数据库遭受破坏后及时进行恢复的功能</p>
@@ -2672,8 +2741,6 @@ EndSection
 
 <p>概述</p>
 
-<hr />
-
 <ul>
   <li>
     <p>模式设计质量的评价指标</p>
@@ -2696,11 +2763,9 @@ EndSection
 </ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>规范化理论
-
----------------------------------------------------------------------------------------------------------------------------------
 </code></pre></div></div>
 
-<h3 id="函数依赖fd">函数依赖（FD）</h3>
+<h3 id="函数依赖fd"><span id="head21">函数依赖（FD）</span></h3>
 
 <ul>
   <li>
@@ -2869,7 +2934,7 @@ EndSection
   *  只需要对两边都有的属性尝试删除即可
 </code></pre></div></div>
 
-<h3 id="与函数依赖有关的范式">与函数依赖有关的范式</h3>
+<h3 id="与函数依赖有关的范式"><span id="head22">与函数依赖有关的范式</span></h3>
 
 <ul>
   <li>
@@ -2952,7 +3017,7 @@ EndSection
   </li>
 </ul>
 
-<h3 id="多值依赖与第四范式">多值依赖与第四范式</h3>
+<h3 id="多值依赖与第四范式"><span id="head23">多值依赖与第四范式</span></h3>
 
 <ul>
   <li>
@@ -2996,8 +3061,6 @@ EndSection
 </ul>
 
 <p>规范化所引起的一些问题</p>
-
-<hr />
 
 <ul>
   <li>
@@ -3099,8 +3162,6 @@ EndSection
 
 <p>数据库设计概述</p>
 
-<hr />
-
 <ul>
   <li>
     <p>数据库设计的基本任务</p>
@@ -3139,8 +3200,6 @@ EndSection
 
 <p>数据库设计的需求分析</p>
 
-<hr />
-
 <ul>
   <li>
     <p>需求说明书</p>
@@ -3161,8 +3220,6 @@ EndSection
 </ul>
 
 <p>数据库的概念设计</p>
-
-<hr />
 
 <ul>
   <li>
@@ -3186,8 +3243,6 @@ EndSection
 </ul>
 
 <p>数据库的逻辑设计</p>
-
-<hr />
 
 <ul>
   <li>
@@ -3214,8 +3269,6 @@ EndSection
 </ul>
 
 <p>数据库的物理设计</p>
-
-<hr />
 
 <ul>
   <li>
@@ -3244,8 +3297,6 @@ EndSection
 <p>答题解法</p>
 
 <p>======================================================================================================================</p>
-
-<hr />
 
 <ul>
   <li>
@@ -3288,9 +3339,7 @@ EndSection
 
 <p>关系代数和关系演算</p>
 
-<hr />
-
-<h3 id="关系代数">关系代数</h3>
+<h3 id="关系代数"><span id="head24">关系代数</span></h3>
 
 <ul>
   <li>
@@ -3441,7 +3490,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   *  被除数和除数关系中**不能含其它‘不必要’的多余属性**, 先投影再除
 </code></pre></div></div>
 
-<h3 id="关系演算-1">关系演算</h3>
+<h3 id="关系演算-1"><span id="head25">关系演算</span></h3>
 
 <ul>
   <li>
@@ -3542,9 +3591,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>规范化设计</p>
 
-<hr />
-
-<h3 id="函数依赖">函数依赖</h3>
+<h3 id="函数依赖"><span id="head26">函数依赖</span></h3>
 
 <ul>
   <li>
@@ -3599,9 +3646,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>事务和并发</p>
 
-<hr />
-
-<h3 id="能不能冲突串行">能不能冲突串行</h3>
+<h3 id="能不能冲突串行"><span id="head27">能不能冲突串行</span></h3>
 
 <ul>
   <li>
@@ -3639,141 +3684,168 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   <li>
     <p>对每个对象, 哪个事务最后写, 两个调度一样</p>
   </li>
-</ul>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="Courses" /><summary type="html"><![CDATA[数据库期末复习总结]]></summary></entry><entry><title type="html">机器学习导论总结</title><link href="http://localhost:4000/ppx123-web/2022/01/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AF%BC%E8%AE%BA/" rel="alternate" type="text/html" title="机器学习导论总结" /><published>2022-01-15T00:00:00+08:00</published><updated>2022-01-15T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/01/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AF%BC%E8%AE%BA</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/01/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AF%BC%E8%AE%BA/"><![CDATA[<h1 class="no_toc" id="机器学习期末复习总结">机器学习期末复习总结</h1>
-<ol id="markdown-toc">
-  <li><a href="#第二章-基本术语和模型评估" id="markdown-toc-第二章-基本术语和模型评估">第二章 基本术语和模型评估</a>    <ol>
-      <li><a href="#任务" id="markdown-toc-任务">任务</a></li>
-      <li><a href="#预测任务根据标记的完整情况" id="markdown-toc-预测任务根据标记的完整情况">预测任务：根据标记的完整情况</a></li>
-      <li><a href="#概念学习" id="markdown-toc-概念学习">概念学习</a></li>
-      <li><a href="#模型评估与选择" id="markdown-toc-模型评估与选择">模型评估与选择</a>        <ol>
-          <li><a href="#评估方法" id="markdown-toc-评估方法">评估方法：</a></li>
-          <li><a href="#性能度量" id="markdown-toc-性能度量">性能度量</a></li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-  <li><a href="#第三章-线性模型" id="markdown-toc-第三章-线性模型">第三章 线性模型</a>    <ol>
-      <li><a href="#回归任务掌握" id="markdown-toc-回归任务掌握">回归任务（掌握）</a></li>
-      <li><a href="#二分类任务" id="markdown-toc-二分类任务">二分类任务</a></li>
-      <li><a href="#多分类任务" id="markdown-toc-多分类任务">多分类任务</a></li>
-      <li><a href="#类别不平衡任务" id="markdown-toc-类别不平衡任务">类别不平衡任务</a></li>
-    </ol>
-  </li>
-  <li><a href="#第四章-决策树" id="markdown-toc-第四章-决策树">第四章 决策树</a>    <ol>
-      <li><a href="#决策树基本流程" id="markdown-toc-决策树基本流程">决策树基本流程</a>        <ol>
-          <li><a href="#基本流程" id="markdown-toc-基本流程">基本流程</a></li>
-        </ol>
-      </li>
-      <li><a href="#决策树算法的关键划分选择" id="markdown-toc-决策树算法的关键划分选择">决策树算法的关键：划分选择</a>        <ol>
-          <li><a href="#划分选择-信息增益" id="markdown-toc-划分选择-信息增益">划分选择-信息增益</a></li>
-          <li><a href="#信息增益" id="markdown-toc-信息增益">信息增益</a></li>
-          <li><a href="#基尼指数cart决策树" id="markdown-toc-基尼指数cart决策树">基尼指数——CART决策树</a></li>
-        </ol>
-      </li>
-      <li><a href="#克服过拟合的问题剪枝处理" id="markdown-toc-克服过拟合的问题剪枝处理">克服过拟合的问题：剪枝处理</a></li>
-      <li><a href="#处理多种类型数据连续与缺失值" id="markdown-toc-处理多种类型数据连续与缺失值">处理多种类型数据：连续与缺失值</a></li>
-      <li><a href="#决策树的变体多变量决策树" id="markdown-toc-决策树的变体多变量决策树">决策树的变体：多变量决策树</a></li>
-    </ol>
-  </li>
-  <li><a href="#第五章-神经网络" id="markdown-toc-第五章-神经网络">第五章 神经网络</a>    <ol>
-      <li><a href="#神经元模型熟悉" id="markdown-toc-神经元模型熟悉">神经元模型：熟悉</a></li>
-      <li><a href="#感知机与多层网络熟悉" id="markdown-toc-感知机与多层网络熟悉">感知机与多层网络：熟悉</a>        <ol>
-          <li><a href="#感知机" id="markdown-toc-感知机">感知机</a></li>
-          <li><a href="#多层前馈神经网络" id="markdown-toc-多层前馈神经网络">多层前馈神经网络</a></li>
-          <li><a href="#多层前馈网络表示能力" id="markdown-toc-多层前馈网络表示能力">多层前馈网络表示能力</a></li>
-          <li><a href="#多层前馈网络局限" id="markdown-toc-多层前馈网络局限">多层前馈网络局限</a></li>
-          <li><a href="#缓解过拟合策略" id="markdown-toc-缓解过拟合策略">缓解过拟合策略</a></li>
-        </ol>
-      </li>
-      <li><a href="#误差逆传播算法熟悉" id="markdown-toc-误差逆传播算法熟悉">误差逆传播算法：熟悉</a>        <ol>
-          <li><a href="#bp算法" id="markdown-toc-bp算法">BP算法</a>            <ol>
-              <li><a href="#标准bp算法" id="markdown-toc-标准bp算法">标准BP算法</a></li>
-              <li><a href="#累计bp算法" id="markdown-toc-累计bp算法">累计BP算法</a></li>
-              <li><a href="#实际应用" id="markdown-toc-实际应用">实际应用</a></li>
-            </ol>
-          </li>
-        </ol>
-      </li>
-      <li><a href="#全局最与局部最了解" id="markdown-toc-全局最与局部最了解">全局最⼩与局部最⼩：了解</a></li>
-      <li><a href="#其他常见神经网络了解" id="markdown-toc-其他常见神经网络了解">其他常见神经网络：了解</a></li>
-      <li><a href="#深度学习了解" id="markdown-toc-深度学习了解">深度学习：了解</a></li>
-    </ol>
-  </li>
-  <li><a href="#第六章-支持向量机-svm" id="markdown-toc-第六章-支持向量机-svm">第六章 支持向量机 SVM</a>    <ol>
-      <li><a href="#间隔与支持向量" id="markdown-toc-间隔与支持向量">间隔与支持向量</a></li>
-      <li><a href="#对偶问题" id="markdown-toc-对偶问题">对偶问题</a>        <ol>
-          <li><a href="#求解smo" id="markdown-toc-求解smo">求解SMO</a></li>
-        </ol>
-      </li>
-      <li><a href="#核函数" id="markdown-toc-核函数">核函数</a>        <ol>
-          <li><a href="#常用的核函数" id="markdown-toc-常用的核函数"><strong>常用的核函数</strong></a></li>
-        </ol>
-      </li>
-      <li><a href="#软间隔与正则化" id="markdown-toc-软间隔与正则化">软间隔与正则化</a>        <ol>
-          <li><a href="#软间隔" id="markdown-toc-软间隔">软间隔</a></li>
-          <li><a href="#正则化" id="markdown-toc-正则化">正则化</a></li>
-        </ol>
-      </li>
-      <li><a href="#支持向量回归" id="markdown-toc-支持向量回归">支持向量回归</a></li>
-      <li><a href="#核方法" id="markdown-toc-核方法">核方法</a></li>
-    </ol>
-  </li>
-  <li><a href="#第七章-贝叶斯分类器" id="markdown-toc-第七章-贝叶斯分类器">第七章 贝叶斯分类器</a>    <ol>
-      <li><a href="#掌握贝叶斯决策论" id="markdown-toc-掌握贝叶斯决策论">掌握贝叶斯决策论</a>        <ol>
-          <li><a href="#判别式-vs-生成式" id="markdown-toc-判别式-vs-生成式">判别式 vs 生成式</a>            <ol>
-              <li><a href="#判别式" id="markdown-toc-判别式">判别式</a></li>
-              <li><a href="#生成式" id="markdown-toc-生成式">生成式</a></li>
-            </ol>
-          </li>
-        </ol>
-      </li>
-      <li><a href="#熟悉极大似然估计" id="markdown-toc-熟悉极大似然估计">熟悉极大似然估计</a></li>
-      <li><a href="#熟悉朴素贝叶斯拉普拉斯修正" id="markdown-toc-熟悉朴素贝叶斯拉普拉斯修正">熟悉朴素贝叶斯（拉普拉斯修正）</a>        <ol>
-          <li><a href="#估计" id="markdown-toc-估计">估计</a></li>
-          <li><a href="#拉普拉斯修正" id="markdown-toc-拉普拉斯修正">拉普拉斯修正</a></li>
-          <li><a href="#朴素贝叶斯分类器的使用" id="markdown-toc-朴素贝叶斯分类器的使用">朴素贝叶斯分类器的使用</a></li>
-        </ol>
-      </li>
-      <li><a href="#掌握半朴素贝叶斯" id="markdown-toc-掌握半朴素贝叶斯">掌握半朴素贝叶斯</a>        <ol>
-          <li><a href="#spode" id="markdown-toc-spode">SPODE</a></li>
-          <li><a href="#tan" id="markdown-toc-tan">TAN</a></li>
-          <li><a href="#aode" id="markdown-toc-aode">AODE：</a></li>
-          <li><a href="#高阶依赖" id="markdown-toc-高阶依赖">高阶依赖</a></li>
-        </ol>
-      </li>
-      <li><a href="#掌握贝叶斯网" id="markdown-toc-掌握贝叶斯网">掌握贝叶斯网</a></li>
-      <li><a href="#了解em算法" id="markdown-toc-了解em算法">了解EM算法</a></li>
-    </ol>
-  </li>
-  <li><a href="#第八章-集成学习" id="markdown-toc-第八章-集成学习">第八章 集成学习</a>    <ol>
-      <li><a href="#个体与集成知道个体分类器的定义和集成学习的定义" id="markdown-toc-个体与集成知道个体分类器的定义和集成学习的定义">个体与集成：知道个体分类器的定义和集成学习的定义</a></li>
-      <li><a href="#boosting知道boosting的思想和adaboost的实现" id="markdown-toc-boosting知道boosting的思想和adaboost的实现">Boosting：知道Boosting的思想和adaboost的实现</a>        <ol>
-          <li><a href="#boosting" id="markdown-toc-boosting">Boosting</a></li>
-          <li><a href="#adaboost" id="markdown-toc-adaboost">AdaBoost</a>            <ol>
-              <li><a href="#注意事项" id="markdown-toc-注意事项">注意事项</a></li>
-            </ol>
-          </li>
-        </ol>
-      </li>
-      <li><a href="#bagging与随机森林知道思想和实现的方式" id="markdown-toc-bagging与随机森林知道思想和实现的方式">Bagging与随机森林：知道思想和实现的方式</a>        <ol>
-          <li><a href="#bagging算法" id="markdown-toc-bagging算法">Bagging算法</a></li>
-          <li><a href="#包外估计" id="markdown-toc-包外估计">包外估计</a></li>
-          <li><a href="#随机森林" id="markdown-toc-随机森林">随机森林</a></li>
-        </ol>
-      </li>
-      <li><a href="#结合策略知道集中常用策略以及stacking的优缺点" id="markdown-toc-结合策略知道集中常用策略以及stacking的优缺点">结合策略：知道集中常用策略以及stacking的优缺点</a></li>
-      <li><a href="#多样性知道多样性扰动的几种办法" id="markdown-toc-多样性知道多样性扰动的几种办法">多样性：知道多样性扰动的几种办法</a>        <ol>
-          <li><a href="#误差-分歧分解" id="markdown-toc-误差-分歧分解">误差-分歧分解</a></li>
-          <li><a href="#多样性增强方法" id="markdown-toc-多样性增强方法">多样性增强方法</a></li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-</ol>
+</ul>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="Courses" /><summary type="html"><![CDATA[数据库期末复习总结]]></summary></entry><entry><title type="html">机器学习导论总结</title><link href="http://localhost:4000/ppx123-web/2022/01/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AF%BC%E8%AE%BA/" rel="alternate" type="text/html" title="机器学习导论总结" /><published>2022-01-15T00:00:00+08:00</published><updated>2022-01-15T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/01/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AF%BC%E8%AE%BA</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/01/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AF%BC%E8%AE%BA/"><![CDATA[<blockquote>
+  <p>机器学习期末复习总结</p>
+</blockquote>
 
-<h2 id="第二章-基本术语和模型评估">第二章 基本术语和模型评估</h2>
+<ul>
+  <li><a href="#head1">第二章 基本术语和模型评估</a>
+    <ul>
+      <li><a href="#head2">任务</a></li>
+      <li><a href="#head3">预测任务：根据标记的完整情况</a></li>
+      <li><a href="#head4">概念学习</a></li>
+      <li><a href="#head5">模型评估与选择</a>
+        <ul>
+          <li><a href="#head6">评估方法：</a></li>
+          <li><a href="#head7">性能度量</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#head8">第三章 线性模型</a>
+    <ul>
+      <li><a href="#head9">回归任务（掌握）</a></li>
+      <li><a href="#head10">二分类任务</a></li>
+      <li><a href="#head11">多分类任务</a></li>
+      <li><a href="#head12">类别不平衡任务</a></li>
+    </ul>
+  </li>
+  <li><a href="#head13">第四章 决策树</a>
+    <ul>
+      <li><a href="#head14">决策树基本流程</a>
+        <ul>
+          <li><a href="#head15">基本流程</a></li>
+        </ul>
+      </li>
+      <li><a href="#head16">决策树算法的关键：划分选择</a>
+        <ul>
+          <li><a href="#head17">划分选择-信息增益</a></li>
+          <li><a href="#head18">信息增益</a></li>
+          <li><a href="#head19">基尼指数——CART决策树</a></li>
+        </ul>
+      </li>
+      <li><a href="#head20">克服过拟合的问题：剪枝处理</a></li>
+      <li><a href="#head21">处理多种类型数据：连续与缺失值</a></li>
+      <li><a href="#head22">决策树的变体：多变量决策树</a></li>
+    </ul>
+  </li>
+  <li><a href="#head23">第五章 神经网络</a>
+    <ul>
+      <li><a href="#head24">神经元模型：熟悉</a></li>
+      <li><a href="#head25">感知机与多层网络：熟悉</a>
+        <ul>
+          <li><a href="#head26">感知机</a></li>
+          <li><a href="#head27">多层前馈神经网络</a></li>
+          <li><a href="#head28">多层前馈网络表示能力</a></li>
+          <li><a href="#head29">多层前馈网络局限</a></li>
+          <li><a href="#head30">缓解过拟合策略</a></li>
+        </ul>
+      </li>
+      <li><a href="#head31">误差逆传播算法：熟悉</a>
+        <ul>
+          <li><a href="#head32">BP算法</a>
+            <ul>
+              <li><a href="#head33">标准BP算法</a></li>
+              <li><a href="#head34">累计BP算法</a></li>
+              <li><a href="#head35">实际应用</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#head36">全局最⼩与局部最⼩：了解</a></li>
+      <li><a href="#head37">其他常见神经网络：了解</a></li>
+      <li><a href="#head38">深度学习：了解</a></li>
+    </ul>
+  </li>
+  <li><a href="#head39">第六章 支持向量机 SVM</a>
+    <ul>
+      <li><a href="#head40">间隔与支持向量</a></li>
+      <li><a href="#head41">对偶问题</a>
+        <ul>
+          <li><a href="#head42">求解SMO</a></li>
+        </ul>
+      </li>
+      <li><a href="#head43">核函数</a>
+        <ul>
+          <li><a href="#head44"><strong>常用的核函数</strong></a></li>
+        </ul>
+      </li>
+      <li><a href="#head45">软间隔与正则化</a>
+        <ul>
+          <li><a href="#head46">软间隔</a></li>
+          <li><a href="#head47">正则化</a></li>
+        </ul>
+      </li>
+      <li><a href="#head48">支持向量回归</a></li>
+      <li><a href="#head49">核方法</a></li>
+    </ul>
+  </li>
+  <li><a href="#head50">第七章 贝叶斯分类器</a>
+    <ul>
+      <li><a href="#head51">掌握贝叶斯决策论</a>
+        <ul>
+          <li><a href="#head52">判别式 vs 生成式</a>
+            <ul>
+              <li><a href="#head53">判别式</a></li>
+              <li><a href="#head54">生成式</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#head55">熟悉极大似然估计</a></li>
+      <li><a href="#head56">熟悉朴素贝叶斯（拉普拉斯修正）</a>
+        <ul>
+          <li><a href="#head57">估计</a></li>
+          <li><a href="#head58">拉普拉斯修正</a></li>
+          <li><a href="#head59">朴素贝叶斯分类器的使用</a></li>
+        </ul>
+      </li>
+      <li><a href="#head60">掌握半朴素贝叶斯</a>
+        <ul>
+          <li><a href="#head61">SPODE</a></li>
+          <li><a href="#head62">TAN</a></li>
+          <li><a href="#head63">AODE：</a></li>
+          <li><a href="#head64">高阶依赖</a></li>
+        </ul>
+      </li>
+      <li><a href="#head65">掌握贝叶斯网</a></li>
+      <li><a href="#head66">了解EM算法</a></li>
+    </ul>
+  </li>
+  <li><a href="#head67">第八章 集成学习</a>
+    <ul>
+      <li><a href="#head68">个体与集成：知道个体分类器的定义和集成学习的定义</a></li>
+      <li><a href="#head69">Boosting：知道Boosting的思想和adaboost的实现</a>
+        <ul>
+          <li><a href="#head70">Boosting</a></li>
+          <li><a href="#head71">AdaBoost</a>
+            <ul>
+              <li><a href="#head72">注意事项</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#head73">Bagging与随机森林：知道思想和实现的方式</a>
+        <ul>
+          <li><a href="#head74">Bagging算法</a></li>
+          <li><a href="#head75">包外估计</a></li>
+          <li><a href="#head76">随机森林</a></li>
+        </ul>
+      </li>
+      <li><a href="#head77">结合策略：知道集中常用策略以及stacking的优缺点</a></li>
+      <li><a href="#head78">多样性：知道多样性扰动的几种办法</a>
+        <ul>
+          <li><a href="#head79">误差-分歧分解</a></li>
+          <li><a href="#head80">多样性增强方法</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
 
-<h3 id="任务">任务</h3>
+<h2 id="第二章-基本术语和模型评估"><span id="head1">第二章 基本术语和模型评估</span></h2>
+
+<h3 id="任务"><span id="head2">任务</span></h3>
 
 <p>分类任务：标记为离散值</p>
 
@@ -3781,7 +3853,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>聚类任务：标记为空值</p>
 
-<h3 id="预测任务根据标记的完整情况">预测任务：根据标记的完整情况</h3>
+<h3 id="预测任务根据标记的完整情况"><span id="head3">预测任务：根据标记的完整情况</span></h3>
 
 <p>监督学习：所有示例有标记，分类、回归</p>
 
@@ -3791,7 +3863,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>噪音标记学习：有标记，但不完全准确</p>
 
-<h3 id="概念学习">概念学习</h3>
+<h3 id="概念学习"><span id="head4">概念学习</span></h3>
 
 <p>假设空间：所有可能属性的组合</p>
 
@@ -3801,11 +3873,11 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>No Free Lunch：总误差与学习算法无关</p>
 
-<h3 id="模型评估与选择">模型评估与选择</h3>
+<h3 id="模型评估与选择"><span id="head5">模型评估与选择</span></h3>
 
 <p>学习器在训练集上的误差称为训练误差或经验误差，在新样本上的误差称为测试误差或泛化误差。</p>
 
-<h4 id="评估方法">评估方法：</h4>
+<h4 id="评估方法"><span id="head6">评估方法：</span></h4>
 
 <p>留出法：将数据集划分为两个互斥的集合</p>
 
@@ -3817,7 +3889,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>数据量足够，一般采用留出法和交叉验证</p>
 
-<h4 id="性能度量">性能度量</h4>
+<h4 id="性能度量"><span id="head7">性能度量</span></h4>
 
 <p>均方误差（MSE），错误率、精度，P，R，ROC(AUC)，$F_\beta$度量，代价敏感错误率。</p>
 
@@ -3837,19 +3909,19 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>泛化误差可分解为方差、偏差与噪声之和</p>
 
-<h2 id="第三章-线性模型">第三章 线性模型</h2>
+<h2 id="第三章-线性模型"><span id="head8">第三章 线性模型</span></h2>
 
-<h3 id="回归任务掌握">回归任务（掌握）</h3>
+<h3 id="回归任务掌握"><span id="head9">回归任务（掌握）</span></h3>
 
 <p>最小二乘法原理和推导</p>
 
-<h3 id="二分类任务">二分类任务</h3>
+<h3 id="二分类任务"><span id="head10">二分类任务</span></h3>
 
 <p>对数几率回归、线性判别分析的建模原理</p>
 
 <p>线性判别分析</p>
 
-<h3 id="多分类任务">多分类任务</h3>
+<h3 id="多分类任务"><span id="head11">多分类任务</span></h3>
 
 <p>一对一</p>
 
@@ -3857,17 +3929,17 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>多对多</p>
 
-<h3 id="类别不平衡任务">类别不平衡任务</h3>
+<h3 id="类别不平衡任务"><span id="head12">类别不平衡任务</span></h3>
 
 <p>欠采样、过采样、阈值移动</p>
 
-<h2 id="第四章-决策树">第四章 决策树</h2>
+<h2 id="第四章-决策树"><span id="head13">第四章 决策树</span></h2>
 
-<h3 id="决策树基本流程">决策树基本流程</h3>
+<h3 id="决策树基本流程"><span id="head14">决策树基本流程</span></h3>
 
 <p>掌握决策树基本流程和原理</p>
 
-<h4 id="基本流程">基本流程</h4>
+<h4 id="基本流程"><span id="head15">基本流程</span></h4>
 
 <p>递归过程，当以下条件停止：</p>
 
@@ -3877,11 +3949,11 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>（3）当前节点包含的样本集合为空</p>
 
-<h3 id="决策树算法的关键划分选择">决策树算法的关键：划分选择</h3>
+<h3 id="决策树算法的关键划分选择"><span id="head16">决策树算法的关键：划分选择</span></h3>
 
 <p>熟悉三种划分准则</p>
 
-<h4 id="划分选择-信息增益">划分选择-信息增益</h4>
+<h4 id="划分选择-信息增益"><span id="head17">划分选择-信息增益</span></h4>
 
 <p>信息熵：样本集合D中第k类样本所占的比例为$p_k,(k=1,2,…,|y|)$.</p>
 
@@ -3893,7 +3965,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>$Ent(D)$表示集合的纯度 越小越纯</p>
 
-<h4 id="信息增益">信息增益</h4>
+<h4 id="信息增益"><span id="head18">信息增益</span></h4>
 
 <p>离散属性$a$，可能取值有$V$类，产生V个分支节点，第$v$个分支节点包含了D中所有在属性$a$上取值为$a^v$的样本，记为$D^v$。计算用属性a</p>
 
@@ -3907,7 +3979,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>不足：若编号作为一个属性，信息增益一般远大于其他属性。信息增益指标偏好取值数目较多的属性</p>
 
-<h4 id="基尼指数cart决策树">基尼指数——CART决策树</h4>
+<h4 id="基尼指数cart决策树"><span id="head19">基尼指数——CART决策树</span></h4>
 
 <p>C4.5：使用增益率，用属性的取值范围对信息增益做一个规范化。</p>
 
@@ -3915,7 +3987,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>$Gini_index(D,a)=\sum\limits_{v=1}^V\dfrac{|D^v|}{|D|}Gini(D^v)$.选择使得$Gini_index(D,a)$最小的属性</p>
 
-<h3 id="克服过拟合的问题剪枝处理">克服过拟合的问题：剪枝处理</h3>
+<h3 id="克服过拟合的问题剪枝处理"><span id="head20">克服过拟合的问题：剪枝处理</span></h3>
 
 <p>预剪枝 vs 后剪枝</p>
 
@@ -3929,7 +4001,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>优点：欠拟合风险小 缺点：时间开销大</p>
 
-<h3 id="处理多种类型数据连续与缺失值">处理多种类型数据：连续与缺失值</h3>
+<h3 id="处理多种类型数据连续与缺失值"><span id="head21">处理多种类型数据：连续与缺失值</span></h3>
 
 <p>了解基本原理</p>
 
@@ -3939,15 +4011,15 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>Q2：划分后样本的处理：将样本划分到每一个分支，赋予不同的权重</p>
 
-<h3 id="决策树的变体多变量决策树">决策树的变体：多变量决策树</h3>
+<h3 id="决策树的变体多变量决策树"><span id="head22">决策树的变体：多变量决策树</span></h3>
 
 <p>了解基本原理</p>
 
 <p>每一个非叶节点是一个线性分类器</p>
 
-<h2 id="第五章-神经网络">第五章 神经网络</h2>
+<h2 id="第五章-神经网络"><span id="head23">第五章 神经网络</span></h2>
 
-<h3 id="神经元模型熟悉">神经元模型：熟悉</h3>
+<h3 id="神经元模型熟悉"><span id="head24">神经元模型：熟悉</span></h3>
 
 <p>输入：来自其他n个神经云传递过来的输入信号。</p>
 
@@ -3955,57 +4027,57 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>输出：通过激活函数的处理以得到输出。</p>
 
-<h3 id="感知机与多层网络熟悉">感知机与多层网络：熟悉</h3>
+<h3 id="感知机与多层网络熟悉"><span id="head25">感知机与多层网络：熟悉</span></h3>
 
-<h4 id="感知机">感知机</h4>
+<h4 id="感知机"><span id="head26">感知机</span></h4>
 
 <p>两层神经元组成，只能处理线性可分问题。</p>
 
-<h4 id="多层前馈神经网络">多层前馈神经网络</h4>
+<h4 id="多层前馈神经网络"><span id="head27">多层前馈神经网络</span></h4>
 
 <p>定义：每层神经元与下一层神经元全互联, 神经元 之间不存在同层连接也不存在跨层连接。</p>
 
 <p>前馈：输入层接受外界输入, 隐含层与输出层神经 元对信号进行加工, 最终结果由输出层神经元输出。</p>
 
-<h4 id="多层前馈网络表示能力">多层前馈网络表示能力</h4>
+<h4 id="多层前馈网络表示能力"><span id="head28">多层前馈网络表示能力</span></h4>
 
 <p>只需要一个包含足够多神经元的隐含层，多层前馈神经网络就能以任意精度逼近任意复杂度的连续函数。</p>
 
-<h4 id="多层前馈网络局限">多层前馈网络局限</h4>
+<h4 id="多层前馈网络局限"><span id="head29">多层前馈网络局限</span></h4>
 
 <p>容易过拟合</p>
 
 <p>如何设置隐层神经元的个数仍然是个未决问题</p>
 
-<h4 id="缓解过拟合策略">缓解过拟合策略</h4>
+<h4 id="缓解过拟合策略"><span id="head30">缓解过拟合策略</span></h4>
 
 <p>早停：在训练中，若训练误差降低，但验证误差升高，则停止训练。</p>
 
 <p>正则化：在误差目标函数中增加一项描述网络复杂程度的部分，例如连接权重与阈值的平方和。($E=\lambda\dfrac{1}{m}\sum\limits_{k=1}^mE_k+(1-\lambda)\sum\limits_iw_i^2$)</p>
 
-<h3 id="误差逆传播算法熟悉">误差逆传播算法：熟悉</h3>
+<h3 id="误差逆传播算法熟悉"><span id="head31">误差逆传播算法：熟悉</span></h3>
 
-<h4 id="bp算法">BP算法</h4>
+<h4 id="bp算法"><span id="head32">BP算法</span></h4>
 
 <p>推导注意链式法则，计算输入层的变化时要对所有的$\beta_j$分别链式法则求和。</p>
 
-<h5 id="标准bp算法">标准BP算法</h5>
+<h5 id="标准bp算法"><span id="head33">标准BP算法</span></h5>
 
 <p>每次针对单个训练样例更新权值与阈值。</p>
 
 <p>参数更新频繁，不同样例可能抵消们需要多次迭代。</p>
 
-<h5 id="累计bp算法">累计BP算法</h5>
+<h5 id="累计bp算法"><span id="head34">累计BP算法</span></h5>
 
 <p>优点：其优化的目标是最小化整个训练集上的累计误差$E=\dfrac{1}{m}\sum\limits_{k=1}^mE_k$.</p>
 
 <p>缺点：读取整个训练集一遍才对参数进行更新，参数更新频率较低。</p>
 
-<h5 id="实际应用">实际应用</h5>
+<h5 id="实际应用"><span id="head35">实际应用</span></h5>
 
 <p>但在很多任务中，累计误差下降到一定程度后，进一步下降会非常缓慢，这时标准BP算法往往会获得较好的解，尤其当训练集非常大时效果更明显。</p>
 
-<h3 id="全局最与局部最了解">全局最⼩与局部最⼩：了解</h3>
+<h3 id="全局最与局部最了解"><span id="head36">全局最⼩与局部最⼩：了解</span></h3>
 
 <p>跳出局部最小的策略</p>
 
@@ -4024,7 +4096,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ol>
 
-<h3 id="其他常见神经网络了解">其他常见神经网络：了解</h3>
+<h3 id="其他常见神经网络了解"><span id="head37">其他常见神经网络：了解</span></h3>
 
 <p>RBF网络：是哟个径向基函数$\rho(x,c_i)=e^{-\beta_i||x-c_i||^2}$作为激活函数</p>
 
@@ -4036,7 +4108,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>Elman网络:递归神经网络,有反馈.</p>
 
-<h3 id="深度学习了解">深度学习：了解</h3>
+<h3 id="深度学习了解"><span id="head38">深度学习：了解</span></h3>
 
 <p>深层神经网络最为典型</p>
 
@@ -4050,9 +4122,9 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>特征学习:通过深度学习自动产生分类的特征</p>
 
-<h2 id="第六章-支持向量机-svm">第六章 支持向量机 SVM</h2>
+<h2 id="第六章-支持向量机-svm"><span id="head39">第六章 支持向量机 SVM</span></h2>
 
-<h3 id="间隔与支持向量">间隔与支持向量</h3>
+<h3 id="间隔与支持向量"><span id="head40">间隔与支持向量</span></h3>
 
 <p>寻找超平面将样本划分，找最中间的超平面。</p>
 
@@ -4070,7 +4142,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>$</p>
 
-<h3 id="对偶问题">对偶问题</h3>
+<h3 id="对偶问题"><span id="head41">对偶问题</span></h3>
 
 <p>拉格朗日乘子法</p>
 
@@ -4120,7 +4192,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>$</p>
 
-<h4 id="求解smo">求解SMO</h4>
+<h4 id="求解smo"><span id="head42">求解SMO</span></h4>
 
 <p>基本思路：不断执行如下</p>
 
@@ -4137,7 +4209,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>支持向量机解的稀疏性：训练后，模型仅与支持向量有关，及$\alpha_i$不等于0的对应的向量有关。</p>
 
-<h3 id="核函数">核函数</h3>
+<h3 id="核函数"><span id="head43">核函数</span></h3>
 
 <p>当空间不线性可分时，将样本从低维映射到一个更高维的特征空间。</p>
 
@@ -4151,13 +4223,13 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>$</p>
 
-<h4 id="常用的核函数"><strong>常用的核函数</strong></h4>
+<h4 id="常用的核函数"><span id="head44"><strong>常用的核函数</strong></span></h4>
 
 <p><img src="C:\Users\赵超懿\AppData\Roaming\Typora\typora-user-images\image-20211225202119165.png" alt="image-20211225202119165" /></p>
 
-<h3 id="软间隔与正则化">软间隔与正则化</h3>
+<h3 id="软间隔与正则化"><span id="head45">软间隔与正则化</span></h3>
 
-<h4 id="软间隔">软间隔</h4>
+<h4 id="软间隔"><span id="head46">软间隔</span></h4>
 
 <p>现实中, 很难确定合适的核函数使得训练样本在特征空间中线性可分; 同时一个线性可分的结果也很难断定是否是有过拟合造成的.</p>
 
@@ -4215,7 +4287,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>$</p>
 
-<h4 id="正则化">正则化</h4>
+<h4 id="正则化"><span id="head47">正则化</span></h4>
 
 <p>$</p>
 
@@ -4225,7 +4297,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>第一项是结构风险（描述模型的某些性质），第二项是经验风险（描述模型与训练数据的契合程度）</p>
 
-<h3 id="支持向量回归">支持向量回归</h3>
+<h3 id="支持向量回归"><span id="head48">支持向量回归</span></h3>
 
 <p>特点: 允许模型输出和实际输出间存在$2\epsilon$的偏差</p>
 
@@ -4235,15 +4307,15 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p><img src="C:\Users\赵超懿\AppData\Roaming\Typora\typora-user-images\image-20211225203230958.png" alt="image-20211225203230958" /></p>
 
-<h3 id="核方法">核方法</h3>
+<h3 id="核方法"><span id="head49">核方法</span></h3>
 
 <p><img src="C:\Users\赵超懿\AppData\Roaming\Typora\typora-user-images\image-20211225203439450.png" alt="image-20211225203439450" /></p>
 
 <p>推广：核LDA（线性模型中提到），核PCA</p>
 
-<h2 id="第七章-贝叶斯分类器">第七章 贝叶斯分类器</h2>
+<h2 id="第七章-贝叶斯分类器"><span id="head50">第七章 贝叶斯分类器</span></h2>
 
-<h3 id="掌握贝叶斯决策论">掌握贝叶斯决策论</h3>
+<h3 id="掌握贝叶斯决策论"><span id="head51">掌握贝叶斯决策论</span></h3>
 
 <p>给定N个类别，令$\lambda_{ij}$代表将第$j$类样本误分类为第$i$类所产生的损失，</p>
 
@@ -4265,13 +4337,13 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>$h^*$成为被贝叶斯最优分类器，总风险成为贝叶斯风险，反应学习性能的理论上限。</p>
 
-<h4 id="判别式-vs-生成式">判别式 vs 生成式</h4>
+<h4 id="判别式-vs-生成式"><span id="head52">判别式 vs 生成式</span></h4>
 
-<h5 id="判别式">判别式</h5>
+<h5 id="判别式"><span id="head53">判别式</span></h5>
 
 <p>直接对$P(c|\mathbf{x})$建模如决策树，BP神经网络，SVM</p>
 
-<h5 id="生成式">生成式</h5>
+<h5 id="生成式"><span id="head54">生成式</span></h5>
 
 <p>先对$P(\mathbf{x},c)$建模，再由次获得$P(c|\mathbf{x})$.</p>
 
@@ -4283,7 +4355,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>代表：贝叶斯分类器，（贝叶斯分类器$\neq$贝叶斯学习）</p>
 
-<h3 id="熟悉极大似然估计">熟悉极大似然估计</h3>
+<h3 id="熟悉极大似然估计"><span id="head55">熟悉极大似然估计</span></h3>
 
 <p>先假设某种概率分布形式，再基于训练样例对参数进行估计</p>
 
@@ -4303,7 +4375,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>$\hat{\theta}_c=\arg\max_{\theta_c}{LL(\theta)}$</p>
 
-<h3 id="熟悉朴素贝叶斯拉普拉斯修正">熟悉朴素贝叶斯（拉普拉斯修正）</h3>
+<h3 id="熟悉朴素贝叶斯拉普拉斯修正"><span id="head56">熟悉朴素贝叶斯（拉普拉斯修正）</span></h3>
 
 <p>主要障碍：所有属性上的联合概率难以从有限训练样本估计获得</p>
 
@@ -4317,7 +4389,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>$</p>
 
-<h4 id="估计">估计</h4>
+<h4 id="估计"><span id="head57">估计</span></h4>
 
 <p>$P(c)=\dfrac{|D_c|}{|D|}$.</p>
 
@@ -4327,13 +4399,13 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>对连续属性，考虑概率密度函数，假定$P(x_i|c)\sim N(\mu_{c,i},\sigma^2_{c,i})$.</p>
 
-<h4 id="拉普拉斯修正">拉普拉斯修正</h4>
+<h4 id="拉普拉斯修正"><span id="head58">拉普拉斯修正</span></h4>
 
 <p>若某个属性值在训练集中没有与某个类同时出现过，则直接计算会出现 问题，因为概率连乘将“抹去”其他属性提供的信息。</p>
 
 <p>$P(c)=\dfrac{|D_c|+1}{|D|+N}$.$P(x_i|c)=\dfrac{|D_{c,x_i}|+1}{|D_c|+N_i}$.</p>
 
-<h4 id="朴素贝叶斯分类器的使用">朴素贝叶斯分类器的使用</h4>
+<h4 id="朴素贝叶斯分类器的使用"><span id="head59">朴素贝叶斯分类器的使用</span></h4>
 
 <p>若对预测速度要求高：预计算所有概率估值，使用时“查表”</p>
 
@@ -4341,7 +4413,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>若数据不断增加：基于现有估值，对新样本涉及的概率估值进行修正 (增量学习, incremental learning)</p>
 
-<h3 id="掌握半朴素贝叶斯">掌握半朴素贝叶斯</h3>
+<h3 id="掌握半朴素贝叶斯"><span id="head60">掌握半朴素贝叶斯</span></h3>
 
 <p>基本思路：适当考虑一部分属性间的相互依赖信息</p>
 
@@ -4355,15 +4427,15 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>$</p>
 
-<h4 id="spode">SPODE</h4>
+<h4 id="spode"><span id="head61">SPODE</span></h4>
 
 <p>假设所有属性都依赖于同一属性，称为“超父” (Super-Parent)， 然后通过交叉验证等模型选择方法来确定超父属性</p>
 
-<h4 id="tan">TAN</h4>
+<h4 id="tan"><span id="head62">TAN</span></h4>
 
 <p>以属性间的条件”互信息”(mutual information)为边的权重，构建完全图，再利用最大带权生成树算法，仅保留强相关属性间的依赖性</p>
 
-<h4 id="aode">AODE：</h4>
+<h4 id="aode"><span id="head63">AODE：</span></h4>
 
 <p>尝试将每个属性作为超父构建 SPODE</p>
 
@@ -4379,27 +4451,27 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>$</p>
 
-<h4 id="高阶依赖">高阶依赖</h4>
+<h4 id="高阶依赖"><span id="head64">高阶依赖</span></h4>
 
 <p>需要充分的样本</p>
 
-<h3 id="掌握贝叶斯网">掌握贝叶斯网</h3>
+<h3 id="掌握贝叶斯网"><span id="head65">掌握贝叶斯网</span></h3>
 
-<h3 id="了解em算法">了解EM算法</h3>
+<h3 id="了解em算法"><span id="head66">了解EM算法</span></h3>
 
-<h2 id="第八章-集成学习">第八章 集成学习</h2>
+<h2 id="第八章-集成学习"><span id="head67">第八章 集成学习</span></h2>
 
-<h3 id="个体与集成知道个体分类器的定义和集成学习的定义">个体与集成：知道个体分类器的定义和集成学习的定义</h3>
+<h3 id="个体与集成知道个体分类器的定义和集成学习的定义"><span id="head68">个体与集成：知道个体分类器的定义和集成学习的定义</span></h3>
 
 <p>集成学习通过构建并结合多个学习器来提升性能</p>
 
-<h3 id="boosting知道boosting的思想和adaboost的实现">Boosting：知道Boosting的思想和adaboost的实现</h3>
+<h3 id="boosting知道boosting的思想和adaboost的实现"><span id="head69">Boosting：知道Boosting的思想和adaboost的实现</span></h3>
 
-<h4 id="boosting">Boosting</h4>
+<h4 id="boosting"><span id="head70">Boosting</span></h4>
 
 <p>个体学习器存在强依赖关系，串行生成，每次调整训练数据样本分布</p>
 
-<h4 id="adaboost">AdaBoost</h4>
+<h4 id="adaboost"><span id="head71">AdaBoost</span></h4>
 
 <p><img src="C:\Users\赵超懿\AppData\Roaming\Typora\typora-user-images\image-20211226162942021.png" alt="image-20211226162942021" /></p>
 
@@ -4421,13 +4493,13 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>$</p>
 
-<h5 id="注意事项">注意事项</h5>
+<h5 id="注意事项"><span id="head72">注意事项</span></h5>
 
 <p>数据分布的学习：重赋权法，重采样法</p>
 
 <p>重启动，避免训练过程过早停止，（8.5处，如果学习的分类器不佳）</p>
 
-<h3 id="bagging与随机森林知道思想和实现的方式">Bagging与随机森林：知道思想和实现的方式</h3>
+<h3 id="bagging与随机森林知道思想和实现的方式"><span id="head73">Bagging与随机森林：知道思想和实现的方式</span></h3>
 
 <p>个体学习器不存在强依赖关系</p>
 
@@ -4435,7 +4507,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>自助采样法</p>
 
-<h4 id="bagging算法">Bagging算法</h4>
+<h4 id="bagging算法"><span id="head74">Bagging算法</span></h4>
 
 <p><img src="C:\Users\赵超懿\AppData\Roaming\Typora\typora-user-images\image-20211226164842877.png" alt="image-20211226164842877" /></p>
 
@@ -4457,17 +4529,17 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>可使用包外估计</p>
 
-<h4 id="包外估计">包外估计</h4>
+<h4 id="包外估计"><span id="head75">包外估计</span></h4>
 
 <p>可以计算泛化误差等</p>
 
-<h4 id="随机森林">随机森林</h4>
+<h4 id="随机森林"><span id="head76">随机森林</span></h4>
 
 <p>采样的随机性，属性的随机性</p>
 
 <p><img src="C:\Users\赵超懿\AppData\Roaming\Typora\typora-user-images\image-20211226165628669.png" alt="image-20211226165628669" /></p>
 
-<h3 id="结合策略知道集中常用策略以及stacking的优缺点">结合策略：知道集中常用策略以及stacking的优缺点</h3>
+<h3 id="结合策略知道集中常用策略以及stacking的优缺点"><span id="head77">结合策略：知道集中常用策略以及stacking的优缺点</span></h3>
 
 <p>平均法：如加权平均法</p>
 
@@ -4477,9 +4549,9 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>在训练阶段，次级训练集是利用初级学习器产生的，若直接用初级学习器 的训练集来产生次级训练集，则过拟合风险会比较大;因此一般是通过使用交叉验证或留一法这样的方式，用训练初级学习器未使用的样本来产生次级学习器的训练样本.</p>
 
-<h3 id="多样性知道多样性扰动的几种办法">多样性：知道多样性扰动的几种办法</h3>
+<h3 id="多样性知道多样性扰动的几种办法"><span id="head78">多样性：知道多样性扰动的几种办法</span></h3>
 
-<h4 id="误差-分歧分解">误差-分歧分解</h4>
+<h4 id="误差-分歧分解"><span id="head79">误差-分歧分解</span></h4>
 
 <p>$</p>
 
@@ -4491,7 +4563,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>个体学习器精确性越高、多样性越大，则集成效果越好</p>
 
-<h4 id="多样性增强方法">多样性增强方法</h4>
+<h4 id="多样性增强方法"><span id="head80">多样性增强方法</span></h4>
 
 <p>数据样本扰动：</p>
 
@@ -4528,132 +4600,121 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   <li>
     <p>不同的多样性增强机制同时使用</p>
   </li>
-</ol>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="Courses" /><summary type="html"><![CDATA[机器学习导论期末复习总结，建议复习再多看看细节的概念]]></summary></entry><entry><title type="html">毛概总结</title><link href="http://localhost:4000/ppx123-web/2022/01/15/%E6%AF%9B%E6%A6%82/" rel="alternate" type="text/html" title="毛概总结" /><published>2022-01-15T00:00:00+08:00</published><updated>2022-01-15T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/01/15/%E6%AF%9B%E6%A6%82</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/01/15/%E6%AF%9B%E6%A6%82/"><![CDATA[<h1 class="no_toc" id="毛概复习">毛概复习</h1>
-<ol id="markdown-toc">
-  <li><a href="#考试内容及复习方式" id="markdown-toc-考试内容及复习方式">考试内容及复习方式</a></li>
-  <li><a href="#第一章-第二节-毛泽东思想的主要内容和活的灵魂" id="markdown-toc-第一章-第二节-毛泽东思想的主要内容和活的灵魂">第一章 第二节 毛泽东思想的主要内容和活的灵魂</a>    <ol>
-      <li><a href="#毛泽东思想的主要内容" id="markdown-toc-毛泽东思想的主要内容">毛泽东思想的主要内容</a></li>
-      <li><a href="#毛泽东思想活的灵魂" id="markdown-toc-毛泽东思想活的灵魂">毛泽东思想活的灵魂</a></li>
-    </ol>
-  </li>
-  <li><a href="#第二章-第二节-新民主主义革命的总路线和基本纲领" id="markdown-toc-第二章-第二节-新民主主义革命的总路线和基本纲领">第二章 第二节 新民主主义革命的总路线和基本纲领</a>    <ol>
-      <li><a href="#总路线的内容" id="markdown-toc-总路线的内容">总路线的内容</a></li>
-      <li><a href="#新民主主义革命的动力" id="markdown-toc-新民主主义革命的动力">新民主主义革命的动力</a></li>
-      <li><a href="#革命的领导阶级是无产阶级" id="markdown-toc-革命的领导阶级是无产阶级">革命的领导阶级是无产阶级</a></li>
-      <li><a href="#新民主主义革命的性质和前途" id="markdown-toc-新民主主义革命的性质和前途">新民主主义革命的性质和前途</a></li>
-      <li><a href="#基本纲领" id="markdown-toc-基本纲领">基本纲领</a></li>
-    </ol>
-  </li>
-  <li><a href="#第三章-第三节-社会主义制度在中国的确立" id="markdown-toc-第三章-第三节-社会主义制度在中国的确立">第三章 第三节 社会主义制度在中国的确立</a>    <ol>
-      <li><a href="#社会主义基本制度的确立及其理论根据" id="markdown-toc-社会主义基本制度的确立及其理论根据">社会主义基本制度的确立及其理论根据</a></li>
-      <li><a href="#重大意义" id="markdown-toc-重大意义">重大意义</a></li>
-    </ol>
-  </li>
-  <li><a href="#第四章-第二节-初步探索的意义和经验教训" id="markdown-toc-第四章-第二节-初步探索的意义和经验教训">第四章 第二节 初步探索的意义和经验教训</a>    <ol>
-      <li><a href="#初步探索的意义" id="markdown-toc-初步探索的意义">初步探索的意义</a></li>
-      <li><a href="#初步探索的经验教训" id="markdown-toc-初步探索的经验教训">初步探索的经验教训</a></li>
-    </ol>
-  </li>
-  <li><a href="#第五章-第二节-邓小平理论的基本问题和主要内容" id="markdown-toc-第五章-第二节-邓小平理论的基本问题和主要内容">第五章 第二节 邓小平理论的基本问题和主要内容</a>    <ol>
-      <li><a href="#基本问题" id="markdown-toc-基本问题">基本问题</a></li>
-      <li><a href="#主要内容" id="markdown-toc-主要内容">主要内容</a></li>
-    </ol>
-  </li>
-  <li><a href="#第七章-第二节-科学发展观的科学内涵和主要内容" id="markdown-toc-第七章-第二节-科学发展观的科学内涵和主要内容">第七章 第二节 科学发展观的科学内涵和主要内容</a>    <ol>
-      <li><a href="#科学内涵" id="markdown-toc-科学内涵">科学内涵</a></li>
-      <li><a href="#主要内容-1" id="markdown-toc-主要内容-1">主要内容</a></li>
-    </ol>
-  </li>
-  <li><a href="#第八章-习近平新时代中国特社会主义思想及其历史地位" id="markdown-toc-第八章-习近平新时代中国特社会主义思想及其历史地位">第八章 习近平新时代中国特⾊社会主义思想及其历史地位</a>    <ol>
-      <li><a href="#第一节-习近平新时代中国特色社会主义思想创立的社会历史条件重点是新时代和大变局" id="markdown-toc-第一节-习近平新时代中国特色社会主义思想创立的社会历史条件重点是新时代和大变局">第一节 习近平新时代中国特色社会主义思想创立的社会历史条件（重点是新时代和大变局）</a>        <ol>
-          <li><a href="#中国特色社会主义新时代的变与不变" id="markdown-toc-中国特色社会主义新时代的变与不变">中国特色社会主义新时代的变与不变</a></li>
-          <li><a href="#世界正经历百年未有之大变局" id="markdown-toc-世界正经历百年未有之大变局">世界正经历百年未有之大变局</a></li>
-        </ol>
-      </li>
-      <li><a href="#第三节-习近平新时代中国特色社会主义思想的历史地位" id="markdown-toc-第三节-习近平新时代中国特色社会主义思想的历史地位">第三节 习近平新时代中国特色社会主义思想的<strong>历史地位</strong></a></li>
-    </ol>
-  </li>
-  <li><a href="#第九章-坚持和发展中国特色社会主义的总任务" id="markdown-toc-第九章-坚持和发展中国特色社会主义的总任务">第九章 坚持和发展中国特色社会主义的总任务</a>    <ol>
-      <li><a href="#第二节-建成社会主义现代化强国的战略安排" id="markdown-toc-第二节-建成社会主义现代化强国的战略安排">第二节 建成社会主义现代化强国的战略安排</a></li>
-      <li><a href="#第三节-建设社会主义现代化国家的战略导向" id="markdown-toc-第三节-建设社会主义现代化国家的战略导向">第三节 建设社会主义现代化国家的战略导向</a>        <ol>
-          <li><a href="#新发展阶段" id="markdown-toc-新发展阶段">新发展阶段</a></li>
-          <li><a href="#新发展理念" id="markdown-toc-新发展理念">新发展理念</a></li>
-          <li><a href="#新发展格局" id="markdown-toc-新发展格局">新发展格局</a></li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-  <li><a href="#第十章-五位一体总布局" id="markdown-toc-第十章-五位一体总布局">第十章 “五位一体”总布局</a>    <ol>
-      <li><a href="#第一节-实现经济高质量发展" id="markdown-toc-第一节-实现经济高质量发展">第一节 实现经济高质量发展</a>        <ol>
-          <li><a href="#坚持习近平经济思想" id="markdown-toc-坚持习近平经济思想">坚持习近平经济思想</a>            <ol>
-              <li><a href="#实现高质量发展的途径ppt无书上的" id="markdown-toc-实现高质量发展的途径ppt无书上的">实现高质量发展的途径（ppt无，书上的）</a></li>
-            </ol>
-          </li>
-          <li><a href="#供给侧结构性改革" id="markdown-toc-供给侧结构性改革">供给侧结构性改革</a>            <ol>
-              <li><a href="#内涵" id="markdown-toc-内涵">内涵</a></li>
-              <li><a href="#背景" id="markdown-toc-背景">背景</a></li>
-              <li><a href="#举措" id="markdown-toc-举措">举措</a></li>
-            </ol>
-          </li>
-        </ol>
-      </li>
-      <li><a href="#第二节-发展社会主义民主政治" id="markdown-toc-第二节-发展社会主义民主政治">第二节 发展社会主义民主政治</a>        <ol>
-          <li><a href="#坚持中国特色社会主义政治发展道路" id="markdown-toc-坚持中国特色社会主义政治发展道路">坚持中国特色社会主义政治发展道路</a></li>
-          <li><a href="#健全人民当家做主制度体系" id="markdown-toc-健全人民当家做主制度体系">健全人民当家做主制度体系</a></li>
-          <li><a href="#巩固和发展爱国统一战线非主要" id="markdown-toc-巩固和发展爱国统一战线非主要">巩固和发展爱国统一战线（非主要）</a></li>
-        </ol>
-      </li>
-      <li><a href="#第三节-建设社会主义文化强国" id="markdown-toc-第三节-建设社会主义文化强国">第三节 建设社会主义文化强国</a>        <ol>
-          <li><a href="#坚持马克思主义在意识形态领域指导地位的根本制度" id="markdown-toc-坚持马克思主义在意识形态领域指导地位的根本制度">坚持马克思主义在意识形态领域指导地位的根本制度</a></li>
-          <li><a href="#社会主义核心价值观" id="markdown-toc-社会主义核心价值观">社会主义核心价值观</a>            <ol>
-              <li><a href="#做法" id="markdown-toc-做法">做法</a></li>
-            </ol>
-          </li>
-          <li><a href="#坚定文化自信繁荣发展社会主义文化" id="markdown-toc-坚定文化自信繁荣发展社会主义文化">坚定文化自信，繁荣发展社会主义文化</a></li>
-          <li><a href="#ppt补充做法" id="markdown-toc-ppt补充做法">（ppt补充）做法</a></li>
-          <li><a href="#推进社会主义文化强国建设" id="markdown-toc-推进社会主义文化强国建设">推进社会主义文化强国建设</a></li>
-        </ol>
-      </li>
-      <li><a href="#第四节-加强以民生为重点的社会建设" id="markdown-toc-第四节-加强以民生为重点的社会建设">第四节 加强以民生为重点的社会建设</a>        <ol>
-          <li><a href="#发展中保障和改善民生提高保障和改善民生水平" id="markdown-toc-发展中保障和改善民生提高保障和改善民生水平">发展中保障和改善民生（提高保障和改善民生水平）</a></li>
-          <li><a href="#加强和创新社会治理" id="markdown-toc-加强和创新社会治理">加强和创新社会治理</a></li>
-          <li><a href="#社会治理面临新挑战" id="markdown-toc-社会治理面临新挑战">社会治理面临新挑战</a></li>
-          <li><a href="#加强和创新社会治理的举措" id="markdown-toc-加强和创新社会治理的举措">加强和创新社会治理的举措</a></li>
-        </ol>
-      </li>
-      <li><a href="#第十章思考题" id="markdown-toc-第十章思考题">第十章思考题</a>        <ol>
-          <li><a href="#1如何准确把握习近平经济思想的主要内容" id="markdown-toc-1如何准确把握习近平经济思想的主要内容">1.如何准确把握习近平经济思想的主要内容?</a></li>
-          <li><a href="#2供给侧结构性改革的背景内涵及对策" id="markdown-toc-2供给侧结构性改革的背景内涵及对策">2.供给侧结构性改革的背景、内涵及对策?</a></li>
-          <li><a href="#3保障人民当家作主的制度体系包括哪些内容" id="markdown-toc-3保障人民当家作主的制度体系包括哪些内容">3.保障人民当家作主的制度体系包括哪些内容?</a></li>
-          <li><a href="#4如何提升文化软实力建设中国特色的文化强国" id="markdown-toc-4如何提升文化软实力建设中国特色的文化强国">4.如何提升文化软实力，建设中国特色的文化强国?</a></li>
-          <li><a href="#5如何加强制度建设推进共同富裕" id="markdown-toc-5如何加强制度建设推进共同富裕">5.如何加强制度建设推进共同富裕?</a></li>
-          <li><a href="#6如何加强和创新社会治理" id="markdown-toc-6如何加强和创新社会治理">6.如何加强和创新社会治理?</a></li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-  <li><a href="#第十一章-第一节-全面建设社会主义现代化国家" id="markdown-toc-第十一章-第一节-全面建设社会主义现代化国家">第十一章 第一节 全面建设社会主义现代化国家</a>    <ol>
-      <li><a href="#从全面建成小康社会到全面建设社会主义现代化国家" id="markdown-toc-从全面建成小康社会到全面建设社会主义现代化国家">从全面建成小康社会到全面建设社会主义现代化国家</a></li>
-      <li><a href="#脱贫攻坚经验" id="markdown-toc-脱贫攻坚经验">脱贫攻坚经验</a></li>
-      <li><a href="#中国社会主义现代化国家的基本特征" id="markdown-toc-中国社会主义现代化国家的基本特征">中国社会主义现代化国家的基本特征</a></li>
-    </ol>
-  </li>
-  <li><a href="#第十二章-第一节-坚持总体国家安全观" id="markdown-toc-第十二章-第一节-坚持总体国家安全观">第十二章 第一节 坚持总体国家安全观</a>    <ol>
-      <li><a href="#国家安全是安邦定国的重要基石" id="markdown-toc-国家安全是安邦定国的重要基石">国家安全是安邦定国的重要基石</a></li>
-      <li><a href="#国家总体安全观" id="markdown-toc-国家总体安全观">国家总体安全观</a></li>
-      <li><a href="#坚持总体国家安全观的意义" id="markdown-toc-坚持总体国家安全观的意义">坚持总体国家安全观的意义</a></li>
-      <li><a href="#坚持走中国特色社会国家安全道路" id="markdown-toc-坚持走中国特色社会国家安全道路">坚持走中国特色社会国家安全道路</a></li>
-      <li><a href="#着力防范化解重大风险" id="markdown-toc-着力防范化解重大风险">着力防范化解重大风险</a></li>
-    </ol>
-  </li>
-  <li><a href="#第十三章-第二节-坚持走和平发展道路" id="markdown-toc-第十三章-第二节-坚持走和平发展道路">第十三章 第二节 坚持走和平发展道路</a>    <ol>
-      <li><a href="#坚持独立自主和平外交政策" id="markdown-toc-坚持独立自主和平外交政策">坚持独立自主和平外交政策</a></li>
-      <li><a href="#推动建设新型国际关系" id="markdown-toc-推动建设新型国际关系">推动建设新型国际关系</a></li>
-    </ol>
-  </li>
-</ol>
+</ol>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="Courses" /><summary type="html"><![CDATA[机器学习导论期末复习总结，建议复习再多看看细节的概念]]></summary></entry><entry><title type="html">毛概总结</title><link href="http://localhost:4000/ppx123-web/2022/01/15/%E6%AF%9B%E6%A6%82/" rel="alternate" type="text/html" title="毛概总结" /><published>2022-01-15T00:00:00+08:00</published><updated>2022-01-15T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/01/15/%E6%AF%9B%E6%A6%82</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/01/15/%E6%AF%9B%E6%A6%82/"><![CDATA[<blockquote>
+  <p>毛概复习整理</p>
+</blockquote>
 
-<h1 id="考试内容及复习方式">考试内容及复习方式</h1>
+<ul>
+  <li><a href="#head1">考试内容及复习方式</a></li>
+  <li><a href="#head2">第一章 第二节 毛泽东思想的主要内容和活的灵魂</a></li>
+  <li><a href="#head3">毛泽东思想的主要内容</a></li>
+  <li><a href="#head4">毛泽东思想活的灵魂</a></li>
+  <li><a href="#head5">第二章 第二节 新民主主义革命的总路线和基本纲领</a></li>
+  <li><a href="#head6">总路线的内容</a></li>
+  <li><a href="#head7">新民主主义革命的动力</a></li>
+  <li><a href="#head8">革命的领导阶级是无产阶级</a></li>
+  <li><a href="#head9">新民主主义革命的性质和前途</a></li>
+  <li><a href="#head10">基本纲领</a></li>
+  <li><a href="#head11">第三章 第三节 社会主义制度在中国的确立</a></li>
+  <li><a href="#head12">社会主义基本制度的确立及其理论根据</a></li>
+  <li><a href="#head13">重大意义</a></li>
+  <li><a href="#head14">第四章 第二节 初步探索的意义和经验教训</a></li>
+  <li><a href="#head15">初步探索的意义</a></li>
+  <li><a href="#head16">初步探索的经验教训</a></li>
+  <li><a href="#head17">第五章 第二节 邓小平理论的基本问题和主要内容</a></li>
+  <li><a href="#head18">基本问题</a></li>
+  <li><a href="#head19">主要内容</a></li>
+  <li><a href="#head20">第七章 第二节 科学发展观的科学内涵和主要内容</a></li>
+  <li><a href="#head21">科学内涵</a></li>
+  <li><a href="#head22">主要内容</a></li>
+  <li><a href="#head23">第八章 习近平新时代中国特⾊社会主义思想及其历史地位</a></li>
+  <li><a href="#head24">第一节 习近平新时代中国特色社会主义思想创立的社会历史条件（重点是新时代和大变局）</a>
+    <ul>
+      <li><a href="#head25">中国特色社会主义新时代的变与不变</a></li>
+      <li><a href="#head26">世界正经历百年未有之大变局</a></li>
+    </ul>
+  </li>
+  <li><a href="#head27">第三节 习近平新时代中国特色社会主义思想的<strong>历史地位</strong></a></li>
+  <li><a href="#head28">第九章 坚持和发展中国特色社会主义的总任务</a></li>
+  <li><a href="#head29">第二节 建成社会主义现代化强国的战略安排</a></li>
+  <li><a href="#head30">第三节 建设社会主义现代化国家的战略导向</a>
+    <ul>
+      <li><a href="#head31">新发展阶段</a></li>
+      <li><a href="#head32">新发展理念</a></li>
+      <li><a href="#head33">新发展格局</a></li>
+    </ul>
+  </li>
+  <li><a href="#head34">第十章 “五位一体”总布局</a></li>
+  <li><a href="#head35">第一节 实现经济高质量发展</a>
+    <ul>
+      <li><a href="#head36">坚持习近平经济思想</a>
+        <ul>
+          <li><a href="#head37">实现高质量发展的途径（ppt无，书上的）</a></li>
+        </ul>
+      </li>
+      <li><a href="#head38">供给侧结构性改革</a>
+        <ul>
+          <li><a href="#head39">内涵</a></li>
+          <li><a href="#head40">背景</a></li>
+          <li><a href="#head41">举措</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#head42">第二节 发展社会主义民主政治</a>
+    <ul>
+      <li><a href="#head43">坚持中国特色社会主义政治发展道路</a></li>
+      <li><a href="#head44">健全人民当家做主制度体系</a></li>
+      <li><a href="#head45">巩固和发展爱国统一战线（非主要）</a></li>
+    </ul>
+  </li>
+  <li><a href="#head46">第三节 建设社会主义文化强国</a>
+    <ul>
+      <li><a href="#head47">坚持马克思主义在意识形态领域指导地位的根本制度</a></li>
+      <li><a href="#head48">社会主义核心价值观</a>
+        <ul>
+          <li><a href="#head49">做法</a></li>
+        </ul>
+      </li>
+      <li><a href="#head50">坚定文化自信，繁荣发展社会主义文化</a></li>
+      <li><a href="#head51">（ppt补充）做法</a></li>
+      <li><a href="#head52">推进社会主义文化强国建设</a></li>
+    </ul>
+  </li>
+  <li><a href="#head53">第四节 加强以民生为重点的社会建设</a>
+    <ul>
+      <li><a href="#head54">发展中保障和改善民生（提高保障和改善民生水平）</a></li>
+      <li><a href="#head55">加强和创新社会治理</a></li>
+      <li><a href="#head56">社会治理面临新挑战</a></li>
+      <li><a href="#head57">加强和创新社会治理的举措</a></li>
+    </ul>
+  </li>
+  <li><a href="#head58">第十章思考题</a>
+    <ul>
+      <li><a href="#head59">1.如何准确把握习近平经济思想的主要内容?</a></li>
+      <li><a href="#head60">2.供给侧结构性改革的背景、内涵及对策?</a></li>
+      <li><a href="#head61">3.保障人民当家作主的制度体系包括哪些内容?</a></li>
+      <li><a href="#head62">4.如何提升文化软实力，建设中国特色的文化强国?</a></li>
+      <li><a href="#head63">5.如何加强制度建设推进共同富裕?</a></li>
+      <li><a href="#head64">6.如何加强和创新社会治理?</a></li>
+    </ul>
+  </li>
+  <li><a href="#head65">第十一章 第一节 全面建设社会主义现代化国家</a></li>
+  <li><a href="#head66">从全面建成小康社会到全面建设社会主义现代化国家</a></li>
+  <li><a href="#head67">脱贫攻坚经验</a></li>
+  <li><a href="#head68">中国社会主义现代化国家的基本特征</a></li>
+  <li><a href="#head69">第十二章 第一节 坚持总体国家安全观</a></li>
+  <li><a href="#head70">国家安全是安邦定国的重要基石</a></li>
+  <li><a href="#head71">国家总体安全观</a></li>
+  <li><a href="#head72">坚持总体国家安全观的意义</a></li>
+  <li><a href="#head73">坚持走中国特色社会国家安全道路</a></li>
+  <li><a href="#head74">着力防范化解重大风险</a></li>
+  <li><a href="#head75">第十三章 第二节 坚持走和平发展道路</a></li>
+  <li><a href="#head76">坚持独立自主和平外交政策</a></li>
+  <li><a href="#head77">推动建设新型国际关系</a></li>
+</ul>
+
+<h1 id="考试内容及复习方式"><span id="head1">考试内容及复习方式</span></h1>
 
 <p>名词解释：4pt x 5  不需要答太多，也不能太少</p>
 
@@ -4665,9 +4726,9 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>注意课件中的侧重点</p>
 
-<h1 id="第一章-第二节-毛泽东思想的主要内容和活的灵魂">第一章 第二节 毛泽东思想的主要内容和活的灵魂</h1>
+<h1 id="第一章-第二节-毛泽东思想的主要内容和活的灵魂"><span id="head2">第一章 第二节 毛泽东思想的主要内容和活的灵魂</span></h1>
 
-<h2 id="毛泽东思想的主要内容">毛泽东思想的主要内容</h2>
+<h2 id="毛泽东思想的主要内容"><span id="head3">毛泽东思想的主要内容</span></h2>
 
 <p>1.新民主主义革命理论：指明了新民主主义革命的对象、动力、领导力量、性质和前途等基本问题。</p>
 
@@ -4687,7 +4748,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>6.党的建设理论</p>
 
-<h2 id="毛泽东思想活的灵魂">毛泽东思想活的灵魂</h2>
+<h2 id="毛泽东思想活的灵魂"><span id="head4">毛泽东思想活的灵魂</span></h2>
 
 <p>贯穿于毛泽东思想各个组成部分的立场、观点和方法，是毛泽东思想的活的灵魂，</p>
 
@@ -4699,13 +4760,13 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>3.独立自主：坚持独立思考，走自己的路，就是坚定不移地维护民族独立、捍卫国家主权，把立足点放在依靠自己力量的基础上，同时积极争取外援，开展国际经济文化交流，学习外国一切对我们有益的先进事物。</p>
 
-<h1 id="第二章-第二节-新民主主义革命的总路线和基本纲领">第二章 第二节 新民主主义革命的总路线和基本纲领</h1>
+<h1 id="第二章-第二节-新民主主义革命的总路线和基本纲领"><span id="head5">第二章 第二节 新民主主义革命的总路线和基本纲领</span></h1>
 
-<h2 id="总路线的内容">总路线的内容</h2>
+<h2 id="总路线的内容"><span id="head6">总路线的内容</span></h2>
 
 <p>1948年在《在晋绥干部会议上的讲话》提出：无产阶级领导的，人民大众的，反对帝国主义、封建主义和官僚资本主义的革命。</p>
 
-<h2 id="新民主主义革命的动力">新民主主义革命的动力</h2>
+<h2 id="新民主主义革命的动力"><span id="head7">新民主主义革命的动力</span></h2>
 
 <p>动力：人民大众，包括⽆产阶级、农⺠阶级、城市⼩资产阶级和 ⺠族资产阶级。</p>
 
@@ -4717,9 +4778,9 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>民族资产阶级也是中国革命的动力之一（两面性）</p>
 
-<h2 id="革命的领导阶级是无产阶级">革命的领导阶级是无产阶级</h2>
+<h2 id="革命的领导阶级是无产阶级"><span id="head8">革命的领导阶级是无产阶级</span></h2>
 
-<h2 id="新民主主义革命的性质和前途">新民主主义革命的性质和前途</h2>
+<h2 id="新民主主义革命的性质和前途"><span id="head9">新民主主义革命的性质和前途</span></h2>
 
 <p>性质：资产阶级民主主义革命。</p>
 
@@ -4727,7 +4788,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>新民主主义革命的指导思想是马克思列宁主义；新民主主义革命的前途是通过新民主主义社会最终实现向社会主义的过渡。</p>
 
-<h2 id="基本纲领">基本纲领</h2>
+<h2 id="基本纲领"><span id="head10">基本纲领</span></h2>
 
 <p>新民主主义的政治纲领：推翻帝国主义和封建主义的统治，建立一个无产阶级领导的、以工农联盟为基础的、各革命阶级联合专政的新民主主义的共和国。</p>
 
@@ -4737,11 +4798,11 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>新民主主义的文化纲领：无产阶级领导的人民大众的反帝反封建的文化，即民族的科学的大众的文化。</p>
 
-<h1 id="第三章-第三节-社会主义制度在中国的确立">第三章 第三节 社会主义制度在中国的确立</h1>
+<h1 id="第三章-第三节-社会主义制度在中国的确立"><span id="head11">第三章 第三节 社会主义制度在中国的确立</span></h1>
 
 <p>1956年底我国对农业、手工业和资本主义工商业的社会主义改造基本完成，标志着中国历史上长达数千年的阶级剥削制度的结束，实现了我国社会由新民主主义向社会主义的转变，社会主义制度在我国初步确立，我国进入社会主义初级阶段。</p>
 
-<h2 id="社会主义基本制度的确立及其理论根据">社会主义基本制度的确立及其理论根据</h2>
+<h2 id="社会主义基本制度的确立及其理论根据"><span id="head12">社会主义基本制度的确立及其理论根据</span></h2>
 
 <p>社会主义经济制度的确立：社会主义改造的基本完成，以生产资料公有制为基础的社会主义基本经济制度已经建立起来。</p>
 
@@ -4751,7 +4812,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>社会的阶级关系和主要矛盾发生根本变化：剥削阶级已经被消灭，工人阶级成为国家的领导阶级；人民对于经济文化迅速发展的需要同当前经济文化不能满足人民需要的状况之间的矛盾，成为国内的主要矛盾。</p>
 
-<h2 id="重大意义">重大意义</h2>
+<h2 id="重大意义"><span id="head13">重大意义</span></h2>
 
 <p>第一，社会主义基本制度的确立，为当代中国一切发展进步奠定了制度基础。</p>
 
@@ -4765,9 +4826,9 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>从新民主主义社会向社会主义社会过渡是一个历史发展的必然。中国共产党坚持马克思主义基本理论的指导，结合中国社会主义革命的具体实践，成功完成了“三大改造”的任务，实现了中国历史上最深刻最伟大的社会变革。为当代中国一切发展进步奠定了根本的政治前提和制度基础，实现了中华民族由近代不断衰落到根本扭转命运、持续走向繁荣富强的伟大飞跃。</p>
 
-<h1 id="第四章-第二节-初步探索的意义和经验教训">第四章 第二节 初步探索的意义和经验教训</h1>
+<h1 id="第四章-第二节-初步探索的意义和经验教训"><span id="head14">第四章 第二节 初步探索的意义和经验教训</span></h1>
 
-<h2 id="初步探索的意义">初步探索的意义</h2>
+<h2 id="初步探索的意义"><span id="head15">初步探索的意义</span></h2>
 
 <p>巩固和发展了我国的社会主义制度</p>
 
@@ -4775,7 +4836,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>丰富了科学社会主义的理论和实践</p>
 
-<h2 id="初步探索的经验教训">初步探索的经验教训</h2>
+<h2 id="初步探索的经验教训"><span id="head16">初步探索的经验教训</span></h2>
 
 <p>必须把马克思主义与中国实际相结合，探索符合中国特点的社会主义建设道路。</p>
 
@@ -4791,15 +4852,15 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>总结：初步探索时期我们对如何建设社会主义的问题展开了重要的理论与实践探索，这一过程中既取得了宝贵的经验、也留下了深刻的教训，这些成功的经验与深刻的教训都构成了我们在继续推进中国特色社会主义的伟大历史征程中所必须要加以珍视的宝贵财富。不能采取形而上学的态度将改革开放前后两个历史时期割裂开来，这两个时期都是我们党领导人民进行社会主义建设的实践探索，是相互衔接、有机统一的整体。</p>
 
-<h1 id="第五章-第二节-邓小平理论的基本问题和主要内容">第五章 第二节 邓小平理论的基本问题和主要内容</h1>
+<h1 id="第五章-第二节-邓小平理论的基本问题和主要内容"><span id="head17">第五章 第二节 邓小平理论的基本问题和主要内容</span></h1>
 
-<h2 id="基本问题">基本问题</h2>
+<h2 id="基本问题"><span id="head18">基本问题</span></h2>
 
 <p>什么是社会主义,怎样建设社会主义.</p>
 
 <p>关键要认清社会主义的本质,社会主义本质:社会主义本质，是解放生产力，发展生产力，消灭剥削，消除两极分化，最终达到共同富裕。</p>
 
-<h2 id="主要内容">主要内容</h2>
+<h2 id="主要内容"><span id="head19">主要内容</span></h2>
 
 <p>解放思想,实事求是													改革开放理论</p>
 
@@ -4811,9 +4872,9 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>“三步走”战略									 						中国问题的关键在于 党</p>
 
-<h1 id="第七章-第二节-科学发展观的科学内涵和主要内容">第七章 第二节 科学发展观的科学内涵和主要内容</h1>
+<h1 id="第七章-第二节-科学发展观的科学内涵和主要内容"><span id="head20">第七章 第二节 科学发展观的科学内涵和主要内容</span></h1>
 
-<h2 id="科学内涵">科学内涵</h2>
+<h2 id="科学内涵"><span id="head21">科学内涵</span></h2>
 
 <p>科学发展观，第一要义是发展，核心立场是以人为本，基本要求是全面协调可持续，根本方法是统筹兼顾。</p>
 
@@ -4825,7 +4886,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>4.统筹兼顾是科学发展观的根本方法</p>
 
-<h2 id="主要内容-1">主要内容</h2>
+<h2 id="主要内容-1"><span id="head22">主要内容</span></h2>
 
 <p>加快转变经济发展方式。</p>
 
@@ -4839,11 +4900,11 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>全面提高党的建设科学化水平。</p>
 
-<h1 id="第八章-习近平新时代中国特社会主义思想及其历史地位">第八章 习近平新时代中国特⾊社会主义思想及其历史地位</h1>
+<h1 id="第八章-习近平新时代中国特社会主义思想及其历史地位"><span id="head23">第八章 习近平新时代中国特⾊社会主义思想及其历史地位</span></h1>
 
-<h2 id="第一节-习近平新时代中国特色社会主义思想创立的社会历史条件重点是新时代和大变局">第一节 习近平新时代中国特色社会主义思想创立的社会历史条件（重点是新时代和大变局）</h2>
+<h2 id="第一节-习近平新时代中国特色社会主义思想创立的社会历史条件重点是新时代和大变局"><span id="head24">第一节 习近平新时代中国特色社会主义思想创立的社会历史条件（重点是新时代和大变局）</span></h2>
 
-<h3 id="中国特色社会主义新时代的变与不变">中国特色社会主义新时代的变与不变</h3>
+<h3 id="中国特色社会主义新时代的变与不变"><span id="head25">中国特色社会主义新时代的变与不变</span></h3>
 
 <p>新的历史方位</p>
 
@@ -4857,11 +4918,11 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>社会主要矛盾的变化：已转变为人民日益增长的美好生活需要和不平衡不充分的发展之间的矛盾。</p>
 
-<h3 id="世界正经历百年未有之大变局">世界正经历百年未有之大变局</h3>
+<h3 id="世界正经历百年未有之大变局"><span id="head26">世界正经历百年未有之大变局</span></h3>
 
 <p>世界经济版图之变，科技与产业之变，国际力量对比之变，全球治理之变（中西共治），人类前途命运之变，公共卫生安全之变。</p>
 
-<h2 id="第三节-习近平新时代中国特色社会主义思想的历史地位">第三节 习近平新时代中国特色社会主义思想的<strong>历史地位</strong></h2>
+<h2 id="第三节-习近平新时代中国特色社会主义思想的历史地位"><span id="head27">第三节 习近平新时代中国特色社会主义思想的<strong>历史地位</strong></span></h2>
 
 <p>当代中国马克思主义、21世纪马克思主义</p>
 
@@ -4869,25 +4930,25 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>建设美好世界的中国智慧和中国方案</p>
 
-<h1 id="第九章-坚持和发展中国特色社会主义的总任务">第九章 坚持和发展中国特色社会主义的总任务</h1>
+<h1 id="第九章-坚持和发展中国特色社会主义的总任务"><span id="head28">第九章 坚持和发展中国特色社会主义的总任务</span></h1>
 
-<h2 id="第二节-建成社会主义现代化强国的战略安排">第二节 建成社会主义现代化强国的战略安排</h2>
+<h2 id="第二节-建成社会主义现代化强国的战略安排"><span id="head29">第二节 建成社会主义现代化强国的战略安排</span></h2>
 
 <p>第一个阶段，从2020年到2035年，在全面建成小康社会的基础上，再奋斗15年，基本实现社会主义现代化。</p>
 
 <p>第二个阶段，从2035年到本世纪中叶；在基本实现现代化的基础上，再奋斗15年，把我国建成富强民主文明和谐美丽的社会主义现代化强国。</p>
 
-<h2 id="第三节-建设社会主义现代化国家的战略导向">第三节 建设社会主义现代化国家的战略导向</h2>
+<h2 id="第三节-建设社会主义现代化国家的战略导向"><span id="head30">第三节 建设社会主义现代化国家的战略导向</span></h2>
 
 <p>《中共中央关于制定国民经济和社会发展第十四个五年规划和二〇三五年远景目标的建议》（以下简称《建议》）</p>
 
 <p>《建议》的核心要义是新发展阶段、新发展理念、新发展格局。</p>
 
-<h3 id="新发展阶段">新发展阶段</h3>
+<h3 id="新发展阶段"><span id="head31">新发展阶段</span></h3>
 
 <p>新发展阶段的基本特征：新的历史起点、发展不平衡不充分的问题仍然突出、高质量发展将成为发展主题、构建新发展格局的发展路径、推动改革向更深层次挺进。</p>
 
-<h3 id="新发展理念">新发展理念</h3>
+<h3 id="新发展理念"><span id="head32">新发展理念</span></h3>
 
 <p>新发展理念是在深刻分析国内外发展形势的基础上形成的，也是针对我国发展中的突出矛盾和问题提出来的。集中反映了我们党对经济社会发展规律认识的深化。</p>
 
@@ -4903,21 +4964,21 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>(5) 共享：共享是中国特色社会主义的本质要求。全民共享、全面共享、共建共享、剪进共享。</p>
 
-<h3 id="新发展格局">新发展格局</h3>
+<h3 id="新发展格局"><span id="head33">新发展格局</span></h3>
 
 <p>构建以国内大循环为主体、国内国际双循环相互促进的新发展格局。</p>
 
-<h1 id="第十章-五位一体总布局">第十章 “五位一体”总布局</h1>
+<h1 id="第十章-五位一体总布局"><span id="head34">第十章 “五位一体”总布局</span></h1>
 
-<h2 id="第一节-实现经济高质量发展">第一节 实现经济高质量发展</h2>
+<h2 id="第一节-实现经济高质量发展"><span id="head35">第一节 实现经济高质量发展</span></h2>
 
-<h3 id="坚持习近平经济思想">坚持习近平经济思想</h3>
+<h3 id="坚持习近平经济思想"><span id="head36">坚持习近平经济思想</span></h3>
 
 <p>坚持加强党对经济工作的集中统一领导 （首位）</p>
 
 <p>坚持以人民为中心的发展思想 （经济发展的根本目的）</p>
 
-<h4 id="实现高质量发展的途径ppt无书上的">实现高质量发展的途径（ppt无，书上的）</h4>
+<h4 id="实现高质量发展的途径ppt无书上的"><span id="head37">实现高质量发展的途径（ppt无，书上的）</span></h4>
 
 <p>坚持适应把握引领经济发展新常态</p>
 
@@ -4929,15 +4990,15 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>坚持正确工作策略和方法</p>
 
-<h3 id="供给侧结构性改革">供给侧结构性改革</h3>
+<h3 id="供给侧结构性改革"><span id="head38">供给侧结构性改革</span></h3>
 
-<h4 id="内涵">内涵</h4>
+<h4 id="内涵"><span id="head39">内涵</span></h4>
 
 <p>供给侧结构性改革就是用改革的方法推进结构调整， 从生产端入手，减少无效和低端供给，提高扩大有效和中高端供给，增强供给侧结构对需求变化的适应性和灵活性，提高全要素生产率，推动我国经济朝着更高质量和更有效率的方向发展。</p>
 
 <p>处理好四方面的关系：处理好政府和市场的关系，处理好加法和减法的关系，处理好短期和长期的关系， 处理好供给侧改⾰和需求侧管理的关系。</p>
 
-<h4 id="背景">背景</h4>
+<h4 id="背景"><span id="head40">背景</span></h4>
 
 <p>引领经济发展新常态</p>
 
@@ -4945,7 +5006,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>适应国际竞争新形势</p>
 
-<h4 id="举措">举措</h4>
+<h4 id="举措"><span id="head41">举措</span></h4>
 
 <p>推进增长动能转化，加快实施创新驱动战略。</p>
 
@@ -4957,11 +5018,11 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>持续推进“三去一降一补”，优化市场供给结构。（去产能、去库存、去杠杆，降成本，补短板）</p>
 
-<h2 id="第二节-发展社会主义民主政治">第二节 发展社会主义民主政治</h2>
+<h2 id="第二节-发展社会主义民主政治"><span id="head42">第二节 发展社会主义民主政治</span></h2>
 
-<h3 id="坚持中国特色社会主义政治发展道路">坚持中国特色社会主义政治发展道路</h3>
+<h3 id="坚持中国特色社会主义政治发展道路"><span id="head43">坚持中国特色社会主义政治发展道路</span></h3>
 
-<h3 id="健全人民当家做主制度体系">健全人民当家做主制度体系</h3>
+<h3 id="健全人民当家做主制度体系"><span id="head44">健全人民当家做主制度体系</span></h3>
 
 <p>四梁八柱：人民代表大会制度，中国共产党领导的多党合作和政治协商制度，民族区域自治制度，基层群众自治制度。</p>
 
@@ -4969,7 +5030,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>中国共产党领导的多党合作和政治协商制度、中国共产党领导的多党合作和政治协商制度、基层群众⾃治制度是我国的基本政治制度。</p>
 
-<h3 id="巩固和发展爱国统一战线非主要">巩固和发展爱国统一战线（非主要）</h3>
+<h3 id="巩固和发展爱国统一战线非主要"><span id="head45">巩固和发展爱国统一战线（非主要）</span></h3>
 
 <p>重要任务</p>
 
@@ -4981,11 +5042,11 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>4.牢牢把握大团结大联合的主题，做好统战工作。</p>
 
-<h2 id="第三节-建设社会主义文化强国">第三节 建设社会主义文化强国</h2>
+<h2 id="第三节-建设社会主义文化强国"><span id="head46">第三节 建设社会主义文化强国</span></h2>
 
-<h3 id="坚持马克思主义在意识形态领域指导地位的根本制度">坚持马克思主义在意识形态领域指导地位的根本制度</h3>
+<h3 id="坚持马克思主义在意识形态领域指导地位的根本制度"><span id="head47">坚持马克思主义在意识形态领域指导地位的根本制度</span></h3>
 
-<h3 id="社会主义核心价值观">社会主义核心价值观</h3>
+<h3 id="社会主义核心价值观"><span id="head48">社会主义核心价值观</span></h3>
 
 <p>与历史文化相契合</p>
 
@@ -4993,7 +5054,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>与需要解决的时代问题相适应。</p>
 
-<h4 id="做法">做法</h4>
+<h4 id="做法"><span id="head49">做法</span></h4>
 
 <ol>
   <li>
@@ -5007,11 +5068,11 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ol>
 
-<h3 id="坚定文化自信繁荣发展社会主义文化">坚定文化自信，繁荣发展社会主义文化</h3>
+<h3 id="坚定文化自信繁荣发展社会主义文化"><span id="head50">坚定文化自信，繁荣发展社会主义文化</span></h3>
 
 <p>文化是一个国家、一个⺠族的灵魂，是人⺠的精神家园。</p>
 
-<h3 id="ppt补充做法">（ppt补充）做法</h3>
+<h3 id="ppt补充做法"><span id="head51">（ppt补充）做法</span></h3>
 
 <p>针对不同受众（差异化传播）</p>
 
@@ -5021,7 +5082,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>加强内容建设</p>
 
-<h3 id="推进社会主义文化强国建设">推进社会主义文化强国建设</h3>
+<h3 id="推进社会主义文化强国建设"><span id="head52">推进社会主义文化强国建设</span></h3>
 
 <p>培养高度的文化自信。</p>
 
@@ -5031,9 +5092,9 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>提高国家文化软实力。</p>
 
-<h2 id="第四节-加强以民生为重点的社会建设">第四节 加强以民生为重点的社会建设</h2>
+<h2 id="第四节-加强以民生为重点的社会建设"><span id="head53">第四节 加强以民生为重点的社会建设</span></h2>
 
-<h3 id="发展中保障和改善民生提高保障和改善民生水平">发展中保障和改善民生（提高保障和改善民生水平）</h3>
+<h3 id="发展中保障和改善民生提高保障和改善民生水平"><span id="head54">发展中保障和改善民生（提高保障和改善民生水平）</span></h3>
 
 <p>建设高质量教育体系</p>
 
@@ -5045,11 +5106,11 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>全面推进健康中国建设</p>
 
-<h3 id="加强和创新社会治理">加强和创新社会治理</h3>
+<h3 id="加强和创新社会治理"><span id="head55">加强和创新社会治理</span></h3>
 
 <p>社会治理目标是保护安全稳定，打基础谋长远。</p>
 
-<h3 id="社会治理面临新挑战">社会治理面临新挑战</h3>
+<h3 id="社会治理面临新挑战"><span id="head56">社会治理面临新挑战</span></h3>
 
 <p>各种风险交织。</p>
 
@@ -5059,7 +5120,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>移动互联网时代的到来。</p>
 
-<h3 id="加强和创新社会治理的举措">加强和创新社会治理的举措</h3>
+<h3 id="加强和创新社会治理的举措"><span id="head57">加强和创新社会治理的举措</span></h3>
 
 <p>创新社会治理体系。</p>
 
@@ -5071,17 +5132,17 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>加强构建基层社会治理新格局。</p>
 
-<h2 id="第十章思考题">第十章思考题</h2>
+<h2 id="第十章思考题"><span id="head58">第十章思考题</span></h2>
 
-<h3 id="1如何准确把握习近平经济思想的主要内容">1.如何准确把握习近平经济思想的主要内容?</h3>
+<h3 id="1如何准确把握习近平经济思想的主要内容"><span id="head59">1.如何准确把握习近平经济思想的主要内容?</span></h3>
 
-<h3 id="2供给侧结构性改革的背景内涵及对策">2.供给侧结构性改革的背景、内涵及对策?</h3>
+<h3 id="2供给侧结构性改革的背景内涵及对策"><span id="head60">2.供给侧结构性改革的背景、内涵及对策?</span></h3>
 
-<h3 id="3保障人民当家作主的制度体系包括哪些内容">3.保障人民当家作主的制度体系包括哪些内容?</h3>
+<h3 id="3保障人民当家作主的制度体系包括哪些内容"><span id="head61">3.保障人民当家作主的制度体系包括哪些内容?</span></h3>
 
-<h3 id="4如何提升文化软实力建设中国特色的文化强国">4.如何提升文化软实力，建设中国特色的文化强国?</h3>
+<h3 id="4如何提升文化软实力建设中国特色的文化强国"><span id="head62">4.如何提升文化软实力，建设中国特色的文化强国?</span></h3>
 
-<h3 id="5如何加强制度建设推进共同富裕">5.如何加强制度建设推进共同富裕?</h3>
+<h3 id="5如何加强制度建设推进共同富裕"><span id="head63">5.如何加强制度建设推进共同富裕?</span></h3>
 
 <p>改革初次分配制度，提升中低收入群体收入水平</p>
 
@@ -5089,15 +5150,15 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>发挥第三次分配的调节作用</p>
 
-<h3 id="6如何加强和创新社会治理">6.如何加强和创新社会治理?</h3>
+<h3 id="6如何加强和创新社会治理"><span id="head64">6.如何加强和创新社会治理?</span></h3>
 
-<h1 id="第十一章-第一节-全面建设社会主义现代化国家">第十一章 第一节 全面建设社会主义现代化国家</h1>
+<h1 id="第十一章-第一节-全面建设社会主义现代化国家"><span id="head65">第十一章 第一节 全面建设社会主义现代化国家</span></h1>
 
-<h2 id="从全面建成小康社会到全面建设社会主义现代化国家">从全面建成小康社会到全面建设社会主义现代化国家</h2>
+<h2 id="从全面建成小康社会到全面建设社会主义现代化国家"><span id="head66">从全面建成小康社会到全面建设社会主义现代化国家</span></h2>
 
 <p>全面建成小康社会是战略目标，在“四个全面”中居于引领地位；全面深化改革、全面依法治国、全面从严治党是三大战略举措，为如期全面建成小康社会提供重要保障。</p>
 
-<h2 id="脱贫攻坚经验">脱贫攻坚经验</h2>
+<h2 id="脱贫攻坚经验"><span id="head67">脱贫攻坚经验</span></h2>
 
 <p>坚持党的领导， 为脱贫攻坚提供坚强政治和组织保证。</p>
 
@@ -5113,7 +5174,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>坚持求真务实、较真碰硬，做到真扶贫、扶真贫、脱真贫。</p>
 
-<h2 id="中国社会主义现代化国家的基本特征">中国社会主义现代化国家的基本特征</h2>
+<h2 id="中国社会主义现代化国家的基本特征"><span id="head68">中国社会主义现代化国家的基本特征</span></h2>
 
 <p>1.中国的现代化是人口规模巨大的现代化。</p>
 
@@ -5125,15 +5186,15 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>5.中国的现代化是走和平发展道路的现代化。</p>
 
-<h1 id="第十二章-第一节-坚持总体国家安全观">第十二章 第一节 坚持总体国家安全观</h1>
+<h1 id="第十二章-第一节-坚持总体国家安全观"><span id="head69">第十二章 第一节 坚持总体国家安全观</span></h1>
 
-<h2 id="国家安全是安邦定国的重要基石">国家安全是安邦定国的重要基石</h2>
+<h2 id="国家安全是安邦定国的重要基石"><span id="head70">国家安全是安邦定国的重要基石</span></h2>
 
-<h2 id="国家总体安全观">国家总体安全观</h2>
+<h2 id="国家总体安全观"><span id="head71">国家总体安全观</span></h2>
 
 <p>总体国家安全观关键在“总体”，突出的是“大安全” 理念，涵盖诸多领域，而且随着社会发展不断拓展。</p>
 
-<h2 id="坚持总体国家安全观的意义">坚持总体国家安全观的意义</h2>
+<h2 id="坚持总体国家安全观的意义"><span id="head72">坚持总体国家安全观的意义</span></h2>
 
 <p>适应了进⾏具有许多新的历史特点的伟大斗争的新要求。</p>
 
@@ -5141,7 +5202,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>顺应了世界发展变化的新趋势。</p>
 
-<h2 id="坚持走中国特色社会国家安全道路">坚持走中国特色社会国家安全道路</h2>
+<h2 id="坚持走中国特色社会国家安全道路"><span id="head73">坚持走中国特色社会国家安全道路</span></h2>
 
 <p>坚持统筹发展和安全的两件大事。</p>
 
@@ -5153,19 +5214,19 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>坚持党对国家安全工作的绝对领导。</p>
 
-<h2 id="着力防范化解重大风险">着力防范化解重大风险</h2>
+<h2 id="着力防范化解重大风险"><span id="head74">着力防范化解重大风险</span></h2>
 
 <p>加强战略预判和风险预警</p>
 
 <p>坚持立足于防，又有效处置风险。</p>
 
-<h1 id="第十三章-第二节-坚持走和平发展道路">第十三章 第二节 坚持走和平发展道路</h1>
+<h1 id="第十三章-第二节-坚持走和平发展道路"><span id="head75">第十三章 第二节 坚持走和平发展道路</span></h1>
 
-<h2 id="坚持独立自主和平外交政策">坚持独立自主和平外交政策</h2>
+<h2 id="坚持独立自主和平外交政策"><span id="head76">坚持独立自主和平外交政策</span></h2>
 
 <p>中国坚定不移地奉⾏独立自主的和平外交政策，坚持互相尊重主权和领土完整、互不侵犯、互不干涉内政、平等互利、和平共处五项原则，走和平发展道路。</p>
 
-<h2 id="推动建设新型国际关系">推动建设新型国际关系</h2>
+<h2 id="推动建设新型国际关系"><span id="head77">推动建设新型国际关系</span></h2>
 
 <p>新型国际关系，“ 新” 在相互尊重，“ 新” 在公平正义，特别是“ 新” 在合作共赢。</p>
 
@@ -5183,68 +5244,71 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   <p>主体来自于Maxwell：https://maxwell-lyu.github.io/，在其基础上简单修改</p>
 </blockquote>
 
-<h1 class="no_toc" id="list">List</h1>
-<ol id="markdown-toc">
-  <li><a href="#计网复习" id="markdown-toc-计网复习">计网复习</a>    <ol>
-      <li><a href="#具体构成描述" id="markdown-toc-具体构成描述">具体构成描述</a></li>
-      <li><a href="#服务描述" id="markdown-toc-服务描述">服务描述</a></li>
-      <li><a href="#什么是协议" id="markdown-toc-什么是协议">什么是协议</a></li>
-      <li><a href="#接入网" id="markdown-toc-接入网">接入网</a></li>
-      <li><a href="#物理媒体" id="markdown-toc-物理媒体">物理媒体</a></li>
-      <li><a href="#分组交换" id="markdown-toc-分组交换">分组交换</a></li>
-      <li><a href="#电路交换" id="markdown-toc-电路交换">电路交换</a></li>
-      <li><a href="#网络的网络" id="markdown-toc-网络的网络">网络的网络</a></li>
-      <li><a href="#时延概述" id="markdown-toc-时延概述">时延概述</a></li>
-      <li><a href="#排队时延和丢包" id="markdown-toc-排队时延和丢包">排队时延和丢包</a></li>
-      <li><a href="#端到端时延" id="markdown-toc-端到端时延">端到端时延</a></li>
-      <li><a href="#吞吐量" id="markdown-toc-吞吐量">吞吐量</a></li>
-      <li><a href="#分层的协议结构" id="markdown-toc-分层的协议结构">分层的协议结构</a></li>
-      <li><a href="#封装" id="markdown-toc-封装">封装</a></li>
-      <li><a href="#无连接的多路复用与多路分解" id="markdown-toc-无连接的多路复用与多路分解">无连接的多路复用与多路分解</a></li>
-      <li><a href="#面向连接的多路复用与多路分解" id="markdown-toc-面向连接的多路复用与多路分解">面向连接的多路复用与多路分解</a></li>
-      <li><a href="#报文段结构" id="markdown-toc-报文段结构">报文段结构</a></li>
-      <li><a href="#udp检验和" id="markdown-toc-udp检验和">UDP检验和</a></li>
-      <li><a href="#tcp连接" id="markdown-toc-tcp连接">TCP连接</a></li>
-      <li><a href="#tcp报文段结构" id="markdown-toc-tcp报文段结构">TCP报文段结构</a></li>
-      <li><a href="#往返时间的估计与超时" id="markdown-toc-往返时间的估计与超时">往返时间的估计与超时</a></li>
-      <li><a href="#可靠数据传输" id="markdown-toc-可靠数据传输">可靠数据传输</a></li>
-      <li><a href="#流量控制" id="markdown-toc-流量控制">流量控制</a></li>
-      <li><a href="#tcp连接管理" id="markdown-toc-tcp连接管理">TCP连接管理</a></li>
-      <li><a href="#公平性" id="markdown-toc-公平性">公平性</a></li>
-      <li><a href="#网络辅助拥塞控制" id="markdown-toc-网络辅助拥塞控制">网络辅助拥塞控制</a></li>
-      <li><a href="#输入端口处理和基于目的地转发" id="markdown-toc-输入端口处理和基于目的地转发">输入端口处理和基于目的地转发</a></li>
-      <li><a href="#交换" id="markdown-toc-交换">交换</a></li>
-      <li><a href="#输出端口处理" id="markdown-toc-输出端口处理">输出端口处理</a></li>
-      <li><a href="#何处出现排队" id="markdown-toc-何处出现排队">何处出现排队</a></li>
-      <li><a href="#分组调度" id="markdown-toc-分组调度">分组调度</a></li>
-      <li><a href="#ipv4数据报格式" id="markdown-toc-ipv4数据报格式">IPv4数据报格式</a></li>
-      <li><a href="#ipv4数据报分片" id="markdown-toc-ipv4数据报分片">IPv4数据报分片</a></li>
-      <li><a href="#ipv4编址" id="markdown-toc-ipv4编址">IPv4编址</a></li>
-      <li><a href="#网络地址转换nat" id="markdown-toc-网络地址转换nat">网络地址转换NAT</a></li>
-      <li><a href="#ipv6" id="markdown-toc-ipv6">IPv6</a></li>
-      <li><a href="#链路状态路由选择算法" id="markdown-toc-链路状态路由选择算法">链路状态路由选择算法</a></li>
-      <li><a href="#距离向量路由选择算法" id="markdown-toc-距离向量路由选择算法">距离向量路由选择算法</a></li>
-      <li><a href="#开放最短路优先ospf" id="markdown-toc-开放最短路优先ospf">开放最短路优先OSPF</a></li>
-      <li><a href="#bgp的作用" id="markdown-toc-bgp的作用">BGP的作用</a></li>
-      <li><a href="#通告bgp路由信息" id="markdown-toc-通告bgp路由信息">通告BGP路由信息</a></li>
-      <li><a href="#确定最好的路由" id="markdown-toc-确定最好的路由">确定最好的路由</a></li>
-      <li><a href="#ip任播" id="markdown-toc-ip任播">IP任播</a></li>
-      <li><a href="#路由选择策略" id="markdown-toc-路由选择策略">路由选择策略</a></li>
-      <li><a href="#拼装在一起-在因特网中呈现" id="markdown-toc-拼装在一起-在因特网中呈现">拼装在一起: 在因特网中呈现</a></li>
-      <li><a href="#信道划分协议" id="markdown-toc-信道划分协议">信道划分协议</a></li>
-      <li><a href="#随机接入协议" id="markdown-toc-随机接入协议">随机接入协议</a></li>
-      <li><a href="#轮流协议" id="markdown-toc-轮流协议">轮流协议</a></li>
-      <li><a href="#链路层寻址和arp" id="markdown-toc-链路层寻址和arp">链路层寻址和ARP</a></li>
-      <li><a href="#以太网" id="markdown-toc-以太网">以太网</a></li>
-      <li><a href="#链路层交换机" id="markdown-toc-链路层交换机">链路层交换机</a></li>
-      <li><a href="#网桥" id="markdown-toc-网桥">网桥</a></li>
-      <li><a href="#虚拟局域网" id="markdown-toc-虚拟局域网">虚拟局域网</a></li>
-      <li><a href="#流式存储视频" id="markdown-toc-流式存储视频">流式存储视频</a></li>
-    </ol>
+<ul>
+  <li><a href="#head1">List</a></li>
+  <li><a href="#head2">计网复习</a>
+    <ul>
+      <li><a href="#head3">具体构成描述</a></li>
+      <li><a href="#head4">服务描述</a></li>
+      <li><a href="#head5">什么是协议</a></li>
+      <li><a href="#head6">接入网</a></li>
+      <li><a href="#head7">物理媒体</a></li>
+      <li><a href="#head8">分组交换</a></li>
+      <li><a href="#head9">电路交换</a></li>
+      <li><a href="#head10">网络的网络</a></li>
+      <li><a href="#head11">时延概述</a></li>
+      <li><a href="#head12">排队时延和丢包</a></li>
+      <li><a href="#head13">端到端时延</a></li>
+      <li><a href="#head14">吞吐量</a></li>
+      <li><a href="#head15">分层的协议结构</a></li>
+      <li><a href="#head16">封装</a></li>
+      <li><a href="#head17">无连接的多路复用与多路分解</a></li>
+      <li><a href="#head18">面向连接的多路复用与多路分解</a></li>
+      <li><a href="#head19">报文段结构</a></li>
+      <li><a href="#head20">UDP检验和</a></li>
+      <li><a href="#head21">TCP连接</a></li>
+      <li><a href="#head22">TCP报文段结构</a></li>
+      <li><a href="#head23">往返时间的估计与超时</a></li>
+      <li><a href="#head24">可靠数据传输</a></li>
+      <li><a href="#head25">流量控制</a></li>
+      <li><a href="#head26">TCP连接管理</a></li>
+      <li><a href="#head27">公平性</a></li>
+      <li><a href="#head28">网络辅助拥塞控制</a></li>
+      <li><a href="#head29">输入端口处理和基于目的地转发</a></li>
+      <li><a href="#head30">交换</a></li>
+      <li><a href="#head31">输出端口处理</a></li>
+      <li><a href="#head32">何处出现排队</a></li>
+      <li><a href="#head33">分组调度</a></li>
+      <li><a href="#head34">IPv4数据报格式</a></li>
+      <li><a href="#head35">IPv4数据报分片</a></li>
+      <li><a href="#head36">IPv4编址</a></li>
+      <li><a href="#head37">网络地址转换NAT</a></li>
+      <li><a href="#head38">IPv6</a></li>
+      <li><a href="#head39">链路状态路由选择算法</a></li>
+      <li><a href="#head40">距离向量路由选择算法</a></li>
+      <li><a href="#head41">开放最短路优先OSPF</a></li>
+      <li><a href="#head42">BGP的作用</a></li>
+      <li><a href="#head43">通告BGP路由信息</a></li>
+      <li><a href="#head44">确定最好的路由</a></li>
+      <li><a href="#head45">IP任播</a></li>
+      <li><a href="#head46">路由选择策略</a></li>
+      <li><a href="#head47">拼装在一起: 在因特网中呈现</a></li>
+      <li><a href="#head48">信道划分协议</a></li>
+      <li><a href="#head49">随机接入协议</a></li>
+      <li><a href="#head50">轮流协议</a></li>
+      <li><a href="#head51">链路层寻址和ARP</a></li>
+      <li><a href="#head52">以太网</a></li>
+      <li><a href="#head53">链路层交换机</a></li>
+      <li><a href="#head54">网桥</a></li>
+      <li><a href="#head55">虚拟局域网</a></li>
+    </ul>
   </li>
-</ol>
+  <li><a href="#head56">流式存储视频</a></li>
+</ul>
 
-<h1 id="计网复习">计网复习</h1>
+<h1 id="list"><span id="head1">List</span></h1>
+
+<h1 id="计网复习"><span id="head2">计网复习</span></h1>
 
 <ul>
   <li>
@@ -5296,9 +5360,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>什么是因特网</p>
 
-<hr />
-
-<h3 id="具体构成描述">具体构成描述</h3>
+<h3 id="具体构成描述"><span id="head3">具体构成描述</span></h3>
 
 <ul>
   <li>
@@ -5345,7 +5407,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="服务描述">服务描述</h3>
+<h3 id="服务描述"><span id="head4">服务描述</span></h3>
 
 <ul>
   <li>
@@ -5356,7 +5418,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="什么是协议">什么是协议</h3>
+<h3 id="什么是协议"><span id="head5">什么是协议</span></h3>
 
 <ul>
   <li>
@@ -5371,8 +5433,6 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 </ul>
 
 <p>网络边缘</p>
-
-<hr />
 
 <ul>
   <li>
@@ -5395,7 +5455,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="接入网">接入网</h3>
+<h3 id="接入网"><span id="head6">接入网</span></h3>
 
 <ul>
   <li>
@@ -5532,7 +5592,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="物理媒体">物理媒体</h3>
+<h3 id="物理媒体"><span id="head7">物理媒体</span></h3>
 
 <ul>
   <li>
@@ -5560,9 +5620,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>网络核心</p>
 
-<hr />
-
-<h3 id="分组交换">分组交换</h3>
+<h3 id="分组交换"><span id="head8">分组交换</span></h3>
 
 <ul>
   <li>
@@ -5609,7 +5667,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="电路交换">电路交换</h3>
+<h3 id="电路交换"><span id="head9">电路交换</span></h3>
 
 <ul>
   <li>
@@ -5666,7 +5724,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 *  需要连接建立和拆除
 </code></pre></div></div>
 
-<h3 id="网络的网络">网络的网络</h3>
+<h3 id="网络的网络"><span id="head10">网络的网络</span></h3>
 
 <ul>
   <li>
@@ -5688,9 +5746,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>分组交换网中的时延丢包和吞吐量</p>
 
-<hr />
-
-<h3 id="时延概述">时延概述</h3>
+<h3 id="时延概述"><span id="head11">时延概述</span></h3>
 
 <ul>
   <li>
@@ -5707,7 +5763,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="排队时延和丢包">排队时延和丢包</h3>
+<h3 id="排队时延和丢包"><span id="head12">排队时延和丢包</span></h3>
 
 <ul>
   <li>
@@ -5730,7 +5786,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="端到端时延">端到端时延</h3>
+<h3 id="端到端时延"><span id="head13">端到端时延</span></h3>
 
 <ul>
   <li>
@@ -5750,7 +5806,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="吞吐量">吞吐量</h3>
+<h3 id="吞吐量"><span id="head14">吞吐量</span></h3>
 
 <ul>
   <li>
@@ -5772,9 +5828,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>协议层级及其服务模型</p>
 
-<hr />
-
-<h3 id="分层的协议结构">分层的协议结构</h3>
+<h3 id="分层的协议结构"><span id="head15">分层的协议结构</span></h3>
 
 <ul>
   <li>
@@ -5890,7 +5944,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*  链路上的比特流
 </code></pre></div></div>
 
-<h3 id="封装">封装</h3>
+<h3 id="封装"><span id="head16">封装</span></h3>
 
 <ul>
   <li>
@@ -5911,8 +5965,6 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 </ul>
 
 <p>面对攻击的网络</p>
-
-<hr />
 
 <ul>
   <li>
@@ -6001,8 +6053,6 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>多路复用与多路分解</p>
 
-<hr />
-
 <ul>
   <li>
     <p>多路分解: 将运输层报文段中的数据, 交付到正确的套接字的工作</p>
@@ -6024,7 +6074,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="无连接的多路复用与多路分解">无连接的多路复用与多路分解</h3>
+<h3 id="无连接的多路复用与多路分解"><span id="head17">无连接的多路复用与多路分解</span></h3>
 
 <ul>
   <li>
@@ -6035,7 +6085,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="面向连接的多路复用与多路分解">面向连接的多路复用与多路分解</h3>
+<h3 id="面向连接的多路复用与多路分解"><span id="head18">面向连接的多路复用与多路分解</span></h3>
 
 <ul>
   <li>
@@ -6047,8 +6097,6 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 </ul>
 
 <p>无连接运输UDP</p>
-
-<hr />
 
 <ul>
   <li>
@@ -6065,7 +6113,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="报文段结构">报文段结构</h3>
+<h3 id="报文段结构"><span id="head19">报文段结构</span></h3>
 
 <table>
   <tbody>
@@ -6102,7 +6150,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="udp检验和">UDP检验和</h3>
+<h3 id="udp检验和"><span id="head20">UDP检验和</span></h3>
 
 <ul>
   <li>
@@ -6127,8 +6175,6 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>面向连接的运输TCP</p>
 
-<hr />
-
 <ul>
   <li>
     <p>提供差错检测, 重传, 累积确认, 定时器, 序号和确认号的首部字段</p>
@@ -6138,7 +6184,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="tcp连接">TCP连接</h3>
+<h3 id="tcp连接"><span id="head21">TCP连接</span></h3>
 
 <ul>
   <li>
@@ -6158,7 +6204,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="tcp报文段结构">TCP报文段结构</h3>
+<h3 id="tcp报文段结构"><span id="head22">TCP报文段结构</span></h3>
 
 <table>
   <tbody>
@@ -6221,7 +6267,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   <p>一个报文可以同时有确认号和序号, 是捎带ACK</p>
 </blockquote>
 
-<h3 id="往返时间的估计与超时">往返时间的估计与超时</h3>
+<h3 id="往返时间的估计与超时"><span id="head23">往返时间的估计与超时</span></h3>
 
 <ul>
   <li>
@@ -6273,7 +6319,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $$\textrm{TimeInterval} = \textrm{EstimatedRTT} + 4\cdot \textrm{DevRTT}$$
 </code></pre></div></div>
 
-<h3 id="可靠数据传输">可靠数据传输</h3>
+<h3 id="可靠数据传输"><span id="head24">可靠数据传输</span></h3>
 
 <ul>
   <li>
@@ -6327,7 +6373,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   <p>这意味着TCP不是单纯的GBN, 而含有一部分SN</p>
 </blockquote>
 
-<h3 id="流量控制">流量控制</h3>
+<h3 id="流量控制"><span id="head25">流量控制</span></h3>
 
 <ul>
   <li>
@@ -6382,7 +6428,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   <p>为了防止接收方无数据要发, 引发发送端阻塞. 这个一字节的报文总会被ACK, 有机会获得一个非0的rwnd值</p>
 </blockquote>
 
-<h3 id="tcp连接管理">TCP连接管理</h3>
+<h3 id="tcp连接管理"><span id="head26">TCP连接管理</span></h3>
 
 <ul>
   <li>建立: 三次握手</li>
@@ -6544,15 +6590,11 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>拥塞控制原理</p>
 
-<hr />
-
 <ul>
   <li>一堆废话, 我只关心TCP</li>
 </ul>
 
 <p>TCP拥塞控制</p>
-
-<hr />
 
 <ul>
   <li>
@@ -6690,7 +6732,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="公平性">公平性</h3>
+<h3 id="公平性"><span id="head27">公平性</span></h3>
 
 <ul>
   <li>
@@ -6719,7 +6761,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="网络辅助拥塞控制">网络辅助拥塞控制</h3>
+<h3 id="网络辅助拥塞控制"><span id="head28">网络辅助拥塞控制</span></h3>
 
 <ul>
   <li>
@@ -6738,8 +6780,6 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 <p>=================</p>
 
 <p>路由器工作原理</p>
-
-<hr />
 
 <ul>
   <li>
@@ -6780,7 +6820,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="输入端口处理和基于目的地转发">输入端口处理和基于目的地转发</h3>
+<h3 id="输入端口处理和基于目的地转发"><span id="head29">输入端口处理和基于目的地转发</span></h3>
 
 <ul>
   <li>
@@ -6809,7 +6849,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="交换">交换</h3>
+<h3 id="交换"><span id="head30">交换</span></h3>
 
 <ul>
   <li>
@@ -6844,13 +6884,13 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="输出端口处理">输出端口处理</h3>
+<h3 id="输出端口处理"><span id="head31">输出端口处理</span></h3>
 
 <ul>
   <li>输出缓存, 数据链路处理(协议, 封装), 线路端接</li>
 </ul>
 
-<h3 id="何处出现排队">何处出现排队</h3>
+<h3 id="何处出现排队"><span id="head32">何处出现排队</span></h3>
 
 <ul>
   <li>
@@ -6892,7 +6932,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="分组调度">分组调度</h3>
+<h3 id="分组调度"><span id="head33">分组调度</span></h3>
 
 <ul>
   <li>
@@ -6935,9 +6975,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>网际协议</p>
 
-<hr />
-
-<h3 id="ipv4数据报格式">IPv4数据报格式</h3>
+<h3 id="ipv4数据报格式"><span id="head34">IPv4数据报格式</span></h3>
 
 <ul>
   <li>数据报格式</li>
@@ -7027,7 +7065,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="ipv4数据报分片">IPv4数据报分片</h3>
+<h3 id="ipv4数据报分片"><span id="head35">IPv4数据报分片</span></h3>
 
 <ul>
   <li>
@@ -7047,7 +7085,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="ipv4编址">IPv4编址</h3>
+<h3 id="ipv4编址"><span id="head36">IPv4编址</span></h3>
 
 <ul>
   <li>
@@ -7140,7 +7178,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   *  内容: 证实参数, 事务ID+1
 </code></pre></div></div>
 
-<h3 id="网络地址转换nat">网络地址转换NAT</h3>
+<h3 id="网络地址转换nat"><span id="head37">网络地址转换NAT</span></h3>
 
 <ul>
   <li>
@@ -7169,7 +7207,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="ipv6">IPv6</h3>
+<h3 id="ipv6"><span id="head38">IPv6</span></h3>
 
 <ul>
   <li>数据报格式</li>
@@ -7264,8 +7302,6 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>路由选择算法</p>
 
-<hr />
-
 <ul>
   <li>
     <p>路由选择算法: 从发送方到接收方, 确定一条通过路由器网络的好的路径</p>
@@ -7302,7 +7338,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="链路状态路由选择算法">链路状态路由选择算法</h3>
+<h3 id="链路状态路由选择算法"><span id="head39">链路状态路由选择算法</span></h3>
 
 <ul>
   <li>
@@ -7343,7 +7379,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="距离向量路由选择算法">距离向量路由选择算法</h3>
+<h3 id="距离向量路由选择算法"><span id="head40">距离向量路由选择算法</span></h3>
 
 <ul>
   <li>
@@ -7370,8 +7406,6 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 </ul>
 
 <p>算法比较</p>
-
-<hr />
 
 <ul>
   <li>
@@ -7413,8 +7447,6 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>因特网中自治系统内部的路由选择OSPF</p>
 
-<hr />
-
 <ul>
   <li>
     <p>自治系统AS</p>
@@ -7430,7 +7462,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="开放最短路优先ospf">开放最短路优先OSPF</h3>
+<h3 id="开放最短路优先ospf"><span id="head41">开放最短路优先OSPF</span></h3>
 
 <ul>
   <li>
@@ -7470,8 +7502,6 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>ISP之间的路由选择BGP</p>
 
-<hr />
-
 <ul>
   <li>
     <p>自治系统间路由选择协议</p>
@@ -7481,7 +7511,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="bgp的作用">BGP的作用</h3>
+<h3 id="bgp的作用"><span id="head42">BGP的作用</span></h3>
 
 <ul>
   <li>
@@ -7498,7 +7528,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="通告bgp路由信息">通告BGP路由信息</h3>
+<h3 id="通告bgp路由信息"><span id="head43">通告BGP路由信息</span></h3>
 
 <ul>
   <li>
@@ -7524,7 +7554,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="确定最好的路由">确定最好的路由</h3>
+<h3 id="确定最好的路由"><span id="head44">确定最好的路由</span></h3>
 
 <ul>
   <li>
@@ -7587,7 +7617,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 *  使用BGP标识选择
 </code></pre></div></div>
 
-<h3 id="ip任播">IP任播</h3>
+<h3 id="ip任播"><span id="head45">IP任播</span></h3>
 
 <ul>
   <li>
@@ -7616,7 +7646,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="路由选择策略">路由选择策略</h3>
+<h3 id="路由选择策略"><span id="head46">路由选择策略</span></h3>
 
 <ul>
   <li>
@@ -7630,15 +7660,13 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="拼装在一起-在因特网中呈现">拼装在一起: 在因特网中呈现</h3>
+<h3 id="拼装在一起-在因特网中呈现"><span id="head47">拼装在一起: 在因特网中呈现</span></h3>
 
 <ul>
   <li>[木大警告] 这节不知道在讲什么玩意, 全是例子</li>
 </ul>
 
 <p>因特网控制报文协议ICMP</p>
-
-<hr />
 
 <ul>
   <li>
@@ -7723,8 +7751,6 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>多路访问链路和协议</p>
 
-<hr />
-
 <ul>
   <li>
     <p>广播链路: 多点, 一个信道</p>
@@ -7734,7 +7760,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="信道划分协议">信道划分协议</h3>
+<h3 id="信道划分协议"><span id="head48">信道划分协议</span></h3>
 
 <ul>
   <li>
@@ -7766,7 +7792,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="随机接入协议">随机接入协议</h3>
+<h3 id="随机接入协议"><span id="head49">随机接入协议</span></h3>
 
 <ul>
   <li>
@@ -7882,7 +7908,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   <li>最小帧长: 检测冲突的时长不超过端到端传播时延的2倍, 取这一值为最小帧长</li>
 </ul>
 
-<h3 id="轮流协议">轮流协议</h3>
+<h3 id="轮流协议"><span id="head50">轮流协议</span></h3>
 
 <ul>
   <li>
@@ -7925,9 +7951,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>交换局域网</p>
 
-<hr />
-
-<h3 id="链路层寻址和arp">链路层寻址和ARP</h3>
+<h3 id="链路层寻址和arp"><span id="head51">链路层寻址和ARP</span></h3>
 
 <ul>
   <li>
@@ -7978,7 +8002,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="以太网">以太网</h3>
+<h3 id="以太网"><span id="head52">以太网</span></h3>
 
 <ul>
   <li>
@@ -8029,7 +8053,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ul>
 
-<h3 id="链路层交换机">链路层交换机</h3>
+<h3 id="链路层交换机"><span id="head53">链路层交换机</span></h3>
 
 <ul>
   <li>
@@ -8109,7 +8133,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 *  缺: 需要配置, 处理延迟大
 </code></pre></div></div>
 
-<h3 id="网桥">网桥</h3>
+<h3 id="网桥"><span id="head54">网桥</span></h3>
 
 <ul>
   <li>
@@ -8188,7 +8212,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   *  Designated port 和 root port 不阻塞, 别的都阻塞
 </code></pre></div></div>
 
-<h3 id="虚拟局域网">虚拟局域网</h3>
+<h3 id="虚拟局域网"><span id="head55">虚拟局域网</span></h3>
 
 <ul>
   <li>
@@ -8228,8 +8252,6 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>802.11 体系结构</p>
 
-<hr />
-
 <ul>
   <li>
     <p>接入点AP： 中央基站</p>
@@ -8266,8 +8288,6 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 </code></pre></div></div>
 
 <p>CSMA/CA: 802.11 MAC协议</p>
-
-<hr />
 
 <ul>
   <li>
@@ -8513,7 +8533,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>=================</p>
 
-<h2 id="流式存储视频">流式存储视频</h2>
+<h2 id="流式存储视频"><span id="head56">流式存储视频</span></h2>
 
 <ul>
   <li>
@@ -8525,8 +8545,6 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 </ul>
 
 <p>提供多种类型的服务</p>
-
-<hr />
 
 <ul>
   <li>
@@ -8570,120 +8588,140 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   <p>概率论其期中与期末总结</p>
 </blockquote>
 
-<h1 class="no_toc" id="list">List</h1>
-<ol id="markdown-toc">
-  <li><a href="#概率论" id="markdown-toc-概率论">概率论</a>    <ol>
-      <li><a href="#大数定律" id="markdown-toc-大数定律">大数定律</a></li>
-      <li><a href="#中心极限定理" id="markdown-toc-中心极限定理">中心极限定理</a></li>
-      <li><a href="#统计量与抽样分布" id="markdown-toc-统计量与抽样分布">统计量与抽样分布</a>        <ol>
-          <li><a href="#统计量" id="markdown-toc-统计量">统计量</a></li>
-          <li><a href="#正态分布的一些性质" id="markdown-toc-正态分布的一些性质">正态分布的一些性质</a></li>
-          <li><a href="#正态总体" id="markdown-toc-正态总体">正态总体</a>            <ol>
-              <li><a href="#chi2分布" id="markdown-toc-chi2分布">$\chi^2$分布</a></li>
-              <li><a href="#t分布" id="markdown-toc-t分布">t分布</a></li>
-              <li><a href="#f分布" id="markdown-toc-f分布">F分布</a></li>
-            </ol>
-          </li>
-          <li><a href="#上分位点" id="markdown-toc-上分位点">上分位点</a></li>
-          <li><a href="#正态总体的样本均值与样本方差的分布" id="markdown-toc-正态总体的样本均值与样本方差的分布">正态总体的样本均值与样本方差的分布</a></li>
-        </ol>
+<ul>
+  <li><a href="#head1">List</a></li>
+  <li><a href="#head2">概率论</a></li>
+  <li><a href="#head3">大数定律</a></li>
+  <li><a href="#head4">中心极限定理</a></li>
+  <li><a href="#head5">统计量与抽样分布</a>
+    <ul>
+      <li><a href="#head6">统计量</a></li>
+      <li><a href="#head7">正态分布的一些性质</a></li>
+      <li><a href="#head8">正态总体</a>
+        <ul>
+          <li><a href="#head9">$\chi^2$分布</a></li>
+          <li><a href="#head10">t分布</a></li>
+          <li><a href="#head11">F分布</a></li>
+        </ul>
       </li>
-      <li><a href="#参数估计" id="markdown-toc-参数估计">参数估计</a>        <ol>
-          <li><a href="#矩估计" id="markdown-toc-矩估计">矩估计</a>            <ol>
-              <li><a href="#无论总体x服从何种分布总体均值exμ-总体方差dxσ2作为未知参数其矩估计量一定是样本均值和样本方差即" id="markdown-toc-无论总体x服从何种分布总体均值exμ-总体方差dxσ2作为未知参数其矩估计量一定是样本均值和样本方差即">无论总体X服从何种分布，总体均值$EX=μ$, 总体方差$DX=σ^2$作为未知参数，其矩估计量一定是样本均值和样本方差，即</a></li>
-              <li><a href="#矩估计特殊情况" id="markdown-toc-矩估计特殊情况">矩估计特殊情况</a></li>
-            </ol>
-          </li>
-          <li><a href="#极大似然估计" id="markdown-toc-极大似然估计">极大似然估计</a>            <ol>
-              <li><a href="#极大似然估计的不变性" id="markdown-toc-极大似然估计的不变性">极大似然估计的不变性</a></li>
-            </ol>
-          </li>
-          <li><a href="#估计量的评选标准" id="markdown-toc-估计量的评选标准">估计量的评选标准</a>            <ol>
-              <li><a href="#无偏性" id="markdown-toc-无偏性">无偏性</a></li>
-              <li><a href="#有效性" id="markdown-toc-有效性">有效性</a></li>
-              <li><a href="#一致性" id="markdown-toc-一致性">一致性</a>                <ol>
-                  <li><a href="#样本k阶矩是总体k阶矩的一致性估计量由大数定律证明" id="markdown-toc-样本k阶矩是总体k阶矩的一致性估计量由大数定律证明">样本k阶矩是总体k阶矩的一致性估计量（由大数定律证明）</a></li>
-                  <li><a href="#设theta_n是theta的无偏估计量且lim_nrightarrow-inftydhattheta_n--0则hattheta是theta的一致估计量" id="markdown-toc-设theta_n是theta的无偏估计量且lim_nrightarrow-inftydhattheta_n--0则hattheta是theta的一致估计量">设$\theta_n$是$\theta$的无偏估计量，且$lim_{n\rightarrow \infty}D(\hat{\theta_n}) = 0$,则$\hat{\theta}$是$\theta$的一致估计量</a></li>
-                </ol>
-              </li>
-            </ol>
-          </li>
-          <li><a href="#区间估计" id="markdown-toc-区间估计">区间估计</a>            <ol>
-              <li><a href="#置信区间与置信度" id="markdown-toc-置信区间与置信度">置信区间与置信度</a></li>
-              <li><a href="#正态总体求均值的μ区间估计" id="markdown-toc-正态总体求均值的μ区间估计">正态总体，求均值的μ区间估计</a>                <ol>
-                  <li><a href="#已知方差估计均值" id="markdown-toc-已知方差估计均值">已知方差，估计均值</a></li>
-                  <li><a href="#未知方差估计均值" id="markdown-toc-未知方差估计均值">未知方差，估计均值</a></li>
-                  <li><a href="#正态总体求方差sigma2的区间估计" id="markdown-toc-正态总体求方差sigma2的区间估计">正态总体，求方差$\sigma^2$的区间估计</a></li>
-                </ol>
-              </li>
-              <li><a href="#双正态总体情形" id="markdown-toc-双正态总体情形">双正态总体情形</a>                <ol>
-                  <li><a href="#sigma_12sigma_22已知求mu_1mu_2的置信区间" id="markdown-toc-sigma_12sigma_22已知求mu_1mu_2的置信区间">$\sigma_1^2,\sigma_2^2$已知，求$\mu_1,\mu_2$的置信区间</a></li>
-                  <li><a href="#方差比dfracsigma_12sigma_22的置信区间" id="markdown-toc-方差比dfracsigma_12sigma_22的置信区间">方差比$\dfrac{\sigma_1^2}{\sigma_2^2}$的置信区间</a></li>
-                </ol>
-              </li>
-              <li><a href="#单侧置信区间" id="markdown-toc-单侧置信区间">单侧置信区间</a></li>
-            </ol>
-          </li>
-          <li><a href="#非正态总体均值的区间估计大样本法" id="markdown-toc-非正态总体均值的区间估计大样本法">非正态总体均值的区间估计（大样本法）</a></li>
-        </ol>
-      </li>
-      <li><a href="#假设检验" id="markdown-toc-假设检验">假设检验</a>        <ol>
-          <li><a href="#u检验法" id="markdown-toc-u检验法">u检验法</a></li>
-          <li><a href="#假设检验基本步骤" id="markdown-toc-假设检验基本步骤">假设检验基本步骤</a></li>
-          <li><a href="#正态总体均值的假设检验" id="markdown-toc-正态总体均值的假设检验">正态总体均值的假设检验</a>            <ol>
-              <li><a href="#单个正态总体均值的假设检验" id="markdown-toc-单个正态总体均值的假设检验">单个正态总体均值的假设检验</a>                <ol>
-                  <li><a href="#sigma2已知u检验法" id="markdown-toc-sigma2已知u检验法">$\sigma^2$已知(u检验法)</a></li>
-                  <li><a href="#单边检验" id="markdown-toc-单边检验">单边检验</a></li>
-                  <li><a href="#sigma2未知t检验法" id="markdown-toc-sigma2未知t检验法">$\sigma^2$未知（t检验法）</a></li>
-                  <li><a href="#双正态总体的情形" id="markdown-toc-双正态总体的情形">双正态总体的情形</a>                    <ol>
-                      <li><a href="#sigma_1sigma_2已知" id="markdown-toc-sigma_1sigma_2已知">$\sigma_1,\sigma_2$已知</a></li>
-                      <li><a href="#sigma_1sigma_2未知但相等sigma_1sigma_2sigma" id="markdown-toc-sigma_1sigma_2未知但相等sigma_1sigma_2sigma">$\sigma_1,\sigma_2$未知但相等，$\sigma_1=\sigma_2=\sigma$</a></li>
-                    </ol>
-                  </li>
-                </ol>
-              </li>
-              <li><a href="#正态总体方差的假设检验" id="markdown-toc-正态总体方差的假设检验">正态总体方差的假设检验</a>                <ol>
-                  <li><a href="#单正态总体" id="markdown-toc-单正态总体">单正态总体</a></li>
-                  <li><a href="#双正态总体f检验法" id="markdown-toc-双正态总体f检验法">双正态总体（F检验法）</a></li>
-                </ol>
-              </li>
-            </ol>
-          </li>
-          <li><a href="#非正态总体均值的检验" id="markdown-toc-非正态总体均值的检验">非正态总体均值的检验</a>            <ol>
-              <li><a href="#一个总体均值的检验" id="markdown-toc-一个总体均值的检验">一个总体均值的检验</a></li>
-              <li><a href="#两个正态总体的检验" id="markdown-toc-两个正态总体的检验">两个正态总体的检验</a></li>
-            </ol>
-          </li>
-        </ol>
-      </li>
-      <li><a href="#拟合优度检验分布拟合优度检验不考" id="markdown-toc-拟合优度检验分布拟合优度检验不考">拟合优度检验（分布拟合优度检验）(不考)</a>        <ol>
-          <li><a href="#皮尔逊统计量" id="markdown-toc-皮尔逊统计量">皮尔逊统计量</a></li>
-          <li><a href="#一般的假设检验问题" id="markdown-toc-一般的假设检验问题">一般的假设检验问题</a></li>
-        </ol>
-      </li>
-      <li><a href="#期中之前的内容" id="markdown-toc-期中之前的内容">期中之前的内容</a>        <ol>
-          <li><a href="#基本概念" id="markdown-toc-基本概念">基本概念</a></li>
-          <li><a href="#分布函数" id="markdown-toc-分布函数">分布函数</a>            <ol>
-              <li><a href="#随机变量函数的分布" id="markdown-toc-随机变量函数的分布">随机变量函数的分布</a></li>
-              <li><a href="#随机向量的函数的分布" id="markdown-toc-随机向量的函数的分布">随机向量的函数的分布</a></li>
-            </ol>
-          </li>
-          <li><a href="#随机变量的数字特征期望方差" id="markdown-toc-随机变量的数字特征期望方差">随机变量的数字特征（期望，方差）</a>            <ol>
-              <li><a href="#期望的性质" id="markdown-toc-期望的性质">期望的性质</a></li>
-              <li><a href="#方差的性质" id="markdown-toc-方差的性质">方差的性质</a></li>
-              <li><a href="#协方差" id="markdown-toc-协方差">协方差</a></li>
-              <li><a href="#x和y不相关" id="markdown-toc-x和y不相关">X和Y不相关</a></li>
-            </ol>
-          </li>
-        </ol>
-      </li>
-    </ol>
+      <li><a href="#head12">上分位点</a></li>
+      <li><a href="#head13">正态总体的样本均值与样本方差的分布</a></li>
+    </ul>
   </li>
-</ol>
+  <li><a href="#head14">参数估计</a>
+    <ul>
+      <li><a href="#head15">矩估计</a>
+        <ul>
+          <li><a href="#head16">无论总体X服从何种分布，总体均值$EX=μ$, 总体方差$DX=σ^2$作为未知参数，其矩估计量一定是样本均值和样本方差，即</a></li>
+          <li><a href="#head17">矩估计特殊情况</a></li>
+        </ul>
+      </li>
+      <li><a href="#head18">极大似然估计</a>
+        <ul>
+          <li><a href="#head19">极大似然估计的不变性</a></li>
+        </ul>
+      </li>
+      <li><a href="#head20">估计量的评选标准</a>
+        <ul>
+          <li><a href="#head21">无偏性</a></li>
+          <li><a href="#head22">有效性</a></li>
+          <li><a href="#head23">一致性</a>
+            <ul>
+              <li><a href="#head24">样本k阶矩是总体k阶矩的一致性估计量（由大数定律证明）</a></li>
+              <li><a href="#head25">设$\theta_n$是$\theta$的无偏估计量，且$lim_{n\rightarrow \infty}D(\hat{\theta_n}) = 0$,则$\hat{\theta}$是$\theta$的一致估计量</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#head26">区间估计</a>
+        <ul>
+          <li><a href="#head27">置信区间与置信度</a></li>
+          <li><a href="#head28">正态总体，求均值的μ区间估计</a>
+            <ul>
+              <li><a href="#head29">已知方差，估计均值</a></li>
+              <li><a href="#head30">未知方差，估计均值</a></li>
+              <li><a href="#head31">正态总体，求方差$\sigma^2$的区间估计</a></li>
+            </ul>
+          </li>
+          <li><a href="#head32">双正态总体情形</a>
+            <ul>
+              <li><a href="#head33">$\sigma_1^2,\sigma_2^2$已知，求$\mu_1,\mu_2$的置信区间</a></li>
+              <li><a href="#head34">方差比$\dfrac{\sigma_1^2}{\sigma_2^2}$的置信区间</a></li>
+            </ul>
+          </li>
+          <li><a href="#head35">单侧置信区间</a></li>
+        </ul>
+      </li>
+      <li><a href="#head36">非正态总体均值的区间估计（大样本法）</a></li>
+    </ul>
+  </li>
+  <li><a href="#head37">假设检验</a>
+    <ul>
+      <li><a href="#head38">u检验法</a></li>
+      <li><a href="#head39">假设检验基本步骤</a></li>
+      <li><a href="#head40">正态总体均值的假设检验</a>
+        <ul>
+          <li><a href="#head41">单个正态总体均值的假设检验</a>
+            <ul>
+              <li><a href="#head42">$\sigma^2$已知(u检验法)</a></li>
+              <li><a href="#head43">单边检验</a></li>
+              <li><a href="#head44">$\sigma^2$未知（t检验法）</a></li>
+              <li><a href="#head45">双正态总体的情形</a>
+                <ul>
+                  <li><a href="#head46">$\sigma_1,\sigma_2$已知</a></li>
+                  <li><a href="#head47">$\sigma_1,\sigma_2$未知但相等，$\sigma_1=\sigma_2=\sigma$</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#head48">正态总体方差的假设检验</a>
+            <ul>
+              <li><a href="#head49">单正态总体</a></li>
+              <li><a href="#head50">双正态总体（F检验法）</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#head51">非正态总体均值的检验</a>
+        <ul>
+          <li><a href="#head52">一个总体均值的检验</a></li>
+          <li><a href="#head53">两个正态总体的检验</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#head54">拟合优度检验（分布拟合优度检验）(不考)</a>
+    <ul>
+      <li><a href="#head55">皮尔逊统计量</a></li>
+      <li><a href="#head56">一般的假设检验问题</a></li>
+    </ul>
+  </li>
+  <li><a href="#head57">期中之前的内容</a>
+    <ul>
+      <li><a href="#head58">基本概念</a></li>
+      <li><a href="#head59">分布函数</a>
+        <ul>
+          <li><a href="#head60">随机变量函数的分布</a></li>
+          <li><a href="#head61">随机向量的函数的分布</a></li>
+        </ul>
+      </li>
+      <li><a href="#head62">随机变量的数字特征（期望，方差）</a>
+        <ul>
+          <li><a href="#head63">期望的性质</a></li>
+          <li><a href="#head64">方差的性质</a></li>
+          <li><a href="#head65">协方差</a></li>
+          <li><a href="#head66">X和Y不相关</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
 
-<h1 id="概率论">概率论</h1>
+<h1 id="list"><span id="head1">List</span></h1>
 
-<h2 id="大数定律">大数定律</h2>
+<h1 id="概率论"><span id="head2">概率论</span></h1>
+
+<h2 id="大数定律"><span id="head3">大数定律</span></h2>
 
 <p>对于随机变量序列${X_n}$,对任意的$\epsilon &gt; 0$,有</p>
 
@@ -8693,19 +8731,19 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>定理：对于独立同分布的随机变量${X_n}$,$E(X_n)=\mu,D(X_n)=\sigma^2$,则${X_n}$服从大数定律。</p>
 
-<h2 id="中心极限定理">中心极限定理</h2>
+<h2 id="中心极限定理"><span id="head4">中心极限定理</span></h2>
 
 <p>$X_i$独立同分布</p>
 
 \[\dfrac{\sum\limits_{i=1}^nX_i - n\mu}{\sqrt{n}\sigma} \sim N(0,1)\]
 
-<h2 id="统计量与抽样分布">统计量与抽样分布</h2>
+<h2 id="统计量与抽样分布"><span id="head5">统计量与抽样分布</span></h2>
 
-<h3 id="统计量">统计量</h3>
+<h3 id="统计量"><span id="head6">统计量</span></h3>
 
 <p>统计量是随机变量，且不含任何未知参数</p>
 
-<h3 id="正态分布的一些性质">正态分布的一些性质</h3>
+<h3 id="正态分布的一些性质"><span id="head7">正态分布的一些性质</span></h3>
 
 <p>两个独立的正态分布，和也是正态分布。</p>
 
@@ -8713,9 +8751,9 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 \[X\sim N(0,1),E(X^k)=(k-1)!!,k是偶数;E(X^k) = 0,k是奇数\]
 
-<h3 id="正态总体">正态总体</h3>
+<h3 id="正态总体"><span id="head8">正态总体</span></h3>
 
-<h4 id="chi2分布">$\chi^2$分布</h4>
+<h4 id="chi2分布"><span id="head9">$\chi^2$分布</span></h4>
 
 <p>$\chi_n^2 = \sum\limits_{i=1}^nX_i^2$，$X_i$独立同分布，$X_i\sim N(0,1)$</p>
 
@@ -8730,13 +8768,13 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ol>
 
-<h4 id="t分布">t分布</h4>
+<h4 id="t分布"><span id="head10">t分布</span></h4>
 
 <p>$T = \dfrac{X}{\sqrt{Y/n}},X\sim N(0,1),Y\sim \chi^2(n)$,且X和Y相互独立。</p>
 
 <p>关于y轴对称。</p>
 
-<h4 id="f分布">F分布</h4>
+<h4 id="f分布"><span id="head11">F分布</span></h4>
 
 <p>$F=\dfrac{U/n_1}{V/n_2},U\sim\chi^2(n_1),V\sim\chi^2(n_2)$且U和V相互独立。$F\sim F(n_1,n_2)$</p>
 
@@ -8751,7 +8789,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ol>
 
-<h3 id="上分位点">上分位点</h3>
+<h3 id="上分位点"><span id="head12">上分位点</span></h3>
 
 <p>$P(X &gt; \lambda_\alpha) = \alpha$,$\lambda_\alpha$为X的$\alpha$分位点。</p>
 
@@ -8761,7 +8799,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 \[F_{1-\alpha}(n_1,n_2) = \dfrac{1}{F_{\alpha}(n_2,n_1)}\]
 
-<h3 id="正态总体的样本均值与样本方差的分布">正态总体的样本均值与样本方差的分布</h3>
+<h3 id="正态总体的样本均值与样本方差的分布"><span id="head13">正态总体的样本均值与样本方差的分布</span></h3>
 
 <p>设$X_1,X_2,…,X_n$是来自正态总体$N(\mu,\sigma^2)$的一个样本，则</p>
 
@@ -8783,9 +8821,9 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 \[\bar{X}-\bar{Y} \sim N(\mu_1,\mu_2,(\dfrac{1}{n_1} +\dfrac{1}{n_2})\sigma^2)\]
 
-<h2 id="参数估计">参数估计</h2>
+<h2 id="参数估计"><span id="head14">参数估计</span></h2>
 
-<h3 id="矩估计">矩估计</h3>
+<h3 id="矩估计"><span id="head15">矩估计</span></h3>
 
 <p>以样本矩作为总体矩的估计从而得到参数的估计量</p>
 
@@ -8795,7 +8833,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>注意：方差和期望之间的转换方式，以及样本方差$S_{n-1}^2$和$S_n^2$的不同，这里用的是后者。</p>
 
-<h4 id="无论总体x服从何种分布总体均值exμ-总体方差dxσ2作为未知参数其矩估计量一定是样本均值和样本方差即">无论总体X服从何种分布，总体均值$EX=μ$, 总体方差$DX=σ^2$作为未知参数，其矩估计量一定是样本均值和样本方差，即</h4>
+<h4 id="无论总体x服从何种分布总体均值exμ-总体方差dxσ2作为未知参数其矩估计量一定是样本均值和样本方差即"><span id="head16">无论总体X服从何种分布，总体均值$EX=μ$, 总体方差$DX=σ^2$作为未知参数，其矩估计量一定是样本均值和样本方差，即</span></h4>
 
 \[\hat{\mu} = \overline{X},\hat{\sigma}^2 = \dfrac{1}{n}\sum\limits_{i=1}^n(X_i-\overline{X})^2 = S_n^2\]
 
@@ -8805,11 +8843,11 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>然后用$\bar{X}$和$S_n^2$替换.</p>
 
-<h4 id="矩估计特殊情况">矩估计特殊情况</h4>
+<h4 id="矩估计特殊情况"><span id="head17">矩估计特殊情况</span></h4>
 
 <p>一阶不行时求二阶。</p>
 
-<h3 id="极大似然估计">极大似然估计</h3>
+<h3 id="极大似然估计"><span id="head18">极大似然估计</span></h3>
 
 <p>选择出现样本情况概率最高的参数取值。</p>
 
@@ -8819,7 +8857,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>离散型随机变量将分布律相乘。</p>
 
-<h4 id="极大似然估计的不变性">极大似然估计的不变性</h4>
+<h4 id="极大似然估计的不变性"><span id="head19">极大似然估计的不变性</span></h4>
 
 <p>设$\hat{\theta}$是$\theta$的极大似然估计，$u(u(\theta))$是$\theta$的函数，且有单值反函数：$\theta = \theta(u)$,则$\hat{u}=u(\hat{\theta})$是$u(\theta)$的极大似然估计。</p>
 
@@ -8827,9 +8865,9 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>如果极大似然方程组无解，可以直接考虑极大似然函数，使其最大，求得其最大时参数的取值（例如均匀分布的极大似然估计）</p>
 
-<h3 id="估计量的评选标准">估计量的评选标准</h3>
+<h3 id="估计量的评选标准"><span id="head20">估计量的评选标准</span></h3>
 
-<h4 id="无偏性">无偏性</h4>
+<h4 id="无偏性"><span id="head21">无偏性</span></h4>
 
 <p>$E(\hat{\theta}) = \theta$</p>
 
@@ -8839,31 +8877,31 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>$E(S_n^2) = \dfrac{n-1}{n}\sigma^2 \neq \sigma^2$,所以$\hat{\sigma}^2 = S_n^2$是有偏的。所以修正样本方差$\dfrac{n}{n-1}S_n^2 = S_{n-1}^2$是无偏的。</p>
 
-<h4 id="有效性">有效性</h4>
+<h4 id="有效性"><span id="head22">有效性</span></h4>
 
 <p>$\hat{\theta_1},\hat{\theta_2}$是$\theta$的无偏估计量，方差小的较为有效。这里指无偏估计量的方差。若$D(\hat{\theta_1})\leq D(\hat{\theta_2})$,则称$\hat{\theta_1}$较$\hat{\theta_2}$有效(对于任意的n)。</p>
 
-<h4 id="一致性">一致性</h4>
+<h4 id="一致性"><span id="head23">一致性</span></h4>
 
 <p>$\hat{\theta_n} = \hat{\theta (x_1,…,x_n)},\lim\limits_{n\rightarrow \infty} \hat{\theta_n}\rightarrow \theta$</p>
 
 <p>$\lim\limits_{n\rightarrow \infty}P(|\hat{\theta_n}-\theta| &lt; \epsilon) = 1$</p>
 
-<h5 id="样本k阶矩是总体k阶矩的一致性估计量由大数定律证明">样本k阶矩是总体k阶矩的一致性估计量（由大数定律证明）</h5>
+<h5 id="样本k阶矩是总体k阶矩的一致性估计量由大数定律证明"><span id="head24">样本k阶矩是总体k阶矩的一致性估计量（由大数定律证明）</span></h5>
 
 <p>$\dfrac{1}{n}\sum\limits_{i=1}^nX_i^k\rightarrow \dfrac{1}{n}\sum\limits_{i=1}^nE(X_i^k)=E(X^k)$</p>
 
-<h5 id="设theta_n是theta的无偏估计量且lim_nrightarrow-inftydhattheta_n--0则hattheta是theta的一致估计量">设$\theta_n$是$\theta$的无偏估计量，且$lim_{n\rightarrow \infty}D(\hat{\theta_n}) = 0$,则$\hat{\theta}$是$\theta$的一致估计量</h5>
+<h5 id="设theta_n是theta的无偏估计量且lim_nrightarrow-inftydhattheta_n--0则hattheta是theta的一致估计量"><span id="head25">设$\theta_n$是$\theta$的无偏估计量，且$lim_{n\rightarrow \infty}D(\hat{\theta_n}) = 0$,则$\hat{\theta}$是$\theta$的一致估计量</span></h5>
 
 <p>矩法得到的估计量一般为一致估计量</p>
 
-<h3 id="区间估计">区间估计</h3>
+<h3 id="区间估计"><span id="head26">区间估计</span></h3>
 
 <p>区间估计：根据样本给出未知参数的一个范围，并保证真参数以指定的较大概率属于这个范围。$P(\hat{\theta_1} &lt; \theta &lt; \hat{\theta_2}) = 1 - \alpha$</p>
 
 <p>基本方式是找一个分布（正态分布 or t or $\chi^2$分布 or t分布 or F分布），这个分布中仅包含需要做区间估计得参数</p>
 
-<h4 id="置信区间与置信度">置信区间与置信度</h4>
+<h4 id="置信区间与置信度"><span id="head27">置信区间与置信度</span></h4>
 
 <p>定义：设总体 含未知参数 $\theta$；对于样本$X_1,…,X_n$找出统计量:</p>
 
@@ -8873,9 +8911,9 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>称区间$[\hat{\theta_1},\hat{\theta_2}]$为$\theta$的<code class="language-plaintext highlighter-rouge">置信区间</code>，$1-\alpha$为该区间的<code class="language-plaintext highlighter-rouge">置信度</code>。</p>
 
-<h4 id="正态总体求均值的μ区间估计">正态总体，求均值的μ区间估计</h4>
+<h4 id="正态总体求均值的μ区间估计"><span id="head28">正态总体，求均值的μ区间估计</span></h4>
 
-<h5 id="已知方差估计均值">已知方差，估计均值</h5>
+<h5 id="已知方差估计均值"><span id="head29">已知方差，估计均值</span></h5>
 
 <p>已知方差$\sigma^2$,则$U = \dfrac{\bar{X}-\mu}{\sigma/\sqrt{n}}\sim N(0,1)$</p>
 
@@ -8883,7 +8921,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 \[代入U得:[\bar{X}-u_{\alpha/2}\dfrac{\sigma}{\sqrt{n}},\bar{X}+u_{\alpha/2}\dfrac{\sigma}{\sqrt{n}}]\]
 
-<h5 id="未知方差估计均值">未知方差，估计均值</h5>
+<h5 id="未知方差估计均值"><span id="head30">未知方差，估计均值</span></h5>
 
 \[T = \dfrac{\bar{X}-\mu}{S_{n-1}/\sqrt{n}} \sim t(n-1)\]
 
@@ -8891,7 +8929,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 \[[\bar{X}-t_{\alpha/2}(n-1)\dfrac{S_n}{\sqrt{n-1}},\bar{X}+t_{\alpha/2}(n-1)\dfrac{S_n}{\sqrt{n-1}}]\]
 
-<h5 id="正态总体求方差sigma2的区间估计">正态总体，求方差$\sigma^2$的区间估计</h5>
+<h5 id="正态总体求方差sigma2的区间估计"><span id="head31">正态总体，求方差$\sigma^2$的区间估计</span></h5>
 
 \[\chi = \dfrac{nS_n^2}{\sigma^2} \sim \chi^2(n-1)\]
 
@@ -8901,13 +8939,13 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 \[[\dfrac{nS_n^2}{\chi^2_{\alpha/2}(n-1)},\dfrac{nS_n^2}{\chi^2_{1-\alpha/2}(n-1)}]\]
 
-<h4 id="双正态总体情形">双正态总体情形</h4>
+<h4 id="双正态总体情形"><span id="head32">双正态总体情形</span></h4>
 
 <p>使用的是修正的样本方差$S_{n-1}^2$</p>
 
 <p>求$\mu_1-\mu_2,\dfrac{\sigma^2_1}{\sigma^2_2}$的区间估计。</p>
 
-<h5 id="sigma_12sigma_22已知求mu_1mu_2的置信区间">$\sigma_1^2,\sigma_2^2$已知，求$\mu_1,\mu_2$的置信区间</h5>
+<h5 id="sigma_12sigma_22已知求mu_1mu_2的置信区间"><span id="head33">$\sigma_1^2,\sigma_2^2$已知，求$\mu_1,\mu_2$的置信区间</span></h5>
 
 \[\bar{X}\sim N(\mu_1,\dfrac{\sigma_1^2}{n_1}),\bar{Y}\sim N(\mu_2,\dfrac{\sigma_2^2}{n_2})\]
 
@@ -8921,13 +8959,13 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>如果$\sigma_1.\sigma_2$位置，但是$\sigma_1=\sigma_2=\sigma,\sigma未知$，取$\sigma^2=\dfrac{(n_1-1)S_1^2+(n_2-1)S_2^2}{n_1+n_2-2}$</p>
 
-<h5 id="方差比dfracsigma_12sigma_22的置信区间">方差比$\dfrac{\sigma_1^2}{\sigma_2^2}$的置信区间</h5>
+<h5 id="方差比dfracsigma_12sigma_22的置信区间"><span id="head34">方差比$\dfrac{\sigma_1^2}{\sigma_2^2}$的置信区间</span></h5>
 
 \[F=\dfrac{S_1^2/\sigma_1^2}{S_2^2/\sigma_2^2} \sim F(n_1-1,n_2-1)\]
 
 <p>置信区间$(\dfrac{S_1^2}{S_2^2}\dfrac{1}{F_{\alpha/2}(n_1-1,n_2-1)},\dfrac{S_1^2}{S_2^2}\dfrac{1}{F_{1-\alpha/2}(n_1-1,n_2-1)})$</p>
 
-<h4 id="单侧置信区间">单侧置信区间</h4>
+<h4 id="单侧置信区间"><span id="head35">单侧置信区间</span></h4>
 
 <p>在单侧置信区间中，都是分位点都是$\alpha$</p>
 
@@ -8941,7 +8979,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>求单侧置信区间但未说明求上下限，根据具体问题判断，例如寿命问题求下限</p>
 
-<h3 id="非正态总体均值的区间估计大样本法">非正态总体均值的区间估计（大样本法）</h3>
+<h3 id="非正态总体均值的区间估计大样本法"><span id="head36">非正态总体均值的区间估计（大样本法）</span></h3>
 
 <p>设$X_1,X_2,…,X_n$为来自均值为$\mu$，方差为$\sigma^2$的总体的一组杨本，给定置信度$1-\alpha$，求均值$\mu$的区间估计（注：非正态分布）</p>
 
@@ -8957,13 +8995,13 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>注意使用的标准差，要给方差开方</p>
 
-<h2 id="假设检验">假设检验</h2>
+<h2 id="假设检验"><span id="head37">假设检验</span></h2>
 
 <p>简单假设:$H_0:x=a,H_1:x\neq a$</p>
 
 <p>复合假设:$x &lt; a$</p>
 
-<h3 id="u检验法">u检验法</h3>
+<h3 id="u检验法"><span id="head38">u检验法</span></h3>
 
 <p>一般根据拒绝的概率计算出拒绝域，检查样本是否在拒绝域之中。</p>
 
@@ -8977,7 +9015,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>第五步：得出结论</p>
 
-<h3 id="假设检验基本步骤">假设检验基本步骤</h3>
+<h3 id="假设检验基本步骤"><span id="head39">假设检验基本步骤</span></h3>
 
 <ol>
   <li>
@@ -8997,17 +9035,17 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ol>
 
-<h3 id="正态总体均值的假设检验">正态总体均值的假设检验</h3>
+<h3 id="正态总体均值的假设检验"><span id="head40">正态总体均值的假设检验</span></h3>
 
-<h4 id="单个正态总体均值的假设检验">单个正态总体均值的假设检验</h4>
+<h4 id="单个正态总体均值的假设检验"><span id="head41">单个正态总体均值的假设检验</span></h4>
 
-<h5 id="sigma2已知u检验法">$\sigma^2$已知(u检验法)</h5>
+<h5 id="sigma2已知u检验法"><span id="head42">$\sigma^2$已知(u检验法)</span></h5>
 
 \[U = \dfrac{\bar{X}-\mu_0}{\sigma/\sqrt{n}} \sim N(0,1)\]
 
 <p>拒绝域为$W={|U|\geq u_{\alpha/2}}$</p>
 
-<h5 id="单边检验">单边检验</h5>
+<h5 id="单边检验"><span id="head43">单边检验</span></h5>
 
 <p>$H_0:\mu = \mu_0,H_1:\mu &gt; \mu_0$</p>
 
@@ -9017,7 +9055,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>拒绝域$W = {\dfrac{\bar{X}-\mu_0}{\sigma/\sqrt{n}}\leq -u_{\alpha}}$</p>
 
-<h5 id="sigma2未知t检验法">$\sigma^2$未知（t检验法）</h5>
+<h5 id="sigma2未知t检验法"><span id="head44">$\sigma^2$未知（t检验法）</span></h5>
 
 \[T = \dfrac{\bar{X}-\mu_0}{S/\sqrt{n}} \sim t(n-1)\]
 
@@ -9025,9 +9063,9 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>对于单边检验，判断大于号还是小于号后，使用的$t_{\alpha}(n-1)$</p>
 
-<h5 id="双正态总体的情形">双正态总体的情形</h5>
+<h5 id="双正态总体的情形"><span id="head45">双正态总体的情形</span></h5>
 
-<h6 id="sigma_1sigma_2已知">$\sigma_1,\sigma_2$已知</h6>
+<h6 id="sigma_1sigma_2已知"><span id="head46">$\sigma_1,\sigma_2$已知</span></h6>
 
 <p>$U=\dfrac{(\bar{X}-\bar{Y}) - (\mu_1-\mu_2)}{\sqrt{\dfrac{\sigma_1^2}{n_1}+\dfrac{\sigma_2^2}{n_2}}}\sim N(0,1)$</p>
 
@@ -9037,15 +9075,15 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>单边($H_1:\mu_1 &gt; \mu_2$时)$W={U\geq u_{\alpha}}$</p>
 
-<h6 id="sigma_1sigma_2未知但相等sigma_1sigma_2sigma">$\sigma_1,\sigma_2$未知但相等，$\sigma_1=\sigma_2=\sigma$</h6>
+<h6 id="sigma_1sigma_2未知但相等sigma_1sigma_2sigma"><span id="head47">$\sigma_1,\sigma_2$未知但相等，$\sigma_1=\sigma_2=\sigma$</span></h6>
 
 <p>$S_w = \sqrt{\dfrac{(n_1-1)S_1^2+(n_2-1)S_2^2}{n_1+n_2-2}}$代替$\sigma$</p>
 
 <p>$T=\dfrac{(\bar{X}-\bar{Y})-(\mu_1-\mu_2)}{S_w\sqrt{\dfrac{1}{n_1}+\dfrac{1}{n_2}}}\sim t(n_1+n_2-2)$</p>
 
-<h4 id="正态总体方差的假设检验">正态总体方差的假设检验</h4>
+<h4 id="正态总体方差的假设检验"><span id="head48">正态总体方差的假设检验</span></h4>
 
-<h5 id="单正态总体">单正态总体</h5>
+<h5 id="单正态总体"><span id="head49">单正态总体</span></h5>
 
 <p>$H_0:\sigma^2 = \sigma_0^2,H_1:\sigma\neq\sigma_0^2$</p>
 
@@ -9053,7 +9091,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>$W={\chi^2\leq\chi^2_{1-\alpha/2}(n-1)}\cup {\chi^2\geq \chi^2_{\alpha/2}(n-1)}$</p>
 
-<h5 id="双正态总体f检验法">双正态总体（F检验法）</h5>
+<h5 id="双正态总体f检验法"><span id="head50">双正态总体（F检验法）</span></h5>
 
 <p>$H_0:\sigma_1^2 = \sigma_2^2,H_1:\sigma_1^2 \neq \sigma_2^2$</p>
 
@@ -9063,19 +9101,19 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>拒绝域$W={F\leq F_{1-\alpha/2}(n_1-1,n_2-1)}\cup {F\geq F_{\alpha/2}(n_1-1,n_2-1)}$</p>
 
-<h3 id="非正态总体均值的检验">非正态总体均值的检验</h3>
+<h3 id="非正态总体均值的检验"><span id="head51">非正态总体均值的检验</span></h3>
 
-<h4 id="一个总体均值的检验">一个总体均值的检验</h4>
+<h4 id="一个总体均值的检验"><span id="head52">一个总体均值的检验</span></h4>
 
 <p>假设X为任意总体，$EX=\mu,DX=\sigma^2$,$X_1,…,X_n$是一组样本，$\bar{X}是样本均值,S^2是修正的样本方差，\mu_0是已知参数，记U=\dfrac{\bar{X}-\mu_0}{\sigma/\sqrt{n}}或U=\dfrac{\bar{X}-\mu_0}{S/\sqrt{n}}$，当n充分大时，统计量U近似服从标准正态分布。</p>
 
-<h4 id="两个正态总体的检验">两个正态总体的检验</h4>
+<h4 id="两个正态总体的检验"><span id="head53">两个正态总体的检验</span></h4>
 
 <p>$X_1,…,X_m,S^2_1,Y_1,Y_2,…,Y_n,S^2_2$,修正样本方差</p>
 
 \[U=\dfrac{\bar{X}-\bar{Y}}{\sqrt{\dfrac{\sigma_1^2}{m}+\dfrac{\sigma_2^2}{n}}}或U=\dfrac{\bar{X}-\bar{Y}}{\sqrt{\dfrac{S_1^2}{m}+\dfrac{S_2^2}{n}}}\]
 
-<h2 id="拟合优度检验分布拟合优度检验不考">拟合优度检验（分布拟合优度检验）(不考)</h2>
+<h2 id="拟合优度检验分布拟合优度检验不考"><span id="head54">拟合优度检验（分布拟合优度检验）(不考)</span></h2>
 
 <p>不知道总体的分布类型</p>
 
@@ -9083,7 +9121,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>利用事件的频率与概率之间的偏差构造检验统计量</p>
 
-<h3 id="皮尔逊统计量">皮尔逊统计量</h3>
+<h3 id="皮尔逊统计量"><span id="head55">皮尔逊统计量</span></h3>
 
 \[H_0:O(X=x_i),i=1,2,...,k\]
 
@@ -9093,7 +9131,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>(3)拒绝域为$W={\chi^2\geq \chi^2_\alpha(k-1)}$</p>
 
-<h3 id="一般的假设检验问题">一般的假设检验问题</h3>
+<h3 id="一般的假设检验问题"><span id="head56">一般的假设检验问题</span></h3>
 
 <ol>
   <li>
@@ -9115,9 +9153,9 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>注意：通常要求$n\geq 50$,将样本空间划分为事件，要求每个事件的理论频数不应太小</p>
 
-<h2 id="期中之前的内容">期中之前的内容</h2>
+<h2 id="期中之前的内容"><span id="head57">期中之前的内容</span></h2>
 
-<h3 id="基本概念">基本概念</h3>
+<h3 id="基本概念"><span id="head58">基本概念</span></h3>
 
 <p>条件概率:$P(B|A) = \dfrac{P(AB)}{P(A)} \Leftrightarrow   P(AB) = P(A)P(B|A) = P(B)P(A|B)$</p>
 
@@ -9127,7 +9165,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>贝叶斯公式：$A_i$是$\Omega$的一个划分，$P(A_j|B) = \dfrac{P(A_j)P(B|A_j)}{\sum\limits_{i=1}^nP(A_i)P(B|A_i)}$</p>
 
-<h3 id="分布函数">分布函数</h3>
+<h3 id="分布函数"><span id="head59">分布函数</span></h3>
 
 <p>二项分布的峰值：当$(n+1)p$是整数时。$k_0=(n+1)p-1$或$(n+1)p$，当$(n+1)p$不是整数时，$k_0=[(n+1)p]$</p>
 
@@ -9157,7 +9195,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>$F(x) = P(X\leq x) (-\infty &lt; x &lt; +\infty)$称为随机变量X的随机变量。</p>
 
-<h4 id="随机变量函数的分布">随机变量函数的分布</h4>
+<h4 id="随机变量函数的分布"><span id="head60">随机变量函数的分布</span></h4>
 
 <p>对于连续型随机变量，其密度函数为$p(x),y = g(x)$是x的连续函数，$Y = g(x)$是连续性随机变量。$求Y=g(X)$的密度函数$p_Y(y)$</p>
 
@@ -9170,19 +9208,19 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   </li>
 </ol>
 
-<h4 id="随机向量的函数的分布">随机向量的函数的分布</h4>
+<h4 id="随机向量的函数的分布"><span id="head61">随机向量的函数的分布</span></h4>
 
 <p>同样求出对应的分布函数，然后求导，如$Z = max{X,Y},F(Z&lt;z) = P(X &lt; z,y &lt; Z)$，然后积分</p>
 
-<h3 id="随机变量的数字特征期望方差">随机变量的数字特征（期望，方差）</h3>
+<h3 id="随机变量的数字特征期望方差"><span id="head62">随机变量的数字特征（期望，方差）</span></h3>
 
-<h4 id="期望的性质">期望的性质</h4>
+<h4 id="期望的性质"><span id="head63">期望的性质</span></h4>
 
 <p>期望的线性性质：不要求独立，$E(aX+bY)=aE(X)+bE(y)$</p>
 
 <p>若X，Y相互独立，$E(XY)=E(X)E(Y)$</p>
 
-<h4 id="方差的性质">方差的性质</h4>
+<h4 id="方差的性质"><span id="head64">方差的性质</span></h4>
 
 <p>$D(aX+b)=a^2D(X)$</p>
 
@@ -9192,12 +9230,12 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>注意样本方差和总体方差的区别</p>
 
-<h4 id="协方差">协方差</h4>
+<h4 id="协方差"><span id="head65">协方差</span></h4>
 
 <p>$cov(X,Y)=E(XY)-E(X)E(Y)$</p>
 
 <p>相关系数：$\rho=\dfrac{cov(X,Y)}{\sqrt{D(X)D(Y)}}$,$|\rho|=1\Leftrightarrow P(cX+aY=b)=1$,X和Y以概率1成线性关系。</p>
 
-<h4 id="x和y不相关">X和Y不相关</h4>
+<h4 id="x和y不相关"><span id="head66">X和Y不相关</span></h4>
 
 <p>$\Leftrightarrow \rho_{XY} = 0\Leftrightarrow cov(X,Y)=0\Leftrightarrow E(XY)=E(X)E(Y)\Leftrightarrow D(X+Y)=D(X)+D(Y)$.</p>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="Courses" /><summary type="html"><![CDATA[计概率论总结]]></summary></entry></feed>

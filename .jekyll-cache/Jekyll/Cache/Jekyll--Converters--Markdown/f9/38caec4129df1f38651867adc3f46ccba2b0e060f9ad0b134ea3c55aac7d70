@@ -1,0 +1,106 @@
+I"�<blockquote>
+  <p>How to use Django and config</p>
+
+  <p>HTML CSS JS</p>
+</blockquote>
+
+<ul>
+  <li><a href="#head1">一些常用的内容</a></li>
+  <li><a href="#head2">HTML</a></li>
+  <li><a href="#head3">CSS</a>
+    <ul>
+      <li><a href="#head4">链接</a></li>
+    </ul>
+  </li>
+  <li><a href="#head5">JS</a></li>
+</ul>
+
+<h1 id="一些常用的内容"><span id="head1">一些常用的内容</span></h1>
+
+<h2 id="html"><span id="head2">HTML</span></h2>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span> — 文档类型。混沌初分，HTML 尚在襁褓（大约是 1991/92 年）之时，DOCTYPE 用来链接一些 HTML 编写守则，比如自动查错之类。DOCTYPE 在当今作用有限，仅用于保证文档正常读取。现在知道这些就足够了。
+<span class="nt">&lt;html&gt;&lt;/html&gt;</span> — <span class="nt">&lt;html&gt;</span> 元素。该元素包含整个页面的内容，也称作根元素。
+<span class="nt">&lt;head&gt;&lt;/head&gt;</span> — <span class="nt">&lt;head&gt;</span> 元素。该元素的内容对用户不可见，其中包含例如面向搜索引擎的搜索关键字（keywords）、页面描述、CSS 样式表和字符编码声明等。
+<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span> — 该元素指定文档使用 UTF-8 字符编码 ，UTF-8 包括绝大多数人类已知语言的字符。基本上 UTF-8 可以处理任何文本内容，还可以避免以后出现某些问题，没有理由再选用其他编码。
+<span class="nt">&lt;title&gt;&lt;/title&gt;</span> — <span class="nt">&lt;title&gt;</span> 元素。该元素设置页面的标题，显示在浏览器标签页上，也作为收藏网页的描述文字。
+<span class="nt">&lt;body&gt;&lt;/body&gt;</span> — <span class="nt">&lt;body&gt;</span> 元素。该元素包含期望让用户在访问页面时看到的内容，包括文本、图像、视频、游戏、可播放的音轨或其他内容。
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>图像，alt作为文字替换属性，只有当图像无法显示时出现
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/firefox-icon.png"</span> <span class="na">alt=</span><span class="s">"测试图片"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p>标题</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;h1&gt;</span>主标题<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h2&gt;</span>顶层标题<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;h3&gt;</span>子标题<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;h4&gt;</span>次子标题<span class="nt">&lt;/h4&gt;</span>
+</code></pre></div></div>
+
+<p>段落</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span>content<span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+
+<p>字体</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;i</span> <span class="na">id=</span><span class="s">""</span><span class="nt">&gt;&lt;/i&gt;</span>斜体
+<span class="nt">&lt;b</span> <span class="na">id=</span><span class="s">""</span><span class="nt">&gt;&lt;/b&gt;</span>粗体
+<span class="nt">&lt;u</span> <span class="na">id=</span><span class="s">""</span><span class="nt">&gt;&lt;/u&gt;</span>下划线
+</code></pre></div></div>
+
+<p>class和id的区别，id在一个页面只能出现一次，而class可以出现多次</p>
+
+<p>列表</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>无序列表<span class="nt">&lt;ul&gt;&lt;/ul&gt;</span>
+有序了列表<span class="nt">&lt;ol&gt;&lt;/ol&gt;</span>
+列表的每一个项目用一个列表项目元素<span class="nt">&lt;li&gt;&lt;/li&gt;</span>包围
+</code></pre></div></div>
+
+<p>链接</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"site"</span><span class="nt">&gt;</span>content <span class="nt">&lt;/a&gt;</span>
+</code></pre></div></div>
+
+<h2 id="css"><span id="head3">CSS</span></h2>
+
+<p>规则集</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">p</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">red</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>选择器（Selector）：HTML 元素的名称位于规则集开始。它选择了一个或多个需要添加样式的元素（在这个例子中就是 p 元素）。要给不同元素添加样式只需要更改选择器就行了。</p>
+
+<p>声明（Declaration）：一个单独的规则，如 color: red; 用来指定添加样式元素的属性。</p>
+
+<p>属性（Properties）：改变 HTML 元素样式的途径。（本例中 color 就是 &lt;p&gt; 元素的属性。）CSS 中，由编写人员决定修改哪个属性以改变规则。</p>
+
+<p>属性的值（Property value）：在属性的右边，冒号后面即属性的值，它从指定属性的众多外观中选择一个值（我们除了 red 之外还有很多属性值可以用于 color ）。</p>
+
+<p>注意其他重要的语法：</p>
+
+<p>每个规则集（除了选择器的部分）都应该包含在成对的大括号里（{}）。</p>
+
+<p>在每个声明里要用冒号（:）将属性与属性值分隔开。</p>
+
+<p>在每个规则集里要用分号（;）将各个声明分隔开。</p>
+
+<h3 id="链接"><span id="head4">链接</span></h3>
+
+<p>指明链接的文件以及在这个文件作为什么</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"file"</span> <span class="na">rel=</span><span class="s">""</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p>style.css</p>
+
+<p>CSS将HTML的元素作为盒子，对每一个元素的各个属性可以进行编辑如width,background-color,color,text-shadow,display,text-align等</p>
+
+<h2 id="js"><span id="head5">JS</span></h2>
+
+:ET
