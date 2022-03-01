@@ -1,2 +1,4 @@
 _site/
 Gemfile*
+node_modules/
+.bundle/

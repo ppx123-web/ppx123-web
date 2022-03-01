@@ -1,4 +1,4 @@
-I"ç-<p>Unfortunately, upgrading form v5 and earlier is not straightforward. A lot of patterns and names have changed,
+I"Ü-<p>Unfortunately, upgrading form v5 and earlier is not straightforward. A lot of patterns and names have changed,
 motivated by a variety of reasons, including better integration with the rest of the Jekyll ecosystem and
 simplified workflows enabled by Jekyll Collections.</p>
 
@@ -72,7 +72,7 @@ Youâ€™ll want to move your static assets there.</p>
 
     <p>If you have only one photo, you can just provide the URL directly, e.g. <code class="language-plaintext highlighter-rouge">picture: &lt;url&gt;</code>.</p>
 
-    <p>For more information, see <a href="/ppx123-web/docs/7.5.2/config/#adding-an-author">Adding an author</a>.</p>
+    <p>For more information, see <a href="/docs/7.5.2/config/#adding-an-author">Adding an author</a>.</p>
   </li>
   <li>
     <p>Rename <code class="language-plaintext highlighter-rouge">gems</code> to <code class="language-plaintext highlighter-rouge">plugins</code> and make sure the list contains <code class="language-plaintext highlighter-rouge">jekyll-seo-tag</code>.</p>

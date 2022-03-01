@@ -1,4 +1,4 @@
-I"Á.<p>Copyright (c) 2017 Florian Klampfer <a href="https://qwtel.com/">https://qwtel.com/</a></p>
+I"¹-<p>Copyright (c) 2017 Florian Klampfer <a href="https://qwtel.com/">https://qwtel.com/</a></p>
 
 <p>This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -59,7 +59,7 @@ MIT licensed with the following copyright:</p>
   <p>Copyright (c) 2013 Mark Otto.</p>
 </blockquote>
 
-<p>A copy of the <a href="/ppx123-web/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
+<p>A copy of the <a href="/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
 
 <h3 id="hy-drawer">hy-drawer</h3>
 <p>This software also uses portions of the hy-drawer project, which is
@@ -69,7 +69,7 @@ GPL-3.0 licensed with the following copyright:</p>
   <p>Copyright (c) 2017 Florian Klampfer</p>
 </blockquote>
 
-<p>A copy of the <a href="/ppx123-web/licenses/GPL-3.0/">GPL-3.0</a> license is provided as part of this distribution.</p>
+<p>A copy of the <a href="/licenses/GPL-3.0/">GPL-3.0</a> license is provided as part of this distribution.</p>
 
 <h3 id="hy-push-state">hy-push-state</h3>
 <p>This software also uses portions of the hy-push-state project, which is
@@ -79,7 +79,7 @@ GPL-3.0 licensed with the following copyright:</p>
   <p>Copyright (c) 2017 Florian Klampfer</p>
 </blockquote>
 
-<p>A copy of the <a href="/ppx123-web/licenses/GPL-3.0/">GPL-3.0</a> license is provided as part of this distribution.</p>
+<p>A copy of the <a href="/licenses/GPL-3.0/">GPL-3.0</a> license is provided as part of this distribution.</p>
 
 <h3 id="rxjs">rxjs</h3>
 <p>This software also uses portions of the rxjs project, which is
@@ -92,7 +92,7 @@ Apache-2.0 licensed with the following copyright;</p>
 <p>No substantial changes to the software were made.
 No <code class="language-plaintext highlighter-rouge">NOTICE</code> file was provided.</p>
 
-<p>A copy of the <a href="/ppx123-web/licenses/Apache-2.0/">Apache-2.0</a> license is provided as part of this distribution.</p>
+<p>A copy of the <a href="/licenses/Apache-2.0/">Apache-2.0</a> license is provided as part of this distribution.</p>
 
 <h3 id="katex">KaTeX</h3>
 <p>This software also uses portions of the KaTeX project, which is
@@ -102,7 +102,7 @@ MIT licensed with the following copyright:</p>
   <p>Copyright (c) 2015 Khan Academy</p>
 </blockquote>
 
-<p>A copy of the <a href="/ppx123-web/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
+<p>A copy of the <a href="/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
 
 <h3 id="webfontloader">webfontloader</h3>
 <p>This software also uses portions of the webfontloader project, which is
@@ -115,7 +115,7 @@ Apache-2.0 licensed with the following copyright;</p>
 <p>No substantial changes to the software were made.
 No <code class="language-plaintext highlighter-rouge">NOTICE</code> file was provided.</p>
 
-<p>A copy of the <a href="/ppx123-web/licenses/Apache-2.0/">Apache-2.0</a> license is provided as part of this distribution.</p>
+<p>A copy of the <a href="/licenses/Apache-2.0/">Apache-2.0</a> license is provided as part of this distribution.</p>
 
 <h3 id="corejs">corejs</h3>
 <p>This software also uses portions of the corejs project, which is
@@ -125,7 +125,7 @@ MIT licensed with the following copyright:</p>
   <p>Copyright (c) 2014-2016 Denis Pushkarev</p>
 </blockquote>
 
-<p>A copy of the <a href="/ppx123-web/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
+<p>A copy of the <a href="/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
 
 <h3 id="color">color</h3>
 <p>This software also uses portions of the color project, which is
@@ -135,7 +135,7 @@ MIT licensed with the following copyright:</p>
   <p>Copyright (c) 2012 Heather Arthur</p>
 </blockquote>
 
-<p>A copy of the <a href="/ppx123-web/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
+<p>A copy of the <a href="/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
 
 <h3 id="elem-dataset">elem-dataset</h3>
 <p>This software also uses portions of the elem-dataset project, which is
@@ -145,7 +145,7 @@ MIT licensed with the following copyright:</p>
   <p>Copyright (c) Alex Cross (alexcross.io)</p>
 </blockquote>
 
-<p>A copy of the <a href="/ppx123-web/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
+<p>A copy of the <a href="/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
 
 <h3 id="web-animations-js">web-animations-js</h3>
 <p>This software also uses portions of the web-animations-js project, which is
@@ -158,7 +158,7 @@ Apache-2.0 licensed with the following copyright;</p>
 <p>No substantial changes to the software were made.
 No <code class="language-plaintext highlighter-rouge">NOTICE</code> file was provided.</p>
 
-<p>A copy of the <a href="/ppx123-web/licenses/Apache-2.0/">Apache-2.0</a> license is provided as part of this distribution.</p>
+<p>A copy of the <a href="/licenses/Apache-2.0/">Apache-2.0</a> license is provided as part of this distribution.</p>
 
 <h3 id="modernizr">Modernizr</h3>
 <p>This software also uses portions of the Modernizr project, which is
@@ -175,7 +175,7 @@ MIT licensed with the following copyright:</p>
  Richard Herrera</p>
 </blockquote>
 
-<p>A copy of the <a href="/ppx123-web/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
+<p>A copy of the <a href="/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
 
 <h3 id="compress">compress</h3>
 <p>This software also uses portions of the compress project, which is
@@ -185,7 +185,7 @@ MIT licensed with the following copyright:</p>
   <p>Copyright (c) 2014 Anatol Broder</p>
 </blockquote>
 
-<p>A copy of the <a href="/ppx123-web/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
+<p>A copy of the <a href="/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
 
 <h3 id="html5shiv">html5shiv</h3>
 <p>This software also uses portions of the html5shiv project,
@@ -195,7 +195,7 @@ which is MIT licensed with the following copyright</p>
   <p>Copyright (c) 2014 Alexander Farkas (aFarkas).</p>
 </blockquote>
 
-<p>A copy of the <a href="/ppx123-web/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
+<p>A copy of the <a href="/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
 
 <h3 id="loadcss">loadCSS</h3>
 <p>This software also uses portions of the loadCSS project, which is
@@ -205,7 +205,7 @@ MIT licensed with the following copyright:</p>
   <p>Copyright (c) @scottjehl, 2016 Filament Group</p>
 </blockquote>
 
-<p>A copy of the <a href="/ppx123-web/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
+<p>A copy of the <a href="/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
 
 <h3 id="ratchet">ratchet</h3>
 <p>This software also uses portions of the ratchet project,
@@ -215,7 +215,7 @@ which is MIT licensed with the following copyright</p>
   <p>Copyright (c) 2015 connors and other contributors</p>
 </blockquote>
 
-<p>A copy of the <a href="/ppx123-web/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
+<p>A copy of the <a href="/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
 
 <h3 id="swipe">Swipe</h3>
 <p>This software also uses portions of the Swipe project,
@@ -225,7 +225,7 @@ which is MIT licensed with the following copyright</p>
   <p>Copyright (c) 2013 Brad Birdsall</p>
 </blockquote>
 
-<p>A copy of the <a href="/ppx123-web/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
+<p>A copy of the <a href="/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
 
 <h3 id="smoothstate">smoothState</h3>
 <p>This software also uses portions of the smoothState project,
@@ -235,7 +235,7 @@ which is MIT licensed with the following copyright</p>
   <p>Copyright (c) 2014 Miguel Angel Perez</p>
 </blockquote>
 
-<p>A copy of the <a href="/ppx123-web/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
+<p>A copy of the <a href="/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
 
 <h3 id="bootstrap-v4">Bootstrap v4</h3>
 <p>This software also uses portions of the Bootstrap v4 project,
@@ -246,7 +246,7 @@ which is MIT licensed with the following copyright</p>
 Copyright (c) 2011-2017 The Bootstrap Authors</p>
 </blockquote>
 
-<p>A copy of the <a href="/ppx123-web/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
+<p>A copy of the <a href="/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
 
 <h3 id="hy-component">hy-component</h3>
 <p>This software also uses portions of the hy-component project,
@@ -256,7 +256,7 @@ which is MIT licensed with the following copyright</p>
   <p>Copyright (c) 2017 Florian Klampfer <a href="https://qwtel.com/">https://qwtel.com/</a></p>
 </blockquote>
 
-<p>A copy of the <a href="/ppx123-web/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
+<p>A copy of the <a href="/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
 
 <h3 id="camelcase">camelcase</h3>
 <p>This software also uses portions of the camelcase project,
@@ -266,7 +266,7 @@ which is MIT licensed with the following copyright</p>
   <p>Copyright (c) Sindre Sorhus <a href="mailto:sindresorhus@gmail.com">sindresorhus@gmail.com</a> (sindresorhus.com)</p>
 </blockquote>
 
-<p>A copy of the <a href="/ppx123-web/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
+<p>A copy of the <a href="/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
 
 <h3 id="decamelize">decamelize</h3>
 <p>This software also uses portions of the decamelize project,
@@ -276,7 +276,7 @@ which is MIT licensed with the following copyright</p>
   <p>Copyright (c) Sindre Sorhus <a href="mailto:sindresorhus@gmail.com">sindresorhus@gmail.com</a> (sindresorhus.com)</p>
 </blockquote>
 
-<p>A copy of the <a href="/ppx123-web/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
+<p>A copy of the <a href="/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
 
 <h3 id="jquery">jQuery</h3>
 <p>This software also uses portions of the jQuery project,
@@ -286,7 +286,7 @@ which is MIT licensed with the following copyright</p>
   <p>Copyright JS Foundation and other contributors, https://js.foundation/</p>
 </blockquote>
 
-<p>A copy of the <a href="/ppx123-web/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
+<p>A copy of the <a href="/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
 
 <h3 id="bootstrap">Bootstrap</h3>
 <p>This software also uses portions of the Bootstrap project,
@@ -296,7 +296,7 @@ which is MIT licensed with the following copyright</p>
   <p>Copyright 2011-2015 Twitter, Inc.</p>
 </blockquote>
 
-<p>A copy of the <a href="/ppx123-web/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
+<p>A copy of the <a href="/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
 
 <h3 id="template-polyfill">template-polyfill</h3>
 <p>This software also uses portions of the template-polyfill project,
@@ -306,6 +306,6 @@ which is MIT licensed with the following copyright</p>
   <p>Copyright (c) 2016 Jeff Carpenter</p>
 </blockquote>
 
-<p>A copy of the <a href="/ppx123-web/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
+<p>A copy of the <a href="/licenses/MIT/">MIT</a> license is provided as part of this distribution.</p>
 
 :ET
