@@ -1,4 +1,4 @@
-I"fÂ<p>Once Jekyll is running, you can start with basic configuration by adding various entries to <code class="language-plaintext highlighter-rouge">_config.yml</code>.
+I"¨Â<p>Once Jekyll is running, you can start with basic configuration by adding various entries to <code class="language-plaintext highlighter-rouge">_config.yml</code>.
 Besides these descriptions, you can also read the <a href="#annotated-config-file">annotated config file</a> below.</p>
 
 <p class="message"><strong>NOTE</strong>: When making changes to <code class="language-plaintext highlighter-rouge">_config.yml</code>, it is necessary to restart the Jekyll process for the changes to take effect.</p>
@@ -104,7 +104,7 @@ The defaults are:</p>
 <p>The <code class="language-plaintext highlighter-rouge">google_fonts</code> key is the string necessary to fetch the fonts from Google.
 You can get it from the download page at <a href="https://fonts.google.com">Google Fonts</a> after youâ€™ve selected one or more fonts:</p>
 
-<p><img src="/assets/img/docs/google-fonts.png" alt="Where to get the google_fonts string" /></p>
+<p><img src="/ppx123-web/assets/img/docs/google-fonts.png" alt="Where to get the google_fonts string" /></p>
 
 <h3 id="using-safe-web-fonts">Using safe web fonts</h3>
 <p>If you prefer not to use Google Fonts and use <a href="http://www.cssfontstack.com/">safe web fonts</a> instead,
@@ -291,7 +291,7 @@ It consists of the name of the social network as key and your username within th
 </code></pre></div></div>
 
 <p>Check out <a href="https://github.com/qwtel/hydejack/blob/master/_data/authors.yml"><code class="language-plaintext highlighter-rouge">authors.yml</code></a> to see which networks are available.
-You can also follow the steps <a href="/docs/7.5.2/advanced/">here</a> to add your own social media icons.</p>
+You can also follow the steps <a href="/ppx123-web/docs/7.5.2/advanced/">here</a> to add your own social media icons.</p>
 
 <p>You can change the order in which the icons appear by moving lines up or down, e.g.</p>
 
@@ -315,7 +315,7 @@ see the included <a href="https://github.com/qwtel/hydejack/blob/master/_data/au
 
 <p class="message"><strong>NOTE</strong>: You can add any platform, even if itâ€™s not defined in <a href="https://github.com/qwtel/hydejack/blob/master/_data/social.yml"><code class="language-plaintext highlighter-rouge">social.yml</code></a>,
 by providing a complete URL. However, a fallback icon <span class="icon-link"></span> will be used when no icon is available.
-Supplying your own icons is an <a href="/docs/7.5.2/advanced/">advanced topic</a>.</p>
+Supplying your own icons is an <a href="/ppx123-web/docs/7.5.2/advanced/">advanced topic</a>.</p>
 
 <h3 id="adding-an-email-rss-icon-or-download-icon">Adding an email, RSS icon or download icon</h3>
 <p>If youâ€™d like to add an email <span class="icon-mail"></span>, RSS <span class="icon-rss2"></span>, or download <span class="icon-box-add"></span> icon to the list,
@@ -325,7 +325,7 @@ add the <code class="language-plaintext highlighter-rouge">email</code>, <code c
 <span class="na">author</span><span class="pi">:</span>
   <span class="na">social</span><span class="pi">:</span>
     <span class="na">email</span><span class="pi">:</span>    <span class="s">mailto:mail@qwtel.com</span>
-    <span class="na">rss</span><span class="pi">:</span>      <span class="s">http://localhost:4000/feed.xml</span> <span class="c1"># make sure you provide an absolute URL</span>
+    <span class="na">rss</span><span class="pi">:</span>      <span class="s">http://localhost:4000/ppx123-web/feed.xml</span> <span class="c1"># make sure you provide an absolute URL</span>
     <span class="na">download</span><span class="pi">:</span> <span class="s">https://github.com/qwtel/hydejack/archive/v7.5.2.zip</span>
 </code></pre></div></div>
 
@@ -406,7 +406,7 @@ There you will also find an example form for MailChimp, where you need to fill i
 
 <p>To build a completely new from, you can use <a href="https://getbootstrap.com/docs/4.0/components/forms/">the same CSS classes as Bootstrap</a>.
 Note that only form, grid and utility classes are available.
-Check out <a href="/forms-by-example/" class="heading flip-title">Forms by Example</a> for some examples.</p>
+Check out <a href="/ppx123-web/forms-by-example/" class="heading flip-title">Forms by Example</a> for some examples.</p>
 
 <h2 id="annotated-config-file">Annotated config file</h2>
 <p>Below you find the the complete default <code class="language-plaintext highlighter-rouge">_config.yml</code> file. You may want to copy it when using the gem-based version of the theme.</p>
@@ -668,6 +668,6 @@ Check out <a href="/forms-by-example/" class="heading flip-title">Forms by Examp
 <span class="c1">#   path:                atom.xml</span>
 </code></pre></div></div>
 
-<p class="read-more">Continue with <a href="/docs/7.5.2/basics/" class="heading flip-title">Basics</a></p>
+<p class="read-more">Continue with <a href="/ppx123-web/docs/7.5.2/basics/" class="heading flip-title">Basics</a></p>
 
 :ET

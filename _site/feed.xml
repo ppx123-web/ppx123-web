@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-03-01T14:10:36+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Zhao Chaoyi</title><subtitle>Notes
-</subtitle><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><entry><title type="html">Cpp</title><link href="http://localhost:4000/2022/02/19/CPP/" rel="alternate" type="text/html" title="Cpp" /><published>2022-02-19T00:00:00+08:00</published><updated>2022-02-19T00:00:00+08:00</updated><id>http://localhost:4000/2022/02/19/CPP</id><content type="html" xml:base="http://localhost:4000/2022/02/19/CPP/"><![CDATA[<blockquote>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/ppx123-web/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/ppx123-web/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-03-01T14:22:45+08:00</updated><id>http://localhost:4000/ppx123-web/feed.xml</id><title type="html">Zhao Chaoyi</title><subtitle>Notes
+</subtitle><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><entry><title type="html">Cpp</title><link href="http://localhost:4000/ppx123-web/2022/02/19/CPP/" rel="alternate" type="text/html" title="Cpp" /><published>2022-02-19T00:00:00+08:00</published><updated>2022-02-19T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/02/19/CPP</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/02/19/CPP/"><![CDATA[<blockquote>
   <p>From C++ Primer Plus</p>
 </blockquote>
 
@@ -129,7 +129,7 @@ void swap(T &amp;,T &amp;);
 template &lt;&gt; void swap&lt;int&gt; (int ,int ) //显式具体化
 template &lt;&gt; void swap (int ,int )      //显式具体化
 template &lt;&gt;表示不要使用swap模板来生成一个使用int类型的实例
-</code></pre>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="Programming" /><summary type="html"><![CDATA[C++ programming tips]]></summary></entry><entry><title type="html">Python</title><link href="http://localhost:4000/2022/02/19/Python/" rel="alternate" type="text/html" title="Python" /><published>2022-02-19T00:00:00+08:00</published><updated>2022-02-19T00:00:00+08:00</updated><id>http://localhost:4000/2022/02/19/Python</id><content type="html" xml:base="http://localhost:4000/2022/02/19/Python/"><![CDATA[<blockquote>
+</code></pre>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="Programming" /><summary type="html"><![CDATA[C++ programming tips]]></summary></entry><entry><title type="html">Python</title><link href="http://localhost:4000/ppx123-web/2022/02/19/Python/" rel="alternate" type="text/html" title="Python" /><published>2022-02-19T00:00:00+08:00</published><updated>2022-02-19T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/02/19/Python</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/02/19/Python/"><![CDATA[<blockquote>
   <p>日常遇到的一些问题</p>
 </blockquote>
 
@@ -183,7 +183,7 @@ template &lt;&gt;表示不要使用swap模板来生成一个使用int类型的�
       <td style="text-align: right">匹配特殊字符，即非上面的字符</td>
     </tr>
   </tbody>
-</table>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="Programming" /><summary type="html"><![CDATA[Python programming]]></summary></entry><entry><title type="html">A Little</title><link href="http://localhost:4000/2022/01/21/Django/" rel="alternate" type="text/html" title="A Little" /><published>2022-01-21T00:00:00+08:00</published><updated>2022-01-21T00:00:00+08:00</updated><id>http://localhost:4000/2022/01/21/Django</id><content type="html" xml:base="http://localhost:4000/2022/01/21/Django/"><![CDATA[<blockquote>
+</table>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="Programming" /><summary type="html"><![CDATA[Python programming]]></summary></entry><entry><title type="html">A Little</title><link href="http://localhost:4000/ppx123-web/2022/01/21/Django/" rel="alternate" type="text/html" title="A Little" /><published>2022-01-21T00:00:00+08:00</published><updated>2022-01-21T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/01/21/Django</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/01/21/Django/"><![CDATA[<blockquote>
   <p>How to use Django and config</p>
 
   <p>HTML CSS JS</p>
@@ -286,7 +286,7 @@ template &lt;&gt;表示不要使用swap模板来生成一个使用int类型的�
 
 <p>CSS将HTML的元素作为盒子，对每一个元素的各个属性可以进行编辑如width,background-color,color,text-shadow,display,text-align等</p>
 
-<h2 id="js"><span id="head5">JS</span></h2>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="ArchLinux" /><summary type="html"><![CDATA[HTML CSS JS WEB]]></summary></entry><entry><title type="html">Archlinux install</title><link href="http://localhost:4000/2022/01/15/Archlinux-install/" rel="alternate" type="text/html" title="Archlinux install" /><published>2022-01-15T00:00:00+08:00</published><updated>2022-01-15T00:00:00+08:00</updated><id>http://localhost:4000/2022/01/15/Archlinux-install</id><content type="html" xml:base="http://localhost:4000/2022/01/15/Archlinux-install/"><![CDATA[<blockquote>
+<h2 id="js"><span id="head5">JS</span></h2>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="ArchLinux" /><summary type="html"><![CDATA[HTML CSS JS WEB]]></summary></entry><entry><title type="html">Archlinux install</title><link href="http://localhost:4000/ppx123-web/2022/01/15/Archlinux-install/" rel="alternate" type="text/html" title="Archlinux install" /><published>2022-01-15T00:00:00+08:00</published><updated>2022-01-15T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/01/15/Archlinux-install</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/01/15/Archlinux-install/"><![CDATA[<blockquote>
   <p>Archlinux安装过程中的一些问题，后续配置需要注意的一些事项，以及linux中遇到的一些问题</p>
 </blockquote>
 
@@ -477,7 +477,7 @@ EndSection
 
 <p>2021-1-16  python3.10好像有点问题，安装不了torch</p>
 
-<p>yay安装python39</p>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="ArchLinux" /><summary type="html"><![CDATA[Install Archlinux]]></summary></entry><entry><title type="html">高级算法作业</title><link href="http://localhost:4000/2022/01/15/advanced-alogrithm-A3/" rel="alternate" type="text/html" title="高级算法作业" /><published>2022-01-15T00:00:00+08:00</published><updated>2022-01-15T00:00:00+08:00</updated><id>http://localhost:4000/2022/01/15/advanced-alogrithm-A3</id><content type="html" xml:base="http://localhost:4000/2022/01/15/advanced-alogrithm-A3/"><![CDATA[<blockquote>
+<p>yay安装python39</p>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="ArchLinux" /><summary type="html"><![CDATA[Install Archlinux]]></summary></entry><entry><title type="html">高级算法作业</title><link href="http://localhost:4000/ppx123-web/2022/01/15/advanced-alogrithm-A3/" rel="alternate" type="text/html" title="高级算法作业" /><published>2022-01-15T00:00:00+08:00</published><updated>2022-01-15T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/01/15/advanced-alogrithm-A3</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/01/15/advanced-alogrithm-A3/"><![CDATA[<blockquote>
   <p>高级算法第三次作业</p>
 </blockquote>
 
@@ -661,7 +661,7 @@ EndSection
 
 <p>=S_1+\dfrac{1}{n^2}(A-pf_0)(B-qg_0)$</p>
 
-<p>由于$f$是非减函数，所以$\dfrac{1}{n^2}(A-pf_0)(B-qg_0) \geq 0\Rightarrow S_1\leq S_2$,Qed.</p>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="Courses" /><summary type="html"><![CDATA[高级算法作业]]></summary></entry><entry><title type="html">数据库期末复习</title><link href="http://localhost:4000/2022/01/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/" rel="alternate" type="text/html" title="数据库期末复习" /><published>2022-01-15T00:00:00+08:00</published><updated>2022-01-15T00:00:00+08:00</updated><id>http://localhost:4000/2022/01/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA</id><content type="html" xml:base="http://localhost:4000/2022/01/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/"><![CDATA[<blockquote>
+<p>由于$f$是非减函数，所以$\dfrac{1}{n^2}(A-pf_0)(B-qg_0) \geq 0\Rightarrow S_1\leq S_2$,Qed.</p>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="Courses" /><summary type="html"><![CDATA[高级算法作业]]></summary></entry><entry><title type="html">数据库期末复习</title><link href="http://localhost:4000/ppx123-web/2022/01/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/" rel="alternate" type="text/html" title="数据库期末复习" /><published>2022-01-15T00:00:00+08:00</published><updated>2022-01-15T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/01/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/01/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E8%AE%BA/"><![CDATA[<blockquote>
   <p>主体来自于Maxwell：https://maxwell-lyu.github.io/，在其基础上简单修改</p>
 </blockquote>
 
@@ -3684,7 +3684,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   <li>
     <p>对每个对象, 哪个事务最后写, 两个调度一样</p>
   </li>
-</ul>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="Courses" /><summary type="html"><![CDATA[数据库期末复习总结]]></summary></entry><entry><title type="html">机器学习导论总结</title><link href="http://localhost:4000/2022/01/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AF%BC%E8%AE%BA/" rel="alternate" type="text/html" title="机器学习导论总结" /><published>2022-01-15T00:00:00+08:00</published><updated>2022-01-15T00:00:00+08:00</updated><id>http://localhost:4000/2022/01/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AF%BC%E8%AE%BA</id><content type="html" xml:base="http://localhost:4000/2022/01/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AF%BC%E8%AE%BA/"><![CDATA[<blockquote>
+</ul>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="Courses" /><summary type="html"><![CDATA[数据库期末复习总结]]></summary></entry><entry><title type="html">机器学习导论总结</title><link href="http://localhost:4000/ppx123-web/2022/01/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AF%BC%E8%AE%BA/" rel="alternate" type="text/html" title="机器学习导论总结" /><published>2022-01-15T00:00:00+08:00</published><updated>2022-01-15T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/01/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AF%BC%E8%AE%BA</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/01/15/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%AF%BC%E8%AE%BA/"><![CDATA[<blockquote>
   <p>机器学习期末复习总结</p>
 </blockquote>
 
@@ -4600,7 +4600,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
   <li>
     <p>不同的多样性增强机制同时使用</p>
   </li>
-</ol>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="Courses" /><summary type="html"><![CDATA[机器学习导论期末复习总结，建议复习再多看看细节的概念]]></summary></entry><entry><title type="html">毛概总结</title><link href="http://localhost:4000/2022/01/15/%E6%AF%9B%E6%A6%82/" rel="alternate" type="text/html" title="毛概总结" /><published>2022-01-15T00:00:00+08:00</published><updated>2022-01-15T00:00:00+08:00</updated><id>http://localhost:4000/2022/01/15/%E6%AF%9B%E6%A6%82</id><content type="html" xml:base="http://localhost:4000/2022/01/15/%E6%AF%9B%E6%A6%82/"><![CDATA[<blockquote>
+</ol>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="Courses" /><summary type="html"><![CDATA[机器学习导论期末复习总结，建议复习再多看看细节的概念]]></summary></entry><entry><title type="html">毛概总结</title><link href="http://localhost:4000/ppx123-web/2022/01/15/%E6%AF%9B%E6%A6%82/" rel="alternate" type="text/html" title="毛概总结" /><published>2022-01-15T00:00:00+08:00</published><updated>2022-01-15T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/01/15/%E6%AF%9B%E6%A6%82</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/01/15/%E6%AF%9B%E6%A6%82/"><![CDATA[<blockquote>
   <p>毛概复习整理</p>
 </blockquote>
 
@@ -5240,7 +5240,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 
 <p>3.要积极参与全球治理体系改革和建设。</p>
 
-<p>4.要加强涉外法律⼯作，完善涉外法律法规体系。</p>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="Courses" /><summary type="html"><![CDATA[毛概期末总结]]></summary></entry><entry><title type="html">计算机网络期末复习</title><link href="http://localhost:4000/2022/01/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="alternate" type="text/html" title="计算机网络期末复习" /><published>2022-01-15T00:00:00+08:00</published><updated>2022-01-15T00:00:00+08:00</updated><id>http://localhost:4000/2022/01/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C</id><content type="html" xml:base="http://localhost:4000/2022/01/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"><![CDATA[<blockquote>
+<p>4.要加强涉外法律⼯作，完善涉外法律法规体系。</p>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="Courses" /><summary type="html"><![CDATA[毛概期末总结]]></summary></entry><entry><title type="html">计算机网络期末复习</title><link href="http://localhost:4000/ppx123-web/2022/01/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="alternate" type="text/html" title="计算机网络期末复习" /><published>2022-01-15T00:00:00+08:00</published><updated>2022-01-15T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2022/01/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2022/01/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"><![CDATA[<blockquote>
   <p>主体来自于Maxwell：https://maxwell-lyu.github.io/，在其基础上简单修改</p>
 </blockquote>
 
@@ -8584,7 +8584,7 @@ $M = C - \pi_{C.key,C.val}\sigma_{C.val &lt; D.val}(C\times D)$
 *  突发长度: b
 
 *  峰值速率: 在已有的一个漏桶后, 串联一个高度为1的桶, 其速率r’可限制峰值速率
-</code></pre></div></div>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="Courses" /><summary type="html"><![CDATA[计算机期末复习总结]]></summary></entry><entry><title type="html">概率论与数理统计</title><link href="http://localhost:4000/2021/07/04/%E6%A6%82%E7%8E%87%E8%AE%BA/" rel="alternate" type="text/html" title="概率论与数理统计" /><published>2021-07-04T00:00:00+08:00</published><updated>2021-07-04T00:00:00+08:00</updated><id>http://localhost:4000/2021/07/04/%E6%A6%82%E7%8E%87%E8%AE%BA</id><content type="html" xml:base="http://localhost:4000/2021/07/04/%E6%A6%82%E7%8E%87%E8%AE%BA/"><![CDATA[<blockquote>
+</code></pre></div></div>]]></content><author><name>Chaoyi Zhao</name><email>&lt;191870271@smail.nju.edu.cn&gt;</email></author><category term="Courses" /><summary type="html"><![CDATA[计算机期末复习总结]]></summary></entry><entry><title type="html">概率论与数理统计</title><link href="http://localhost:4000/ppx123-web/2021/07/04/%E6%A6%82%E7%8E%87%E8%AE%BA/" rel="alternate" type="text/html" title="概率论与数理统计" /><published>2021-07-04T00:00:00+08:00</published><updated>2021-07-04T00:00:00+08:00</updated><id>http://localhost:4000/ppx123-web/2021/07/04/%E6%A6%82%E7%8E%87%E8%AE%BA</id><content type="html" xml:base="http://localhost:4000/ppx123-web/2021/07/04/%E6%A6%82%E7%8E%87%E8%AE%BA/"><![CDATA[<blockquote>
   <p>概率论其期中与期末总结</p>
 </blockquote>
 

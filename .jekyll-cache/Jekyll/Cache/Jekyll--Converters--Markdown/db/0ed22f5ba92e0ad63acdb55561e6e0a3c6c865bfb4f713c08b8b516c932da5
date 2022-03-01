@@ -1,4 +1,4 @@
-I"�6<p>There are multiple ways of installing Hydejack.
+I"7<p>There are multiple ways of installing Hydejack.
 The easiest and cleanest way is <a href="#via-starter-kit">via the Starter Kit</a>.
 Alternatively, you can use the <a href="#via-gem">Ruby gem</a>.
 If you don’t mind a cluttered source directory, you can use <a href="#via-zip">the zip file</a>.
@@ -130,13 +130,13 @@ This approach is recommended if you intend to customize Hydejack.</p>
   <dd>Contains all files and folders needed to create a new blog.</dd>
   <dt><code class="language-plaintext highlighter-rouge">upgrade</code></dt>
   <dd>Contains only the files and folders needed for upgrading form an earlier version of Hydejack (6.0.0 or above).
-See the <a href="/docs/7.5.2/upgrade/" class="heading flip-title">Upgrade</a> for more.</dd>
+See the <a href="/ppx123-web/docs/7.5.2/upgrade/" class="heading flip-title">Upgrade</a> for more.</dd>
   <dt><code class="language-plaintext highlighter-rouge">CHANGELOG _ Hydejack.pdf</code></dt>
-  <dd>The <a href="/CHANGELOG/">changelog</a> in PDF form.</dd>
+  <dd>The <a href="/ppx123-web/CHANGELOG/">changelog</a> in PDF form.</dd>
   <dt><code class="language-plaintext highlighter-rouge">Documentation _ Hydejack.pdf</code></dt>
   <dd>This documentation in PDF form.</dd>
   <dt><code class="language-plaintext highlighter-rouge">NOTICE _ Hydejack.pdf</code></dt>
-  <dd>The <a href="/NOTICE/">notice</a> in PDF form.</dd>
+  <dd>The <a href="/ppx123-web/NOTICE/">notice</a> in PDF form.</dd>
   <dt><code class="language-plaintext highlighter-rouge">PRO License _ Hydejack.pdf</code></dt>
   <dd>The license for use of Hydejack PRO in PDF form.</dd>
   <dt><code class="language-plaintext highlighter-rouge">PRO–hy-drawer License _ Hydejack.pdf</code></dt>
@@ -219,6 +219,6 @@ Before running for the first time, dependencies need to be fetched from <a href=
 
 <p>and point your browser to <a href="http://localhost:4000">http://localhost:4000</a> to see Hydejack in action.</p>
 
-<p class="read-more">Continue with <a href="/docs/7.5.2/config/" class="heading flip-title">Config</a></p>
+<p class="read-more">Continue with <a href="/ppx123-web/docs/7.5.2/config/" class="heading flip-title">Config</a></p>
 
 :ET

@@ -1,4 +1,4 @@
-I"ÆÅ<h2 class="no_toc" id="table-of-contents">Table of Contents</h2>
+I"ƒÅ<h2 class="no_toc" id="table-of-contents">Table of Contents</h2>
 <ol id="markdown-toc">
   <li><a href="#adding-a-page" id="markdown-toc-adding-a-page">Adding a page</a></li>
   <li><a href="#adding-an-entry-to-the-sidebar" id="markdown-toc-adding-an-entry-to-the-sidebar">Adding an entry to the sidebar</a>    <ol>
@@ -212,7 +212,7 @@ the <code class="language-plaintext highlighter-rouge">slug</code> must be <code
 <a href="https://qwtel.com/hydejack/about/">Demo</a>.
 The main difference is that it will display an author‚Äôs <code class="language-plaintext highlighter-rouge">about</code> text and <code class="language-plaintext highlighter-rouge">picture</code> above the regular content.</p>
 
-<p>To create an about page, make sure <code class="language-plaintext highlighter-rouge">layout</code> is set to <code class="language-plaintext highlighter-rouge">about</code>, and that the <code class="language-plaintext highlighter-rouge">author</code> key is set to an author defined in <code class="language-plaintext highlighter-rouge">_data/authors.yml</code>. For more on authors, see <a href="/docs/7.5.2/config/#adding-an-author">Adding an author</a>.</p>
+<p>To create an about page, make sure <code class="language-plaintext highlighter-rouge">layout</code> is set to <code class="language-plaintext highlighter-rouge">about</code>, and that the <code class="language-plaintext highlighter-rouge">author</code> key is set to an author defined in <code class="language-plaintext highlighter-rouge">_data/authors.yml</code>. For more on authors, see <a href="/ppx123-web/docs/7.5.2/config/#adding-an-author">Adding an author</a>.</p>
 
 <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># file: about.md</span>
 <span class="nn">---</span>
@@ -417,6 +417,6 @@ In order to use it, rename it to <code class="language-plaintext highlighter-rou
 
 <p class="message"><strong>NOTE</strong>: You can download the final <code class="language-plaintext highlighter-rouge">resume.json</code> (minified) from the assets folder. When running locally, you can find it at <code class="language-plaintext highlighter-rouge">_site/assets/resume.json</code>.</p>
 
-<p class="read-more">Continue with <a href="/docs/7.5.2/writing/" class="heading flip-title">Writing</a></p>
+<p class="read-more">Continue with <a href="/ppx123-web/docs/7.5.2/writing/" class="heading flip-title">Writing</a></p>
 
 :ET

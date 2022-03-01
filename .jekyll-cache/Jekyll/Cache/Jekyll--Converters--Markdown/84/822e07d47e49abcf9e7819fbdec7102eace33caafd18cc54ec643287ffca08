@@ -1,4 +1,4 @@
-I"ãœ<p>Hydejack offers a few additional features to markup your markdown.
+I"îœ<p>Hydejack offers a few additional features to markup your markdown.
 Donâ€™t worry, these are merely CSS classes added via the standard <code class="language-plaintext highlighter-rouge">{:.my-class}</code> syntax,
 so that your posts remain compatible with other Jekyll themes.</p>
 
@@ -776,6 +776,6 @@ for the purpose of writing blog posts, this should be a favorable tradeoff.</p>
 <p class="message"><strong>NOTE</strong>: KaTeX does not support the <code class="language-plaintext highlighter-rouge">align</code> and <code class="language-plaintext highlighter-rouge">align*</code> environments.
 Instead, <code class="language-plaintext highlighter-rouge">aligned</code> should be used, e.g. <code class="language-plaintext highlighter-rouge">\begin{aligned} ... \end{aligned}</code>.</p>
 
-<p class="read-more">Continue with <a href="/docs/7.5.2/scripts/" class="heading flip-title">Scripts</a></p>
+<p class="read-more">Continue with <a href="/ppx123-web/docs/7.5.2/scripts/" class="heading flip-title">Scripts</a></p>
 
 :ET

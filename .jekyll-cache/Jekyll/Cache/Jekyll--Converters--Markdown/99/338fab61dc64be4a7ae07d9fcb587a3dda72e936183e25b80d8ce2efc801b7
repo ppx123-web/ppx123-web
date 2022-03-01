@@ -1,4 +1,4 @@
-I"+3<p>There are two ways of adding third party scripts.
+I"63<p>There are two ways of adding third party scripts.
 <a href="#embedding">Embedding</a> is ideal for one-off scripts, e.g. <code class="language-plaintext highlighter-rouge">widgets.js</code> that is part of embedded tweets (see below).
 Adding <a href="#global-scripts">global scripts</a> is for scripts that should be loaded on every page.</p>
 
@@ -154,5 +154,5 @@ you can disable push state by adding to your config file:</p>
   <span class="na">no_push_state</span><span class="pi">:</span> <span class="no">true</span>
 </code></pre></div></div>
 
-<p class="read-more">Continue with <a href="/docs/7.5.2/build/" class="heading flip-title">Build</a></p>
+<p class="read-more">Continue with <a href="/ppx123-web/docs/7.5.2/build/" class="heading flip-title">Build</a></p>
 :ET
