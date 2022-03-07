@@ -51,7 +51,7 @@ author:
   # twitter:             <username>
 
 # This text will appear in a `<small>` tag in the footer of every page.
-copyright:              <==>
+copyright:              
 #© 2017. All rights reserved.
 
 # Add links to the footer.
@@ -273,4 +273,4 @@ sass:
 # markdown: kramdown
 
 
-disqus: <disqus_KrVTHJCuVK>
+# disqus: <disqus_KrVTHJCuVK>
