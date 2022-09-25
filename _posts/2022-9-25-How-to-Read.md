@@ -2,8 +2,8 @@
 layout: post
 title: How to Read
 description: >
-  六字名词及复习
-tags: [Courses]
+  How to Read Papers
+tags: [Reading]
 author: author1
 ---
 

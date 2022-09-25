@@ -3,7 +3,7 @@ layout: list
 title: Reading
 slug: Reading
 menu: true
-order: 3
+order: 2
 description: >
   Reading paper and book
 accent_color: '#268bd2'
