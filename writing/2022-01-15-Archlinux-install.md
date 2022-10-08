@@ -183,3 +183,12 @@ https://wusiyu.me/archlinux-remove-initramfs-linux-fallback-img/
 2021-1-16  python3.10好像有点问题，安装不了torch
 
 yay安装python39
+
+
+## Arch install on removable media
+
+安装同上，不同点在于安装bootloader
+
+以grub举例：安装需要增加--removable选项，见wiki，refind同样需要选项
+
+原理：对于普通的电脑安装，在grub安装时会将grubx64.efi这样的文件放到一个位置，也会写入到uefi的条目中，条目存在于主板的固件中。同时对于陌生设备想要直接启动，uefi会扫描每一个fat分区的/efi/boot/分区中的*.efi文件，如果有，在boot menu则会显示
