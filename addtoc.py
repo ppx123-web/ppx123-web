@@ -35,7 +35,7 @@ def modify(file):
     cnt = 0
     filedata = ""
     toc = ""
-    with open(f"./{directory}/{file}","r+") as f:
+    with open(f"./{directory}/{file}","r+",encoding="utf8") as f:
         for line in f.readlines():
             if len(pattern_toc.findall(line)) > 0:
                 # 当匹配到一条toc时，跳过
