@@ -2,7 +2,7 @@
 layout: post
 title: How to Read
 description: >
-  六字名词及复习
+  Reading Papers
 tags: [Courses]
 author: author1
 ---
