@@ -37,4 +37,34 @@ sudo systemctl enable bluetooth.service
 2. 进入注册表，将`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\BTHPORT\Parameters\Keys\MAC1`的右侧文件，修改名称为记下的MAC，值为记下的Key。
 3. Connect
 
+## konsole 快捷键
+
+Tab：自动补全。
+
+Ctrl-b：向前移动，相当于(Left)。
+
+Ctrl-f：向后移动，相当于(Right)。
+
+Alt-b：按词向前移动。
+
+Alt-f：按词向后移动。
+
+Ctrl-a：移动到句首。相当于(HOME)键。
+
+Ctrl-e：移动到句尾。相当于(END)键。
+
+Ctrl-x：连续按两下的话，首尾交替。
+
+Ctrl-h：删除光标前一个字符，相当于(Backspace)键。
+
+Ctrl-d：删除光标后一个字符，相当于(Delete)键。
+
+Ctrl-w：删除光标所指的一个单词。
+
+Ctrl-u：删除光标前的所有字符。
+
+Ctrl-k：删除光标后的所有字符。
+
+Ctrl-l：清理屏幕，相当与「clear」命令。
+
 
