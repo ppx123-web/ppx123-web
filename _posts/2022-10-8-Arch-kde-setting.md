@@ -12,7 +12,7 @@ author: author1
 - [蓝牙设置](#head2)
 	- [双系统蓝牙需要重新配对的问题](#head3)
 		- [修改linux](#head4)
-		- [修改windows](#head5)
+		- [修改windows (推荐)](#head5)
 
 ## <span id="head1">List</span>
 
@@ -38,7 +38,7 @@ sudo systemctl enable bluetooth.service
 `进行替换（使用LTK），再更改文件夹名为windows下记下的MAC
 7. `reboot` !!!
 
-#### <span id="head5">修改windows</span>
+#### <span id="head5">修改windows (推荐)</span>
 
 1. 同上记录LTK和蓝牙设备MAC
 2. 进入注册表，将`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\BTHPORT\Parameters\Keys\MAC1`的右侧文件，修改名称为记下的MAC，值为记下的Key。
