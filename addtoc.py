@@ -35,7 +35,7 @@ def modify(file):
     cnt = 0
     filedata = ""
     toc = ""
-    with open(f"./{directory}/{file}","r+",encoding="utf8") as f:
+    with open(f"{file}","r+",encoding="utf8") as f:
         for line in f.readlines():
             if len(pattern_toc.findall(line)) > 0:
                 # 当匹配到一条toc时，跳过
@@ -53,7 +53,7 @@ def modify(file):
             else:
                 filedata += line
     headcnt = 0
-    with open(f"./_posts/{file}","w",encoding="utf-8") as f:
+    with open(f"./_posts/{os.path.basename(file)}","w",encoding="utf-8") as f:
         match = re.match(pattern_head, filedata,re.S | re.M)
         f.write(match.group(1)+'\n')
         f.write(toc + '\n')
@@ -64,16 +64,17 @@ if __name__=='__main__':
     print("处理writing文件夹中文件输出到_post")
     if len(sys.argv) == 1:
         filedir = os.listdir(directory)
-        for name in filedir:
-            if fnmatch.fnmatch(name, "*.md"):
-                filenames.append(name)
+        for d in filedir:
+            for name in os.listdir(directory + "/"  + d):
+                if fnmatch.fnmatch(name, "*.md"):
+                    filenames.append(directory + "/" + d + "/" + name)
     else:
         if sys.argv[1] == "bak":
             print("备份到bak文件夹")
-            subprocess.call(r"cp ./backup/*.md ./bak/",shell=True)
+            subprocess.call(r"cp ./writing/*/*.md ./bak/",shell=True)
         for u in range(1,len(sys.argv)):
             filenames.append(sys.argv[u])
     print(f"处理的文件有:{filenames}")
     # input('按回车以确认...')
     for file in filenames:
-        modify(os.path.basename(file))
+        modify(file)
