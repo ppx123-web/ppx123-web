@@ -4,7 +4,7 @@ import subprocess, time, re
 
 pattern = re.compile(r"^(?P<p1>#+ +)(?P<p2>.+)\n$")
 pattern_use = re.compile(r"^(#+ +)\<span.*\>(?P<p3>.+)\</span\>\n$")
-pattern_head = r"(---[\s\S]*---[\n]+(\>[^\n]*\n)*)"
+pattern_head = r"(---[^#]*---[\n]+(\>[^\n]*\n)*)"
 pattern_toc = re.compile(r"^[-* \t]+ +\[(?P<p4>.+)\]\(#head[0-9]+\)\n$")
 head_sign = re.compile(r"^---\n$")
 directory = "writing"
